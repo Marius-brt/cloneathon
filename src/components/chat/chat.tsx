@@ -11,7 +11,7 @@ export function Chat({
   initialMessages
 }: { chatId: string; initialMessages: Message[] }) {
   const { enabledTools } = useChatStore();
-  const { messages, input, handleInputChange, handleSubmit } = useChat({
+  const { messages, input, status, stop, handleInputChange, handleSubmit } = useChat({
     initialMessages,
     body: {
       chatId,
@@ -33,7 +33,13 @@ export function Chat({
           )}
         </div>
       </div>
-      <ChatInput input={input} setInput={handleInputChange} onSubmit={handleSubmit} />
+      <ChatInput
+        input={input}
+        setInput={handleInputChange}
+        onSubmit={handleSubmit}
+        status={status}
+        stop={stop}
+      />
     </>
   );
 }

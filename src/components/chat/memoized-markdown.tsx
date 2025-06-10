@@ -48,9 +48,11 @@ const components: Components = {
   )
 };
 
+const LANGUAGE_REGEX = /language-(\w+)/;
+
 function CodeBlock({ children, className, ...props }: CodeComponentProps) {
   const size = useContext(MarkdownSizeContext);
-  const match = /language-(\w+)/.exec(className || "");
+  const match = LANGUAGE_REGEX.exec(className || "");
 
   if (match) {
     const lang = match[1];

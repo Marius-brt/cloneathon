@@ -20,7 +20,7 @@ export function ToolsBtn() {
           variant={"outline"}
           size={"sm"}
           icon={Settings2}
-          className="rounded-lg pr-1"
+          className="rounded-lg pr-2"
         >
           Tools
           <div className="flex items-center gap-1">

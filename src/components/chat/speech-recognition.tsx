@@ -9,14 +9,20 @@ import speechToText, { useSpeechRecognition } from "react-speech-recognition";
 export function SpeechRecognition({
   value,
   setValue,
-  className
-}: { value: string; setValue: (value: string) => void; className?: string }) {
+  className,
+  isLoading
+}: {
+  value: string;
+  setValue: (value: string) => void;
+  className?: string;
+  isLoading: boolean;
+}) {
   const { transcript, listening, resetTranscript, browserSupportsSpeechRecognition } =
     useSpeechRecognition();
 
   const [hasUsedSpeechRecognition, setHasUsedSpeechRecognition] = useState(false);
   const [hasManualInput, setHasManualInput] = useState(false);
-  const [isHydrated, setIsHydrated] = useState(false);
+  const [_, setIsHydrated] = useState(false);
   const previousValueRef = useRef(value);
 
   // Ensure component only renders after hydration
@@ -64,7 +70,7 @@ export function SpeechRecognition({
   return (
     <Button
       onClick={toggleListening}
-      disabled={disabled}
+      disabled={disabled || isLoading}
       size={"icon"}
       variant={"ghost"}
       className={cn("rounded-xl", className)}
