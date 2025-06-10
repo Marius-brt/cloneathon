@@ -6,7 +6,6 @@ import { Separator } from "@/components/ui/separator";
 import { SwitchCard } from "@/components/ui/switch-card";
 import { useChatStore } from "@/lib/stores/chat.store";
 import { tools } from "@/lib/tools";
-import { cn } from "@/lib/utils";
 import { Settings2 } from "lucide-react";
 import { Fragment } from "react";
 import { CommandMenuKbd } from "../ui/command";
