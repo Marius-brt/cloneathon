@@ -2,15 +2,32 @@ import { prisma } from "@/lib/config/db";
 import type { Message } from "@ai-sdk/react";
 
 export const MessageRepository = {
-  async createMessage(data: {
-    role: string;
-    parts: any;
-    content: string;
+  async upsertMessage({
+    chatId,
+    id,
+    role,
+    content,
+    parts
+  }: {
+    id: string;
     chatId: string;
-    createdAt?: Date;
+    role: string;
+    content: string;
+    parts: any[];
   }) {
-    return await prisma.message.create({
-      data
+    return await prisma.message.upsert({
+      where: { id },
+      update: {
+        content,
+        parts
+      },
+      create: {
+        id,
+        chatId,
+        content,
+        role,
+        parts
+      }
     });
   },
   async getMessagesByChatId(chatId: string): Promise<Message[]> {

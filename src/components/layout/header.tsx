@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { getSafeSession } from "@/lib/server/auth-utils";
 import { CommandPalette } from "../command";
+import { Logout } from "./logout";
 
 export async function Header() {
   const session = await getSafeSession();
@@ -22,13 +23,11 @@ export async function Header() {
             <AvatarFallback>{session.user.name}</AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent align="end">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Profile</DropdownMenuItem>
-          <DropdownMenuItem>Billing</DropdownMenuItem>
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
+          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <Logout />
         </DropdownMenuContent>
       </DropdownMenu>
     </header>

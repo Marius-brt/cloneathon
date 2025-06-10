@@ -73,7 +73,7 @@ export function ChatInput({
               isLoading={isLoading}
             />
             <Button size={"icon"} type="submit" className="rounded-xl">
-              {isLoading ? <Square className="mr-0.5" /> : <Send className="mr-0.5" />}
+              {isLoading ? <Square /> : <Send className="mr-0.5" />}
             </Button>
           </div>
         </form>

@@ -4,19 +4,15 @@ import { getSafeSession } from "@/lib/server/auth-utils";
 export const ChatRepository = {
   async getChat(id: string) {
     const session = await getSafeSession();
-    return await prisma.chat.findFirst({
+    return await prisma.chat.upsert({
       where: {
         id,
         userId: session.user.id
-      }
-    });
-  },
-  async createChat(id?: string) {
-    const session = await getSafeSession();
-    return await prisma.chat.create({
-      data: {
-        userId: session.user.id,
-        id
+      },
+      update: {},
+      create: {
+        id,
+        userId: session.user.id
       }
     });
   }

@@ -4,38 +4,46 @@ import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 import { getTools } from "@/lib/server/tools";
 import {
-  type CoreAssistantMessage,
-  type CoreToolMessage,
-  type Message,
+  type UIMessage,
+  appendClientMessage,
   appendResponseMessages,
   createDataStreamResponse,
   smoothStream,
   streamText
 } from "ai";
 import { NextResponse } from "next/server";
+import { z } from "zod";
 
 export const maxDuration = 60;
 
-type ResponseMessageWithoutId = CoreToolMessage | CoreAssistantMessage;
-type ResponseMessage = ResponseMessageWithoutId & { id: string };
-
-function getTrailingMessageId({
-  messages
-}: {
-  messages: ResponseMessage[];
-}): string | null {
-  const trailingMessage = messages.at(-1);
-
-  if (!trailingMessage) {
-    return null;
-  }
-
-  return trailingMessage.id;
-}
+const bodySchema = z.object({
+  chatId: z.string(),
+  tools: z.array(z.string()),
+  message: z.object({
+    content: z.string(),
+    role: z.enum(["user"]),
+    parts: z
+      .array(
+        z.object({
+          type: z.enum(["text"]),
+          text: z.string()
+        })
+      )
+      .min(1)
+      .max(1)
+  })
+});
 
 export async function POST(req: Request) {
   try {
-    const { chatId, messages, tools } = await req.json();
+    const body = bodySchema.safeParse(await req.json());
+
+    if (!body.success) {
+      console.error("Invalid request body", body.error);
+      return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+    }
+
+    const { chatId, message, tools } = body.data;
 
     const session = await getSession();
 
@@ -43,21 +51,26 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    let chat = await ChatRepository.getChat(chatId);
+    const chat = await ChatRepository.getChat(chatId);
 
-    if (!chat) {
-      chat = await ChatRepository.createChat(chatId);
-    }
+    const msg = await MessageRepository.upsertMessage({
+      id: crypto.randomUUID(),
+      chatId: chat.id,
+      role: message.role,
+      content: message.content,
+      parts: message.parts
+    });
 
-    const userMessage = messages
-      .filter((message: Message) => message.role === "user")
-      .at(-1);
+    const previousMessages = await MessageRepository.getMessagesByChatId(chatId);
 
-    await MessageRepository.createMessage({
-      role: "user",
-      parts: userMessage?.parts,
-      content: userMessage?.content ?? "",
-      chatId: chat.id
+    const messages = appendClientMessage({
+      messages: previousMessages.map((m) => ({ ...m, content: "" }) as UIMessage),
+      message: {
+        id: msg.id,
+        role: msg.role as UIMessage["role"],
+        content: msg.content,
+        parts: msg.parts as UIMessage["parts"]
+      }
     });
 
     return createDataStreamResponse({
@@ -65,6 +78,7 @@ export async function POST(req: Request) {
         const result = streamText({
           model,
           messages,
+          experimental_generateMessageId: () => crypto.randomUUID(),
           system: `
           You are Cloneathon, an ai assistant that can answer questions and help with tasks.
           Be helpful and provide relevant information
@@ -86,27 +100,23 @@ export async function POST(req: Request) {
           },
           onFinish: async ({ response }) => {
             try {
-              const assistantId = getTrailingMessageId({
-                messages: response.messages.filter(
-                  (message) => message.role === "assistant"
-                )
-              });
-
-              if (!assistantId) {
-                throw new Error("No assistant message found!");
-              }
-
-              const [, assistantMessage] = appendResponseMessages({
+              const responseMessages = appendResponseMessages({
                 messages,
                 responseMessages: response.messages
               });
 
-              await MessageRepository.createMessage({
-                role: assistantMessage.role,
-                parts: assistantMessage.parts,
-                content: assistantMessage.content,
-                createdAt: assistantMessage.createdAt,
-                chatId: chat.id
+              const newMessage = responseMessages.at(-1);
+
+              if (!newMessage) {
+                throw new Error("No response message found!");
+              }
+
+              await MessageRepository.upsertMessage({
+                id: newMessage.id,
+                chatId: chatId,
+                role: newMessage.role,
+                content: newMessage.content,
+                parts: newMessage.parts as any[]
               });
             } catch (error) {
               console.error("error", error);

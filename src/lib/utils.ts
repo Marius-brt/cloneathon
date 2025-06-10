@@ -1,6 +1,7 @@
 import type { SocialProvider } from "@/lib/types";
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
+import { format } from "date-fns";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -26,3 +27,7 @@ export const providerNames: Record<SocialProvider, string> = {
   vk: "VK",
   zoom: "Zoom"
 };
+
+export function formatDate(date: Date | string) {
+  return format(date, "MMMM dd, yyyy hh:mm a");
+}

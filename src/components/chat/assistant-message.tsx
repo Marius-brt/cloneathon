@@ -2,6 +2,7 @@ import type { UIMessage } from "ai";
 import MemoizedMarkdown from "./memoized-markdown";
 import { Source } from "./source";
 import { ToolCalling } from "./tool-calling";
+import { formatDate } from "@/lib/utils";
 
 export function AssistantMessage({ message }: { message: UIMessage }) {
   const sources = message.parts.filter((part) => part.type === "source");
@@ -38,8 +39,8 @@ export function AssistantMessage({ message }: { message: UIMessage }) {
           ))}
         </div>
       )}
-      <div className="text-muted-foreground text-sm">
-        {message.createdAt && <span>{message.createdAt.toLocaleString()}</span>}
+      <div className="text-muted-foreground text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
+        {message.createdAt && <span>{formatDate(message.createdAt)}</span>}
       </div>
     </div>
   );

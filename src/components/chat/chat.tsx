@@ -16,6 +16,14 @@ export function Chat({
     body: {
       chatId,
       tools: enabledTools
+    },
+    experimental_prepareRequestBody: ({ messages }) => {
+      const lastMessage = messages.at(-1);
+      return {
+        chatId,
+        tools: enabledTools,
+        message: lastMessage
+      };
     }
   });
 
