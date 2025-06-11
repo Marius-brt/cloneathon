@@ -12,12 +12,12 @@ export const tools: Record<
 > = {
   context7: {
     name: "Context7",
-    description: "Context7 is a tool that allows you to search the web.",
+    description: "Search up-to-date documentation and technical information",
     icon: toolIcons.context7
   },
   websearch: {
     name: "Web Search",
-    description: "Web Search is a tool that allows you to search the web.",
+    description: "Search the web for up-to-date information",
     icon: GlobeIcon
   }
 };

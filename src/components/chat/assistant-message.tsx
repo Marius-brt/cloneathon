@@ -1,8 +1,8 @@
+import { formatDate } from "@/lib/utils";
 import type { UIMessage } from "ai";
 import MemoizedMarkdown from "./memoized-markdown";
 import { Source } from "./source";
 import { ToolCalling } from "./tool-calling";
-import { formatDate } from "@/lib/utils";
 
 export function AssistantMessage({ message }: { message: UIMessage }) {
   const sources = message.parts.filter((part) => part.type === "source");

@@ -30,7 +30,7 @@ const components: Components = {
     <h4 {...props} className={"pt-4 text-muted-foreground text-xs uppercase"} />
   ),
   ul: ({ node, ...props }) => <ul {...props} className={"mb-4 list-disc pl-4"} />,
-  li: ({ node, ...props }) => <li {...props} className={"mb-6 last:mb-0"} />,
+  li: ({ node, ...props }) => <li {...props} className={"mb-4 last:mb-0"} />,
   p: ({ node, ...props }) => <p {...props} className={"text-pretty leading-relaxed"} />,
   a: ({ node, ...props }) => (
     <a

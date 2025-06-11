@@ -22,17 +22,19 @@ export function SwitchCard({
   const id = useId();
   return (
     <div className={cn("relative flex w-full items-start gap-2", className)}>
-      <Switch
-        id={id}
-        checked={value}
-        onCheckedChange={onChange}
-        className="data-[state=checked]:[&_span]:rtl:-translate-x-2 order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2"
-        aria-describedby={`${id}-description`}
-      />
       <div className="flex grow items-start gap-3">
         <div className="mt-1">{icon}</div>
-        <div className="grid grow gap-2">
-          <Label htmlFor={id}>{title}</Label>
+        <div className="grid grow gap-1">
+          <div className="flex items-center justify-between gap-2">
+            <Label htmlFor={id}>{title}</Label>
+            <Switch
+              id={id}
+              checked={value}
+              onCheckedChange={onChange}
+              className="data-[state=checked]:[&_span]:rtl:-translate-x-2 order-1 h-4 w-6 after:absolute after:inset-0 [&_span]:size-3 data-[state=checked]:[&_span]:translate-x-2"
+              aria-describedby={`${id}-description`}
+            />
+          </div>
           <p id={`${id}-description`} className="text-muted-foreground text-xs">
             {description}
           </p>
