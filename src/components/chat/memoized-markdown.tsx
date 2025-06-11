@@ -1,3 +1,4 @@
+import { CopyButton } from "@/components/ui/copy";
 import { cn } from "@/lib/utils";
 import { marked } from "marked";
 import { createContext, memo, useContext, useMemo } from "react";
@@ -8,7 +9,7 @@ import ShikiHighlighter from "react-shiki";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import { CopyButton } from "../ui/copy";
+import { useTheme } from "next-themes";
 
 type CodeComponentProps = ComponentProps<"code"> & ExtraProps;
 type MarkdownSize = "default" | "small";
@@ -53,6 +54,7 @@ const LANGUAGE_REGEX = /language-(\w+)/;
 function CodeBlock({ children, className, ...props }: CodeComponentProps) {
   const size = useContext(MarkdownSizeContext);
   const match = LANGUAGE_REGEX.exec(className || "");
+  const { theme } = useTheme();
 
   if (match) {
     const lang = match[1];
@@ -60,9 +62,10 @@ function CodeBlock({ children, className, ...props }: CodeComponentProps) {
       <div className="rounded-none">
         <Codebar lang={lang} codeString={String(children)} />
         <ShikiHighlighter
+          addDefaultStyles={false}
           language={lang}
-          theme={"material-theme-darker"}
-          className="!rounded-none font-mono text-sm"
+          theme={theme === "dark" ? "material-theme-darker" : "material-theme-lighter"}
+          className="font-mono text-sm [&>pre]:rounded-b-lg [&>pre]:p-4"
           showLanguage={false}
         >
           {String(children)}
