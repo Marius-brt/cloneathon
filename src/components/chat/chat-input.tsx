@@ -54,7 +54,7 @@ export function ChatInput({
   );
 
   return (
-    <div className="absolute bottom-0 left-0 w-full pb-4 text-base">
+    <div className="absolute bottom-0 left-0 w-full px-4 pb-4 text-base">
       <div className="absolute bottom-0 left-0 h-[200px] w-full bg-gradient-to-b from-background/0 via-background to-background" />
       <div className="relative z-20 mx-auto max-w-2xl rounded-xl bg-muted shadow-xl">
         <form className="relative w-full" onSubmit={handleSubmit}>

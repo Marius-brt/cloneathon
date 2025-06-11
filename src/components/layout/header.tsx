@@ -10,12 +10,14 @@ import {
 import { getSafeSession } from "@/lib/server/auth-utils";
 import { CommandPalette } from "../command";
 import { Logout } from "./logout";
+import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 
 export async function Header() {
   const session = await getSafeSession();
+  const recentChats = await ChatRepository.getRecentChats();
   return (
     <header className="absolute top-0 right-0 left-0 z-40 flex items-center justify-between p-4">
-      <CommandPalette />
+      <CommandPalette recentChats={recentChats} />
       <DropdownMenu>
         <DropdownMenuTrigger>
           <Avatar>

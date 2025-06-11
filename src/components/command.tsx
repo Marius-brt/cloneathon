@@ -18,7 +18,8 @@ import {
   DialogHeader,
   DialogTitle
 } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
+import { searchAction } from "@/lib/server/actions/search.action";
+import { useDebounce } from "@uidotdev/usehooks";
 import { useCommandState } from "cmdk";
 import {
   ArrowUpRightIcon,
@@ -29,7 +30,7 @@ import {
   Sparkles
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { type ComponentProps, Fragment, useCallback, useEffect, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 
 type ActionType = {
   label: string;
@@ -38,38 +39,17 @@ type ActionType = {
   link?: string;
 };
 
-const actions: {
-  label: string;
-  actions: ActionType[];
-}[] = [
+type ChatType = {
+  id: string;
+  title: string | null;
+};
+
+const actions: ActionType[] = [
   {
-    label: "Actions",
-    actions: [
-      {
-        label: "New chat",
-        icon: MessageSquareDiff,
-        shortcut: "⌘N",
-        link: "/"
-      }
-    ]
-  },
-  {
-    label: "Recent chats",
-    actions: [
-      {
-        label: "React Children Error Fix",
-        icon: ArrowUpRightIcon
-      },
-      {
-        label: "Next.js 15 Routing",
-        icon: ArrowUpRightIcon
-      },
-      {
-        label: "Redis Cache Invalidation",
-        icon: ArrowUpRightIcon,
-        link: "/67398r324789542340950"
-      }
-    ]
+    label: "New chat",
+    icon: MessageSquareDiff,
+    shortcut: "⌘N",
+    link: "/"
   }
 ];
 
@@ -102,10 +82,46 @@ function NewChatButton() {
   );
 }
 
-export function CommandPalette() {
-  const [open, setOpen] = useState(false);
-
+export function CommandPalette({
+  recentChats
+}: {
+  recentChats: ChatType[];
+}) {
+  const [input, setInput] = useState("");
+  const debouncedSearch = useDebounce(input, 300);
   const router = useRouter();
+  const [open, setOpen] = useState(false);
+  const [chatsSearchResults, setChatsSearchResults] = useState<ChatType[]>([]);
+
+  const items = useMemo(() => {
+    const chats = recentChats.map((chat) => ({
+      label: chat.title || "Recent chat",
+      icon: ArrowUpRightIcon,
+      link: `/${chat.id}`
+    }));
+
+    chats.push(
+      ...chatsSearchResults.map((chat) => ({
+        label: chat.title || "Recent chat",
+        icon: ArrowUpRightIcon,
+        link: `/${chat.id}`
+      }))
+    );
+
+    return [
+      {
+        label: "Actions",
+        actions
+      },
+      {
+        label: "Recent chats",
+        actions: chats
+      }
+    ] as {
+      label: string;
+      actions: ActionType[];
+    }[];
+  }, [recentChats, chatsSearchResults]);
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -118,6 +134,29 @@ export function CommandPalette() {
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
+
+  useEffect(() => {
+    if (debouncedSearch !== "") {
+      searchAction({
+        query: debouncedSearch,
+        ignoreIds: recentChats.map((chat) => chat.id)
+      }).then((res) => {
+        if (res.data) {
+          setChatsSearchResults(res.data);
+        }
+      });
+    } else {
+      setChatsSearchResults([]);
+    }
+  }, [debouncedSearch, recentChats]);
+
+  useEffect(() => {
+    if (!open) {
+      setTimeout(() => {
+        setInput("");
+      }, 100);
+    }
+  }, [open]);
 
   const handleActionClick = useCallback(
     (action: ActionType) => {
@@ -161,14 +200,22 @@ export function CommandPalette() {
             loop
             className="**:data-[slot=command-input]:!h-9 **:data-[slot=command-input-wrapper]:!h-9 rounded-none bg-transparent"
           >
-            <CommandInput placeholder="Type a command or search..." />
+            <CommandInput
+              placeholder="Type a command or search..."
+              value={input}
+              onValueChange={(v) => setInput(v)}
+            />
             <CommandList>
               <NewChatButton />
-              {actions.map((action, index) => (
-                <Fragment key={index}>
+              {items.map((action, i) => (
+                <Fragment key={i}>
                   <CommandGroup heading={action.label}>
-                    {action.actions.map((action, index) => (
-                      <CommandItem key={index} onSelect={() => handleActionClick(action)}>
+                    {action.actions.map((action, j) => (
+                      <CommandItem
+                        value={`${action.label} ${action.link || ""}`}
+                        key={`${i}-${j}`}
+                        onSelect={() => handleActionClick(action)}
+                      >
                         <action.icon
                           size={16}
                           className="opacity-60"
@@ -183,7 +230,7 @@ export function CommandPalette() {
                       </CommandItem>
                     ))}
                   </CommandGroup>
-                  {index < actions.length - 1 && <CommandSeparator />}
+                  {i < actions.length - 1 && <CommandSeparator />}
                 </Fragment>
               ))}
             </CommandList>

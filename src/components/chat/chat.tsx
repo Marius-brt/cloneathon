@@ -29,7 +29,7 @@ export function Chat({
 
   return (
     <>
-      <div className="h-screen w-full overflow-y-auto pt-20 pb-[250px]">
+      <div className="h-screen w-full overflow-y-auto px-4 pt-20 pb-[250px]">
         <div className="absolute top-0 left-0 h-20 w-full bg-gradient-to-t from-background/0 to-background" />
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {messages.map((message) =>
