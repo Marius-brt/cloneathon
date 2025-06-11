@@ -20,5 +20,6 @@ export const env = createEnv({
     TAVILY_API_KEY: z.string().min(1)
   },
   client: {},
-  experimental__runtimeEnv: {}
+  experimental__runtimeEnv: {},
+  skipValidation: process.env.CHECK_ENV === "false"
 });

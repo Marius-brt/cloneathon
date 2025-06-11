@@ -15,6 +15,7 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 
 export const maxDuration = 60;
+export const dynamic = "force-dynamic";
 
 const bodySchema = z.object({
   chatId: z.string(),

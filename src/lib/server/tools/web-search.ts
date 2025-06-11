@@ -3,9 +3,9 @@ import { tavily } from "@tavily/core";
 import { type DataStreamWriter, type ToolSet, tool } from "ai";
 import z from "zod";
 
-const tvly = tavily({ apiKey: env.TAVILY_API_KEY });
-
 export function webSearchTools(dataStream: DataStreamWriter): ToolSet {
+  const tvly = tavily({ apiKey: env.TAVILY_API_KEY });
+
   return {
     websearch: tool({
       description: "Search the web for up-to-date information",

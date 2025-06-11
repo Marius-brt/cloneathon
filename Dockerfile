@@ -1,5 +1,12 @@
+FROM oven/bun:1 AS base
+
+ENV NEXT_TELEMETRY_DISABLED=1
+
+# Install OpenSSL for Prisma
+RUN apt-get update -y && apt-get install -y openssl
+
 # Use Bun image as base
-FROM oven/bun:1 AS deps
+FROM base AS deps
 WORKDIR /app
 
 # Accept database URL as build argument
@@ -18,7 +25,7 @@ RUN bun install --frozen-lockfile
 RUN bunx prisma generate
 
 # Builder stage
-FROM oven/bun:1 AS builder
+FROM base AS builder
 WORKDIR /app
 
 # Accept database URL as build argument
@@ -33,19 +40,15 @@ COPY --from=deps /app/prisma ./prisma
 # Copy source code
 COPY . .
 
-# Set environment variable for Next.js build
-ENV NEXT_TELEMETRY_DISABLED=1
-
 # Build the application
 RUN bun run build
 
 # Production stage
-FROM oven/bun:1 AS runner
+FROM base AS runner
 WORKDIR /app
 
 # Set environment variables
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1
 
 # Copy built application
 COPY --from=builder /app/public ./public
