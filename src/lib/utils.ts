@@ -1,7 +1,7 @@
 import type { SocialProvider } from "@/lib/types";
 import { type ClassValue, clsx } from "clsx";
-import { twMerge } from "tailwind-merge";
 import { format } from "date-fns";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));

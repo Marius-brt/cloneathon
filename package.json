@@ -3,14 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
     "db:generate": "prisma generate",
-    "db:push": "prisma db push",
     "db:migrate": "prisma migrate dev",
-    "db:studio": "prisma studio"
+    "db:push": "prisma db push",
+    "db:studio": "prisma studio",
+    "dev": "next dev --turbopack",
+    "format": "sort-package-json package.json  && biome format --write ./",
+    "lint": "biome check --organize-imports-enabled=true ./",
+    "start": "next start"
   },
   "dependencies": {
     "@ai-sdk/mistral": "^1.2.8",

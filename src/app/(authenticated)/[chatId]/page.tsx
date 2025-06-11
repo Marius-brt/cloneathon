@@ -2,6 +2,8 @@ import { Chat } from "@/components/chat/chat";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 
+export const dynamic = "force-dynamic";
+
 export default async function ThreadPage({
   params
 }: {

@@ -1,6 +1,7 @@
 import { CopyButton } from "@/components/ui/copy";
 import { cn } from "@/lib/utils";
 import { marked } from "marked";
+import { useTheme } from "next-themes";
 import { createContext, memo, useContext, useMemo } from "react";
 import type { ComponentProps } from "react";
 import ReactMarkdown, { type Components } from "react-markdown";
@@ -9,7 +10,6 @@ import ShikiHighlighter from "react-shiki";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import { useTheme } from "next-themes";
 
 type CodeComponentProps = ComponentProps<"code"> & ExtraProps;
 type MarkdownSize = "default" | "small";
