@@ -23,7 +23,7 @@ export async function Header() {
     <header className="absolute top-0 right-0 left-0 z-40 flex items-center justify-between p-4">
       <CommandPalette recentChats={recentChats} />
       <DropdownMenu>
-        <DropdownMenuTrigger>
+        <DropdownMenuTrigger className="rounded-full">
           <Avatar>
             {session.user.image && <AvatarImage src={session.user.image} />}
             <AvatarFallback>{session.user.name?.charAt(0).toUpperCase()}</AvatarFallback>

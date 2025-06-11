@@ -195,9 +195,9 @@ export function CommandPalette({
             <MenuIcon />
           </Button>
         </TooltipTrigger>
-        <TooltipContent side="right" sideOffset={10}>
+        <TooltipContent side="right" sideOffset={6} className="flex items-center gap-1.5">
           Toggle menu with
-          <kbd className="ml-1 inline-flex h-5 max-h-full items-center rounded border bg-background px-1 font-[inherit] font-medium text-[0.625rem] text-muted-foreground/70">
+          <kbd className="inline-flex items-center rounded border bg-muted px-1 font-[inherit] font-bold text-[0.7rem] text-muted-foreground">
             ⌘K
           </kbd>
         </TooltipContent>
