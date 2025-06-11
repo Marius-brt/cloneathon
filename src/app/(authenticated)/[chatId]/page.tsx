@@ -12,7 +12,7 @@ export default async function ThreadPage({
   const { chatId } = await params;
 
   const messages = await MessageRepository.getMessagesByChatId(chatId);
-  const title = await ChatRepository.getChatTitle(chatId);
+  const title = messages.length > 0 ? await ChatRepository.getChatTitle(chatId) : null;
 
   return <Chat chatId={chatId} initialMessages={messages} title={title?.title || ""} />;
 }

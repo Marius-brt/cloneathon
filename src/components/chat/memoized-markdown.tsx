@@ -59,13 +59,13 @@ function CodeBlock({ children, className, ...props }: CodeComponentProps) {
   if (match) {
     const lang = match[1];
     return (
-      <div className="rounded-none">
+      <div className="mt-4 rounded-none">
         <Codebar lang={lang} codeString={String(children)} />
         <ShikiHighlighter
           addDefaultStyles={false}
           language={lang}
           theme={theme === "dark" ? "material-theme-darker" : "material-theme-lighter"}
-          className="font-mono text-sm [&>pre]:rounded-b-lg [&>pre]:p-4"
+          className="font-mono text-sm [&>pre]:overflow-x-auto [&>pre]:rounded-b-lg [&>pre]:p-4"
           showLanguage={false}
         >
           {String(children)}

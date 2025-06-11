@@ -26,7 +26,7 @@ export async function Header() {
         <DropdownMenuTrigger>
           <Avatar>
             {session.user.image && <AvatarImage src={session.user.image} />}
-            <AvatarFallback>{session.user.name}</AvatarFallback>
+            <AvatarFallback>{session.user.name?.charAt(0).toUpperCase()}</AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end" className="min-w-40">

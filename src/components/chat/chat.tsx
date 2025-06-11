@@ -116,8 +116,8 @@ export function Chat({
   return (
     <>
       <div className="absolute top-5 right-0 left-0 flex justify-center">
-        <div className="relative z-50 flex items-center gap-2">
-          <span className="font-medium text-sm">{chatTitle}</span>
+        <div className="relative z-50 flex max-w-[40%] items-center gap-2">
+          <span className="truncate font-medium text-sm">{chatTitle}</span>
           <Button variant="ghost" size="icon" className="size-6">
             <Pencil className="!size-3" />
           </Button>
@@ -126,7 +126,7 @@ export function Chat({
       <div className="fixed top-0 left-0 z-20 h-22 w-full bg-gradient-to-t from-background/0 via-60% via-background to-background" />
       <div
         ref={chatRef}
-        className="h-screen w-full overflow-y-auto px-4 pt-20 pb-[250px]"
+        className="h-dvh w-full overflow-y-auto overflow-x-hidden px-4 pt-20 pb-[250px]"
       >
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {messages.map((message) =>
@@ -151,6 +151,7 @@ export function Chat({
         status={status}
         stop={stop}
       />
+      <div className="pointer-events-none fixed bottom-0 left-0 h-[180px] w-full bg-gradient-to-b from-background/0 via-70% via-background to-background" />
     </>
   );
 }

@@ -9,7 +9,7 @@ export default function AuthenticatedLayout({
   return (
     <>
       <Header />
-      <main className="relative h-screen">{children}</main>
+      <main className="relative h-dvh overflow-hidden">{children}</main>
     </>
   );
 }

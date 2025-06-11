@@ -1,5 +1,6 @@
 import { prisma } from "@/lib/config/db";
 import type { Message } from "@ai-sdk/react";
+import { getSafeSession } from "@/lib/server/auth-utils";
 
 export const MessageRepository = {
   async upsertMessage({
@@ -31,9 +32,13 @@ export const MessageRepository = {
     });
   },
   async getMessagesByChatId(chatId: string): Promise<Message[]> {
+    const session = await getSafeSession();
     const messages = await prisma.message.findMany({
       where: {
-        chatId
+        chatId,
+        chat: {
+          userId: session.user.id
+        }
       }
     });
 

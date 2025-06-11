@@ -25,12 +25,14 @@ import {
   ArrowUpRightIcon,
   CornerDownLeftIcon,
   type LucideIcon,
+  MenuIcon,
   MessageSquareDiff,
-  SearchIcon,
   Sparkles
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { Button } from "./ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 
 type ActionType = {
   label: string;
@@ -170,7 +172,7 @@ export function CommandPalette({
 
   return (
     <>
-      <button
+      {/* <button
         type="button"
         className="inline-flex h-9 w-fit rounded-md border border-input bg-background px-3 py-2 text-foreground text-sm shadow-xs outline-none transition-[color,box-shadow] placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
         onClick={() => setOpen(true)}
@@ -186,7 +188,20 @@ export function CommandPalette({
         <kbd className="-me-1 ms-12 inline-flex h-5 max-h-full items-center rounded border bg-background px-1 font-[inherit] font-medium text-[0.625rem] text-muted-foreground/70">
           ⌘K
         </kbd>
-      </button>
+      </button> */}
+      <Tooltip>
+        <TooltipTrigger>
+          <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
+            <MenuIcon />
+          </Button>
+        </TooltipTrigger>
+        <TooltipContent side="right" sideOffset={10}>
+          Toggle menu with
+          <kbd className="ml-1 inline-flex h-5 max-h-full items-center rounded border bg-background px-1 font-[inherit] font-medium text-[0.625rem] text-muted-foreground/70">
+            ⌘K
+          </kbd>
+        </TooltipContent>
+      </Tooltip>
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogHeader className="sr-only">
           <DialogTitle>Command Palette</DialogTitle>

@@ -54,8 +54,7 @@ export function ChatInput({
   );
 
   return (
-    <div className="absolute bottom-0 left-0 z-30 w-full px-4 pb-4 text-base">
-      <div className="pointer-events-none absolute bottom-0 left-0 h-[180px] w-full bg-gradient-to-b from-background/0 via-70% via-background to-background" />
+    <div className="fixed bottom-0 left-0 z-30 w-full px-4 pb-4 text-base">
       <div className="relative z-20 mx-auto max-w-2xl rounded-xl border bg-gradient-to-b from-stone-200/0 to-70% to-stone-200 shadow-xl dark:from-stone-800/0 dark:to-stone-800">
         <form className="relative top-border-gradient w-full " onSubmit={handleSubmit}>
           <Textarea
