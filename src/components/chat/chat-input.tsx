@@ -54,17 +54,20 @@ export function ChatInput({
   );
 
   return (
-    <div className="absolute bottom-0 left-0 w-full px-4 pb-4 text-base">
-      <div className="absolute bottom-0 left-0 h-[200px] w-full bg-gradient-to-b from-background/0 via-background to-background" />
-      <div className="relative z-20 mx-auto max-w-2xl rounded-xl bg-muted shadow-xl">
-        <form className="relative w-full" onSubmit={handleSubmit}>
+    <div className="absolute bottom-0 left-0 z-30 w-full px-4 pb-4 text-base">
+      <div className="pointer-events-none absolute bottom-0 left-0 h-[180px] w-full bg-gradient-to-b from-background/0 via-70% via-background to-background" />
+      <div className="relative z-20 mx-auto max-w-2xl rounded-xl border bg-gradient-to-b from-stone-200/0 to-70% to-stone-200 shadow-xl dark:from-stone-800/0 dark:to-stone-800">
+        <form className="relative top-border-gradient w-full " onSubmit={handleSubmit}>
           <Textarea
+            id="chat-input"
             value={input}
             placeholder="Ask anything..."
+            spellCheck={false}
             onChange={setInput}
             onKeyDown={handleKeyDown}
             disabled={isLoading}
-            className="!outline-none !ring-0 !bg-card !text-medium !border-muted !p-4 !text-base min-h-[100px] resize-none rounded-xl"
+            autoFocus
+            className="!outline-none !ring-0 !bg-background/60 dark:!bg-background/35 !border-t-0 !border-x-0 !text-medium !border-muted dark:!border-white/20 !p-4 !text-base min-h-[100px] resize-none rounded-xl backdrop-blur-sm backdrop-filter"
           />
           <div className="absolute right-2 bottom-2 flex items-center justify-center gap-2">
             <SpeechRecognition
@@ -72,7 +75,12 @@ export function ChatInput({
               setValue={handleInputChange}
               isLoading={isLoading}
             />
-            <Button size={"icon"} type="submit" className="rounded-xl">
+            <Button
+              size={"icon"}
+              type="submit"
+              className="rounded-xl"
+              disabled={!isLoading && input.length === 0}
+            >
               {isLoading ? <Square /> : <Send className="mr-0.5" />}
             </Button>
           </div>

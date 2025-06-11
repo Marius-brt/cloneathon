@@ -24,7 +24,7 @@ export function SwitchCard({
     <div className={cn("relative flex w-full items-start gap-2", className)}>
       <div className="flex grow items-start gap-3">
         <div className="mt-1">{icon}</div>
-        <div className="grid grow gap-1">
+        <div className="grid grow gap-1.5">
           <div className="flex items-center justify-between gap-2">
             <Label htmlFor={id}>{title}</Label>
             <Switch

@@ -6,3 +6,5 @@ const provider = createMistral({
 });
 
 export const model = provider("mistral-medium-latest");
+
+export const titleGenerationModel = provider("mistral-medium-latest");

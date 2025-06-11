@@ -1,3 +1,6 @@
+import { CommandPalette } from "@/components/command";
+import { Logout } from "@/components/layout/logout";
+import { ThemeSwitcher } from "@/components/layout/theme-switcher";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -5,12 +8,13 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
 import { getSafeSession } from "@/lib/server/auth-utils";
-import { CommandPalette } from "../command";
-import { Logout } from "./logout";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
+import Link from "next/link";
 
 export async function Header() {
   const session = await getSafeSession();
@@ -25,10 +29,16 @@ export async function Header() {
             <AvatarFallback>{session.user.name}</AvatarFallback>
           </Avatar>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
+        <DropdownMenuContent align="end" className="min-w-40">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger>Theme</DropdownMenuSubTrigger>
+            <ThemeSwitcher />
+          </DropdownMenuSub>
+          <DropdownMenuItem asChild>
+            <Link href="/settings">Settings</Link>
+          </DropdownMenuItem>
           <Logout />
         </DropdownMenuContent>
       </DropdownMenu>

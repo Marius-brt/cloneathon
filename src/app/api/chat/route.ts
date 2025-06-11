@@ -51,7 +51,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
-    const chat = await ChatRepository.getChat(chatId);
+    const chat = await ChatRepository.getOrCreateChat(chatId);
 
     const msg = await MessageRepository.upsertMessage({
       id: crypto.randomUUID(),

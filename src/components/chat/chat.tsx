@@ -3,18 +3,25 @@
 import { AssistantMessage } from "@/components/chat/assistant-message";
 import { ChatInput } from "@/components/chat/chat-input";
 import { UserMessage } from "@/components/chat/user-message";
+import { Button } from "@/components/ui/button";
+import { generateChatName } from "@/lib/server/actions/chat.action";
 import { useChatStore } from "@/lib/stores/chat.store";
 import { type Message, useChat } from "@ai-sdk/react";
-import { Loader2 } from "lucide-react";
+import { Loader2, Pencil } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export function Chat({
   chatId,
-  initialMessages
-}: { chatId: string; initialMessages: Message[] }) {
+  initialMessages,
+  title
+}: { chatId: string; initialMessages: Message[]; title: string }) {
   const { enabledTools } = useChatStore();
   const chatRef = useRef<HTMLDivElement>(null);
   const [autoScroll, setAutoScroll] = useState(true);
+  const [chatTitle, setChatTitle] = useState(title !== "" ? title : "New chat");
+  const [isTitleGenerated, setIsTitleGenerated] = useState(
+    initialMessages.length > 0 && title !== ""
+  );
 
   const { messages, input, status, stop, handleInputChange, handleSubmit } = useChat({
     initialMessages,
@@ -32,7 +39,7 @@ export function Chat({
     }
   });
 
-  const submit = useCallback(() => {
+  const submit = useCallback(async () => {
     setAutoScroll(true);
     handleSubmit();
 
@@ -44,7 +51,21 @@ export function Chat({
         });
       }
     }, 100);
-  }, [handleSubmit]);
+
+    if (!isTitleGenerated) {
+      const text = messages.find((m) => m.role === "user")?.content;
+
+      const title = await generateChatName({
+        chatId,
+        message: text || input
+      });
+
+      if (title.data) {
+        setChatTitle(title.data);
+        setIsTitleGenerated(true);
+      }
+    }
+  }, [chatId, handleSubmit, input, isTitleGenerated, messages]);
 
   const handleScroll = useCallback(
     (e: Event) => {
@@ -81,13 +102,32 @@ export function Chat({
     };
   }, [handleScroll, status]);
 
+  useEffect(() => {
+    if (chatRef.current && initialMessages.length > 0) {
+      setTimeout(() => {
+        chatRef.current?.scrollTo({
+          top: chatRef.current.scrollHeight,
+          behavior: "instant"
+        });
+      }, 200);
+    }
+  }, [initialMessages]);
+
   return (
     <>
+      <div className="absolute top-5 right-0 left-0 flex justify-center">
+        <div className="relative z-50 flex items-center gap-2">
+          <span className="font-medium text-sm">{chatTitle}</span>
+          <Button variant="ghost" size="icon" className="size-6">
+            <Pencil className="!size-3" />
+          </Button>
+        </div>
+      </div>
+      <div className="fixed top-0 left-0 z-20 h-22 w-full bg-gradient-to-t from-background/0 via-60% via-background to-background" />
       <div
         ref={chatRef}
         className="h-screen w-full overflow-y-auto px-4 pt-20 pb-[250px]"
       >
-        <div className="absolute top-0 left-0 h-20 w-full bg-gradient-to-t from-background/0 to-background" />
         <div className="mx-auto flex max-w-3xl flex-col gap-8">
           {messages.map((message) =>
             message.role === "user" ? (

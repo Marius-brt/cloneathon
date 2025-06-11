@@ -2,7 +2,7 @@ import { prisma } from "@/lib/config/db";
 import { getSafeSession } from "@/lib/server/auth-utils";
 
 export const ChatRepository = {
-  async getChat(id: string) {
+  async getOrCreateChat(id: string) {
     const session = await getSafeSession();
     return await prisma.chat.upsert({
       where: {
@@ -48,6 +48,26 @@ export const ChatRepository = {
         id: true,
         title: true
       }
+    });
+  },
+  async getChatTitle(id: string) {
+    const session = await getSafeSession();
+    return await prisma.chat.findUnique({
+      where: {
+        id,
+        userId: session.user.id
+      },
+      select: {
+        title: true
+      }
+    });
+  },
+  async updateChatTitle(id: string, title: string) {
+    const session = await getSafeSession();
+    return await prisma.chat.upsert({
+      where: { id, userId: session.user.id },
+      create: { id, userId: session.user.id, title },
+      update: { title }
     });
   }
 };

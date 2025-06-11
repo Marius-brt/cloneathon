@@ -56,7 +56,11 @@ export function ModelBtn() {
   return (
     <Popover>
       <PopoverTrigger asChild>
-        <Button variant={"outline"} size={"sm"} className="rounded-lg">
+        <Button
+          variant={"outline"}
+          size={"sm"}
+          className="hover:!bg-popover rounded-lg bg-muted pr-2 dark:bg-transparent"
+        >
           {Icon && <Icon className="!size-3" />}
           {currentModel?.label}
         </Button>

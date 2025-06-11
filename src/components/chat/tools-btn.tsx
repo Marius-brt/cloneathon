@@ -20,7 +20,7 @@ export function ToolsBtn() {
           variant={"outline"}
           size={"sm"}
           icon={Settings2}
-          className="rounded-lg pr-2"
+          className="hover:!bg-popover rounded-lg bg-muted pr-2 dark:bg-transparent"
         >
           Tools
           <div className="flex items-center gap-1">
