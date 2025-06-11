@@ -190,7 +190,7 @@ export function CommandPalette({
         </kbd>
       </button> */}
       <Tooltip>
-        <TooltipTrigger>
+        <TooltipTrigger asChild>
           <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
             <MenuIcon />
           </Button>

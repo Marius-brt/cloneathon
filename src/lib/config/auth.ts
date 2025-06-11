@@ -9,10 +9,10 @@ export const auth = betterAuth({
     provider: "postgresql"
   }),
   session: {
-    cookieCache: {
+    /*  cookieCache: {
       enabled: true,
       maxAge: 5 * 60
-    }
+    } */
   },
   socialProviders: {
     github: {
