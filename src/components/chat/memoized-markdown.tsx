@@ -54,7 +54,7 @@ const LANGUAGE_REGEX = /language-(\w+)/;
 function CodeBlock({ children, className, ...props }: CodeComponentProps) {
   const size = useContext(MarkdownSizeContext);
   const match = LANGUAGE_REGEX.exec(className || "");
-  const { theme } = useTheme();
+  const { resolvedTheme } = useTheme();
 
   if (match) {
     const lang = match[1];
@@ -64,7 +64,9 @@ function CodeBlock({ children, className, ...props }: CodeComponentProps) {
         <ShikiHighlighter
           addDefaultStyles={false}
           language={lang}
-          theme={theme === "dark" ? "material-theme-darker" : "material-theme-lighter"}
+          theme={
+            resolvedTheme === "dark" ? "material-theme-darker" : "material-theme-lighter"
+          }
           className="font-mono text-sm [&>pre]:overflow-x-auto [&>pre]:rounded-b-lg [&>pre]:p-4"
           showLanguage={false}
         >

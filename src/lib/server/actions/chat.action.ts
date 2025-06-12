@@ -35,7 +35,7 @@ export const generateChatName = protectedAction
       maxTokens: 100
     });
 
-    const sanitizedTitle = title.text.replace(/["']/g, "");
+    const sanitizedTitle = title.text.trim().replace(/^["']|["']$/g, "");
 
     await ChatRepository.updateChatTitle(chatId, sanitizedTitle);
 
