@@ -1,3 +1,4 @@
+import { appConfig } from "@/lib/config/app";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -11,8 +12,8 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Marius Chat",
-  description: "Marius Chat is a chatbot that can help you with your questions."
+  title: appConfig.name,
+  description: appConfig.description
 };
 
 export const viewport: Viewport = {

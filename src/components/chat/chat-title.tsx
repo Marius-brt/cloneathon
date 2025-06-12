@@ -9,7 +9,7 @@ export function ChatTitle() {
 
   return (
     <div className="-translate-x-1/2 fixed top-5 left-[50%] z-50 flex items-center justify-center">
-      <span className="truncate font-medium text-sm">
+      <span className="max-w-[50vw] truncate font-medium text-sm">
         {chatTitle === "" ? "New chat" : chatTitle}
       </span>
       <Button variant="ghost" size="icon" className="size-6">

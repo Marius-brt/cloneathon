@@ -8,7 +8,7 @@
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "dev": "next dev --turbopack",
+    "dev": "next dev --turbopack --experimental-https",
     "format": "sort-package-json package.json  && biome format --write ./",
     "lint": "biome check --organize-imports-enabled=true ./",
     "start": "next start"
