@@ -62,7 +62,7 @@ export async function POST(req: Request) {
       parts: message.parts
     });
 
-    const previousMessages = await MessageRepository.getMessagesByChatId(chatId);
+    const previousMessages = await MessageRepository.getAllMessages(chatId);
 
     const messages = appendClientMessage({
       messages: previousMessages.map((m) => ({ ...m, content: "" }) as UIMessage),

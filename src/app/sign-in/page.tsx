@@ -1,6 +1,6 @@
 import { FormLoadingState } from "@/components/providers/form-loading-state";
 import { Button } from "@/components/ui/button";
-import { MessageSquareIcon, Triangle } from "lucide-react";
+import { MessageSquareIcon } from "lucide-react";
 import Link from "next/link";
 import { ProviderBtn } from "./_ui/provider-btn";
 

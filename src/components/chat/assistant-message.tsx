@@ -1,16 +1,16 @@
 import { formatDate } from "@/lib/utils";
-import type { UIMessage } from "ai";
-import MemoizedMarkdown from "./memoized-markdown";
+import type { Message } from "ai";
+import { MemoizedMarkdown } from "./markdown";
 import { Source } from "./source";
 import { ToolCalling } from "./tool-calling";
 
-export function AssistantMessage({ message }: { message: UIMessage }) {
-  const sources = message.parts.filter((part) => part.type === "source");
+export function AssistantMessage({ message }: { message: Message }) {
+  const sources = message.parts?.filter((part) => part.type === "source") || [];
 
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col items-start gap-6 text-base">
-        {message.parts.map((part, i) => {
+        {message.parts?.map((part, i) => {
           switch (part.type) {
             case "tool-invocation":
               return (

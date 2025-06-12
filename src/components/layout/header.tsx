@@ -20,7 +20,7 @@ export async function Header() {
   const session = await getSafeSession();
   const recentChats = await ChatRepository.getRecentChats();
   return (
-    <header className="absolute top-0 right-0 left-0 z-40 flex items-center justify-between p-4">
+    <header className="fixed top-0 right-0 left-0 z-40 flex items-center justify-between p-4">
       <CommandPalette recentChats={recentChats} />
       <DropdownMenu>
         <DropdownMenuTrigger className="rounded-full">
