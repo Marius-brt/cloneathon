@@ -1,5 +1,6 @@
 "use client";
 
+import { generateChatName } from "@/lib/server/actions/chat.action";
 import { useChatStore } from "@/lib/stores/chat.store";
 import { useMessagesStore } from "@/lib/stores/messages.store";
 import { type Message, useChat } from "@ai-sdk/react";
@@ -7,8 +8,10 @@ import {
   type ChangeEvent,
   type ReactNode,
   createContext,
+  useCallback,
   useContext,
-  useEffect
+  useEffect,
+  useState
 } from "react";
 
 const ChatContext = createContext<{
@@ -43,9 +46,15 @@ export function ChatProvider({
   children,
   initialMessages,
   chatId,
-  title
-}: { children: ReactNode; initialMessages: Message[]; chatId: string; title: string }) {
-  const { setMessages, setCurrentChatId, setChatTitle } = useMessagesStore();
+  initialTitle
+}: {
+  children: ReactNode;
+  initialMessages: Message[];
+  chatId: string;
+  initialTitle: string;
+}) {
+  const [initialized, setInitialized] = useState(false);
+  const { setMessages, setCurrentChatId, setChatTitle, chatTitle } = useMessagesStore();
   const { enabledTools } = useChatStore();
 
   const { messages, input, status, stop, handleInputChange, handleSubmit, setInput } =
@@ -66,22 +75,58 @@ export function ChatProvider({
     });
 
   useEffect(() => {
+    if (initialized) {
+      return;
+    }
     setMessages(chatId, messages);
     setCurrentChatId(chatId);
-    setChatTitle(title);
-  }, [chatId, messages, setMessages, setCurrentChatId, setChatTitle, title]);
+    setChatTitle(initialTitle);
+    setInitialized(true);
+  }, [
+    chatId,
+    messages,
+    setMessages,
+    setCurrentChatId,
+    setChatTitle,
+    initialTitle,
+    initialized
+  ]);
+
+  const onSubmit = useCallback(() => {
+    handleSubmit();
+
+    if ((initialized && initialMessages.length === 0) || chatTitle === "") {
+      generateChatName({
+        chatId,
+        message: messages.at(-1)?.content || input
+      }).then((data) => {
+        if (data.data) {
+          setChatTitle(data.data);
+        }
+      });
+    }
+  }, [
+    handleSubmit,
+    initialized,
+    initialMessages,
+    chatTitle,
+    setChatTitle,
+    input,
+    chatId,
+    messages
+  ]);
 
   return (
     <ChatContext.Provider
       value={{
         chatId,
         messages,
-        title,
+        title: initialized ? chatTitle : initialTitle,
         input,
         status,
         stop,
         handleInputChange,
-        handleSubmit,
+        handleSubmit: onSubmit,
         setInput
       }}
     >

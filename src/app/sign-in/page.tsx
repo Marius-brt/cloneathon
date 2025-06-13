@@ -6,7 +6,7 @@ import { ProviderBtn } from "./_ui/provider-btn";
 
 export default function SignInPage() {
   return (
-    <section className="flex min-h-screen bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
+    <section className="flex min-h-dvh bg-zinc-50 px-4 py-16 md:py-32 dark:bg-transparent">
       <FormLoadingState>
         <div className="m-auto h-fit w-full max-w-sm overflow-hidden rounded-[calc(var(--radius)+.125rem)] border bg-muted shadow-md shadow-zinc-950/5 dark:[--color-muted:var(--color-zinc-900)]">
           <div className="-m-px rounded-[calc(var(--radius)+.125rem)] border bg-card p-8 pb-6">

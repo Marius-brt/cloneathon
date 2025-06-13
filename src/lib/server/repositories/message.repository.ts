@@ -51,7 +51,8 @@ export const MessageRepository = {
       id: message.id,
       role: message.role as Message["role"],
       parts: message.parts as Message["parts"],
-      content: message.content
+      content: message.content,
+      createdAt: message.createdAt
     })) as Message[];
   },
   async getAllMessages(chatId: string): Promise<Message[]> {
@@ -69,7 +70,8 @@ export const MessageRepository = {
       id: message.id,
       role: message.role as Message["role"],
       parts: message.parts as Message["parts"],
-      content: message.content
+      content: message.content,
+      createdAt: message.createdAt
     })) as Message[];
   }
 };

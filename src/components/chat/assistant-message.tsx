@@ -1,12 +1,12 @@
+import { MemoizedMarkdown } from "@/components/chat/markdown";
+import { Source } from "@/components/chat/source";
+import { ToolCalling } from "@/components/chat/tool-calling";
+import { CopyButton } from "@/components/ui/copy";
 import { formatDate } from "@/lib/utils";
 import type { Message } from "ai";
-import { MemoizedMarkdown } from "./markdown";
-import { Source } from "./source";
-import { ToolCalling } from "./tool-calling";
 
 export function AssistantMessage({ message }: { message: Message }) {
   const sources = message.parts?.filter((part) => part.type === "source") || [];
-
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col items-start gap-6 text-base">
@@ -39,7 +39,8 @@ export function AssistantMessage({ message }: { message: Message }) {
           ))}
         </div>
       )}
-      <div className="text-muted-foreground text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
+      <div className="flex items-center gap-2 py-2 text-muted-foreground text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
+        <CopyButton small value={message.content} />
         {message.createdAt && <span>{formatDate(message.createdAt)}</span>}
       </div>
     </div>

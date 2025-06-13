@@ -29,7 +29,7 @@ export default async function ThreadPage({
     <ChatProvider
       initialMessages={orderedMessages}
       chatId={chatId}
-      title={title?.title || ""}
+      initialTitle={title?.title || ""}
     >
       <ChatTitle />
       <div className="fixed top-0 left-0 z-20 h-22 w-full bg-gradient-to-t from-background/0 via-60% via-background to-background" />

@@ -8,7 +8,7 @@
     "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
-    "dev": "next dev --turbopack --experimental-https",
+    "dev": "next dev --turbopack",
     "format": "sort-package-json package.json  && biome format --write ./",
     "lint": "biome check --organize-imports-enabled=true ./",
     "start": "next start"
@@ -26,6 +26,7 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-switch": "^1.2.5",
     "@radix-ui/react-tooltip": "^1.2.7",
+    "@react-three/fiber": "^9.1.2",
     "@t3-oss/env-nextjs": "^0.13.7",
     "@tavily/core": "^0.5.6",
     "@uidotdev/usehooks": "^2.4.1",
@@ -55,6 +56,7 @@
     "remark-math": "^6.0.0",
     "shiki": "^3.6.0",
     "tailwind-merge": "^3.3.0",
+    "three": "^0.177.0",
     "zod": "^3.25.56",
     "zustand": "^5.0.5"
   },
@@ -66,6 +68,7 @@
     "@types/react-dom": "^19",
     "@types/react-speech-recognition": "^3.9.6",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "@types/three": "^0.177.0",
     "prisma": "^6.9.0",
     "sort-package-json": "^3.2.1",
     "tailwindcss": "^4",

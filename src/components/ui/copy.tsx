@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import { Check, Copy } from "lucide-react";
 import { useState } from "react";
 
-export function CopyButton({ value }: { value: string }) {
+export function CopyButton({ value, small = false }: { value: string; small?: boolean }) {
   const [copied, setCopied] = useState<boolean>(false);
 
   const handleCopy = async () => {
@@ -31,7 +31,10 @@ export function CopyButton({ value }: { value: string }) {
           <Button
             variant="ghost"
             size="icon"
-            className="relative disabled:opacity-100"
+            className={cn(
+              "relative disabled:opacity-100",
+              small && "size-6 [&_svg]:size-3"
+            )}
             onClick={handleCopy}
             aria-label={copied ? "Copied" : "Copy to clipboard"}
             disabled={copied}
@@ -59,7 +62,9 @@ export function CopyButton({ value }: { value: string }) {
             </div>
           </Button>
         </TooltipTrigger>
-        <TooltipContent className="px-2 py-1 text-xs">Click to copy</TooltipContent>
+        <TooltipContent sideOffset={5} className="px-2 py-1 text-xs">
+          Copy to clipboard
+        </TooltipContent>
       </Tooltip>
     </TooltipProvider>
   );
