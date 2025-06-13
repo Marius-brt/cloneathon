@@ -4,14 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Separator } from "@/components/ui/separator";
 import { SwitchCard } from "@/components/ui/switch-card";
-import { useChatStore } from "@/lib/stores/chat.store";
+import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { tools } from "@/lib/tools";
 import { Settings2 } from "lucide-react";
 import { Fragment } from "react";
 import { CommandMenuKbd } from "../ui/command";
 
 export function ToolsBtn() {
-  const { enabledTools, toggleTool } = useChatStore();
+  const { enabledTools, toggleTool } = useChatSettingsStore();
 
   return (
     <Popover>

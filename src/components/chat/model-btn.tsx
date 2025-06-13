@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { type ModelType, models } from "@/lib/ai-providers";
-import { useChatStore } from "@/lib/stores/chat.store";
+import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
 import { useMemo } from "react";
 import { capabilitiesIcons, icons } from "../icons";
@@ -43,7 +43,7 @@ function ModelCard({
 }
 
 export function ModelBtn() {
-  const { aiModel, setAiModel } = useChatStore();
+  const { aiModel, setAiModel } = useChatSettingsStore();
 
   const currentModel = useMemo(() => {
     return models.find((m) => m.name === aiModel);

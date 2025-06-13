@@ -1,11 +1,18 @@
 import { MemoizedMarkdown } from "@/components/chat/markdown";
+import { Reasoning } from "@/components/chat/reasoning";
 import { Source } from "@/components/chat/source";
 import { ToolCalling } from "@/components/chat/tool-calling";
 import { CopyButton } from "@/components/ui/copy";
 import { formatDate } from "@/lib/utils";
 import type { Message } from "ai";
 
-export function AssistantMessage({ message }: { message: Message }) {
+export function AssistantMessage({
+  message,
+  isStreaming
+}: {
+  message: Message;
+  isStreaming: boolean;
+}) {
   const sources = message.parts?.filter((part) => part.type === "source") || [];
   return (
     <div className="flex flex-col gap-2">
@@ -25,6 +32,13 @@ export function AssistantMessage({ message }: { message: Message }) {
                   key={`${message.id}-${i}`}
                   content={part.text}
                   id={message.id}
+                />
+              );
+            case "reasoning":
+              return (
+                <Reasoning
+                  text={part.reasoning}
+                  isReasoning={isStreaming && i === (message.parts?.length ?? 0) - 1}
                 />
               );
             default:

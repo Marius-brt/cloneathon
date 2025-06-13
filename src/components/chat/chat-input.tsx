@@ -1,24 +1,35 @@
 "use client";
 
+import { ModelBtn } from "@/components/chat/model-btn";
 import { SpeechRecognition } from "@/components/chat/speech-recognition";
+import { ToolsBtn } from "@/components/chat/tools-btn";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { Send, Square } from "lucide-react";
 import { type FormEvent, type KeyboardEvent, useCallback } from "react";
-import { useChatProvider } from "../providers/chat-provider";
-import { ModelBtn } from "./model-btn";
-import { ToolsBtn } from "./tools-btn";
 
-export function ChatInput() {
-  const { input, status, stop, setInput, handleSubmit } = useChatProvider();
-  const isLoading = status === "streaming" || status === "submitted";
-
-  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSubmit();
-    }
-  };
+export function ChatInput({
+  stop,
+  handleSubmit,
+  isLoading,
+  input,
+  setInput
+}: {
+  stop: () => void;
+  handleSubmit: () => void;
+  isLoading: boolean;
+  input: string;
+  setInput: (value: string) => void;
+}) {
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent<HTMLTextAreaElement>) => {
+      if (e.key === "Enter" && !e.shiftKey) {
+        e.preventDefault();
+        handleSubmit();
+      }
+    },
+    [handleSubmit]
+  );
 
   const onSubmit = useCallback(
     (e: FormEvent<HTMLFormElement>) => {

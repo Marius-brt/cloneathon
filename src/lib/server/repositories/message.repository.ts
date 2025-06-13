@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/config/db";
+import { MESSAGES_BATCH_SIZE } from "@/lib/constants";
 import { getSafeSession } from "@/lib/server/auth-utils";
 import type { Message } from "@ai-sdk/react";
 
@@ -31,7 +32,7 @@ export const MessageRepository = {
       }
     });
   },
-  async getMessagesByChatId(chatId: string, take: number, skip = 0): Promise<Message[]> {
+  async getMessagesByChatId(chatId: string, count: number): Promise<Message[]> {
     const session = await getSafeSession();
     const messages = await prisma.message.findMany({
       where: {
@@ -40,8 +41,8 @@ export const MessageRepository = {
           userId: session.user.id
         }
       },
-      take,
-      skip,
+      take: MESSAGES_BATCH_SIZE,
+      skip: count,
       orderBy: {
         createdAt: "desc"
       }

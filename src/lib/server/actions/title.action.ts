@@ -6,7 +6,7 @@ import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { generateText } from "ai";
 import z from "zod/v4";
 
-export const generateChatName = protectedAction
+export const generateTitle = protectedAction
   .inputSchema(
     z.object({
       chatId: z.uuid(),

@@ -1,83 +1,86 @@
 "use client";
 
-import { AssistantMessage } from "@/components/chat/assistant-message";
-import { UserMessage } from "@/components/chat/user-message";
-import { useChatMessages } from "@/components/providers/chat-provider";
+import { ChatInput } from "@/components/chat/chat-input";
+import { ChatTitle } from "@/components/chat/chat-title";
+import { Messages } from "@/components/chat/messages";
+import { generateTitle } from "@/lib/server/actions/title.action";
+import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
+import { useChat } from "@ai-sdk/react";
 import type { Message } from "ai";
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 
-export const Chat = memo(function Chat({
-  initialMessages
-}: { initialMessages: Message[] }) {
-  const { messages: liveMessages, isStreaming } = useChatMessages();
-  const [messages, setMessages] = useState<Message[]>(initialMessages || []);
-  const [autoScroll, setAutoScroll] = useState(true);
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (liveMessages && liveMessages.length > 0) {
-      setMessages(liveMessages);
-    }
-  }, [liveMessages]);
-
-  useEffect(() => {
-    if (ref.current && initialMessages.length > 0) {
-      ref.current.scrollTo({
-        top: ref.current.scrollHeight,
-        behavior: "instant"
-      });
-    }
-  }, [initialMessages]);
-
-  const handleScroll = useCallback(
-    (e: Event) => {
-      if (e.target instanceof HTMLElement && autoScroll) {
-        setAutoScroll(false);
-      }
-    },
-    [autoScroll]
+export function Chat({
+  initialMessages,
+  chatId,
+  initialTitle
+}: {
+  initialMessages: Message[];
+  chatId: string;
+  initialTitle: string | null;
+}) {
+  const { enabledTools } = useChatSettingsStore();
+  const [titleGenerated, setTitleGenerated] = useState(
+    initialTitle !== null && initialTitle !== ""
   );
-
-  useEffect(() => {
-    let id: NodeJS.Timeout;
-    if (autoScroll && isStreaming) {
-      id = setInterval(() => {
-        if (ref.current) {
-          ref.current.scrollTo({
-            top: ref.current.scrollHeight,
-            behavior: "smooth"
-          });
-        }
-      }, 200);
-    }
-    return () => clearInterval(id);
-  }, [autoScroll, isStreaming]);
-
-  useEffect(() => {
-    if (ref.current && (isStreaming || status === "submitted")) {
-      ref.current.addEventListener("wheel", handleScroll);
-    }
-    return () => {
-      if (ref.current) {
-        ref.current?.removeEventListener("wheel", handleScroll);
+  const [title, setTitle] = useState(initialTitle || "");
+  const { input, messages, status, stop, handleSubmit, setInput } = useChat({
+    initialMessages,
+    experimental_throttle: 100,
+    sendExtraMessageFields: false,
+    onFinish: () => {
+      window.history.replaceState({}, "", `/${chatId}`);
+      window.dispatchEvent(new CustomEvent("chat-history-updated"));
+    },
+    experimental_prepareRequestBody: ({ messages }) => {
+      const lastMessage = messages.filter((message) => message.role === "user").at(-1);
+      if (!lastMessage) {
+        throw new Error("No message found");
       }
-    };
-  }, [handleScroll, isStreaming]);
+      return {
+        chatId,
+        tools: enabledTools,
+        message: lastMessage
+      };
+    }
+  });
+
+  const isStreaming = status === "streaming" || status === "submitted";
+
+  const submitHandler = useCallback(() => {
+    if (input.length > 0 && !isStreaming) {
+      handleSubmit();
+
+      if (!titleGenerated) {
+        const firstUserMessage = messages.find((message) => message.role === "user");
+        generateTitle({
+          chatId,
+          message: firstUserMessage?.content || input
+        }).then((data) => {
+          if (data.data) {
+            setTitle(data.data);
+            setTitleGenerated(true);
+          }
+        });
+      }
+    }
+  }, [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]);
 
   return (
-    <div
-      ref={ref}
-      className="h-dvh w-full overflow-y-auto overflow-x-hidden px-4 pt-20 pb-[250px]"
-    >
-      <div className="mx-auto flex max-w-3xl flex-col gap-8">
-        {messages.map((message) =>
-          message.role === "user" ? (
-            <UserMessage key={message.id} message={message} />
-          ) : (
-            <AssistantMessage key={message.id} message={message} />
-          )
-        )}
-      </div>
-    </div>
+    <>
+      <ChatTitle title={title} />
+      <Messages
+        messages={messages}
+        isStreaming={isStreaming}
+        chatId={chatId}
+        submitted={status === "submitted"}
+      />
+      <ChatInput
+        stop={stop}
+        handleSubmit={submitHandler}
+        isLoading={isStreaming}
+        input={input}
+        setInput={setInput}
+      />
+    </>
   );
-});
+}
