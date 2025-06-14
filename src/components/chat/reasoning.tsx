@@ -21,7 +21,9 @@ export function Reasoning({ text, isReasoning }: { text: string; isReasoning: bo
           {isReasoning ? (
             <ShinyText className="text-sm">Reasoning</ShinyText>
           ) : (
-            <span className="text-muted-foreground text-sm">Reasoning</span>
+            <span className="text-neutral-600/70 text-sm dark:text-neutral-400/70">
+              Reasoning
+            </span>
           )}
         </AccordionTrigger>
         <AccordionContent className="pt-2 pb-0">

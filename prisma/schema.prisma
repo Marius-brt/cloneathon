@@ -90,6 +90,7 @@ model Message {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   chatId    String
+  modelId   String
 
   chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
 

@@ -1,5 +1,7 @@
-import { model } from "@/lib/config/ai";
+import { readFileSync } from "node:fs";
+import { provider } from "@/lib/config/ai";
 import { getSession } from "@/lib/server/auth-utils";
+import type { Model } from "@/lib/server/openrouter";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 import { getTools } from "@/lib/server/tools";
@@ -17,9 +19,14 @@ import { z } from "zod";
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
+const models: Record<string, Model> = JSON.parse(
+  readFileSync("src/assets/models.json", "utf-8")
+);
+
 const bodySchema = z.object({
   chatId: z.string(),
   tools: z.array(z.string()),
+  modelId: z.string(),
   message: z.object({
     content: z.string(),
     role: z.enum(["user"]),
@@ -44,7 +51,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
     }
 
-    const { chatId, message, tools } = body.data;
+    const { chatId, message, tools, modelId } = body.data;
+
+    if (!models[modelId]) {
+      return NextResponse.json({ error: "Model not found" }, { status: 404 });
+    }
 
     const session = await getSession();
 
@@ -57,6 +68,7 @@ export async function POST(req: Request) {
     const msg = await MessageRepository.upsertMessage({
       id: crypto.randomUUID(),
       chatId: chat.id,
+      modelId,
       role: message.role,
       content: message.content,
       parts: message.parts
@@ -77,7 +89,7 @@ export async function POST(req: Request) {
     return createDataStreamResponse({
       execute: async (dataStream) => {
         const result = streamText({
-          model,
+          model: provider(modelId),
           messages,
           experimental_generateMessageId: () => crypto.randomUUID(),
           system: `
@@ -113,6 +125,7 @@ export async function POST(req: Request) {
               }
 
               await MessageRepository.upsertMessage({
+                modelId,
                 id: newMessage.id,
                 chatId: chatId,
                 role: newMessage.role,

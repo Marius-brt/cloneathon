@@ -37,6 +37,7 @@ export function AssistantMessage({
             case "reasoning":
               return (
                 <Reasoning
+                  key={`${message.id}-${i}`}
                   text={part.reasoning}
                   isReasoning={isStreaming && i === (message.parts?.length ?? 0) - 1}
                 />

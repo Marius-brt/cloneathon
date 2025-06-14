@@ -1,15 +1,14 @@
-import { defaultModel } from "@/lib/ai-providers";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 
 type ChatSettingsStore = {
   enabledTools: string[];
-  aiModel: string;
+  modelId?: string;
 };
 
 type ChatSettingsStoreActions = {
   toggleTool: (tool: string) => void;
-  setAiModel: (model: string) => void;
+  setModelId: (modelId: string) => void;
 };
 
 export const useChatSettingsStore = create<
@@ -18,14 +17,13 @@ export const useChatSettingsStore = create<
   persist(
     (set) => ({
       enabledTools: [],
-      aiModel: defaultModel,
       toggleTool: (tool) =>
         set((state) => ({
           enabledTools: state.enabledTools.includes(tool)
             ? state.enabledTools.filter((t) => t !== tool)
             : [...state.enabledTools, tool]
         })),
-      setAiModel: (model) => set({ aiModel: model })
+      setModelId: (modelId) => set({ modelId })
     }),
     {
       name: "chat-settings-store",

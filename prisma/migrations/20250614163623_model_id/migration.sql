@@ -1,0 +1,4 @@
+ALTER TABLE "message" ADD COLUMN "modelId" TEXT NOT NULL DEFAULT '';
+
+ALTER TABLE "message" ALTER COLUMN "modelId" DROP DEFAULT;
+

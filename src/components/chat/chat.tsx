@@ -18,7 +18,7 @@ export function Chat({
   chatId: string;
   initialTitle: string | null;
 }) {
-  const { enabledTools } = useChatSettingsStore();
+  const { enabledTools, modelId } = useChatSettingsStore();
   const [titleGenerated, setTitleGenerated] = useState(
     initialTitle !== null && initialTitle !== ""
   );
@@ -39,6 +39,7 @@ export function Chat({
       return {
         chatId,
         tools: enabledTools,
+        modelId,
         message: lastMessage
       };
     }

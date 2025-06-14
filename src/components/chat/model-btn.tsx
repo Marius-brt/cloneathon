@@ -1,20 +1,27 @@
 "use client";
 
+import { capabilitiesIcons, icons } from "@/components/icons";
+import { useModels } from "@/components/providers/models.provider";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { type ModelType, models } from "@/lib/ai-providers";
+import type { Model } from "@/lib/server/openrouter";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
-import { useMemo } from "react";
-import { capabilitiesIcons, icons } from "../icons";
+import { useDebounce } from "@uidotdev/usehooks";
+import { Bot, Brain } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 
 function ModelCard({
   model,
   active,
   onSelect
-}: { model: ModelType; active: boolean; onSelect: () => void }) {
+}: { model: Model; active: boolean; onSelect: () => void }) {
   const Icon = useMemo(() => {
-    return icons[model.provider as keyof typeof icons];
+    if (!icons[model.provider_id as keyof typeof icons]) {
+      return Bot;
+    }
+    return icons[model.provider_id as keyof typeof icons];
   }, [model]);
 
   return (
@@ -22,15 +29,24 @@ function ModelCard({
       type="button"
       onClick={onSelect}
       className={cn(
-        "flex flex-col items-center gap-2 rounded-lg border border-transparent px-2 py-4 text-center transition-all duration-300",
+        "flex h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-1 py-3 text-center transition-all duration-300",
         active && "border-border bg-muted"
       )}
     >
-      <Icon className="!size-6" />
-      <span className="font-medium text-sm">{model.label}</span>
+      {Icon && <Icon className="!size-7" />}
+      <span className="font-medium text-sm">{model.model_name}</span>
       <div className="mt-auto flex items-center gap-2">
-        {model.capabilities.map((capability) => {
-          const { icon: Icon, color } = capabilitiesIcons[capability];
+        {model.reasoning && (
+          <div className={"rounded bg-purple-500/10 p-1 text-purple-500"}>
+            <Brain className="!size-3" />
+          </div>
+        )}
+        {model.input_capabilities.map((capability) => {
+          if (!capabilitiesIcons[capability as keyof typeof capabilitiesIcons]) {
+            return null;
+          }
+          const { icon: Icon, color } =
+            capabilitiesIcons[capability as keyof typeof capabilitiesIcons];
           return (
             <div key={capability} className={cn(color, "rounded p-1")}>
               <Icon className="!size-3" />
@@ -43,15 +59,38 @@ function ModelCard({
 }
 
 export function ModelBtn() {
-  const { aiModel, setAiModel } = useChatSettingsStore();
+  const models = useModels();
+  const { modelId, setModelId } = useChatSettingsStore();
+  const [search, setSearch] = useState("");
+  const debouncedSearch = useDebounce(search, 100);
+  const [results, setResults] = useState<Model[]>([]);
 
   const currentModel = useMemo(() => {
-    return models.find((m) => m.name === aiModel);
-  }, [aiModel]);
+    if (!modelId) {
+      return null;
+    }
+    return models[modelId];
+  }, [modelId, models]);
 
   const Icon = useMemo(() => {
-    return icons[currentModel?.provider as keyof typeof icons];
+    if (!currentModel || !icons[currentModel.provider_id as keyof typeof icons]) {
+      return Bot;
+    }
+    return icons[currentModel.provider_id as keyof typeof icons];
   }, [currentModel]);
+
+  useEffect(() => {
+    setResults(
+      (debouncedSearch.length > 0
+        ? Object.values(models).filter(
+            (model) =>
+              model.model_name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
+              model.provider_name.toLowerCase().includes(debouncedSearch.toLowerCase())
+          )
+        : Object.values(models).slice(0, 9)
+      ).sort((a, b) => a.id.localeCompare(b.id))
+    );
+  }, [debouncedSearch, models]);
 
   return (
     <Popover>
@@ -62,21 +101,29 @@ export function ModelBtn() {
           className="hover:!bg-popover rounded-lg bg-muted pr-2 dark:bg-transparent"
         >
           {Icon && <Icon className="!size-3" />}
-          {currentModel?.label}
+          {currentModel?.model_name}
         </Button>
       </PopoverTrigger>
       <PopoverContent
         align="start"
-        className="grid grid-cols-2 gap-2 overflow-hidden p-2"
+        className="flex w-[610px] flex-col gap-2 overflow-hidden p-2"
       >
-        {models.map((model) => (
-          <ModelCard
-            key={model.name}
-            model={model}
-            active={model.name === aiModel}
-            onSelect={() => setAiModel(model.name)}
-          />
-        ))}
+        <Input
+          placeholder="Search models"
+          className="w-full"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        <div className="flex max-h-[400px] w-full flex-wrap gap-2 overflow-y-auto pt-2">
+          {Object.values(results).map((model) => (
+            <ModelCard
+              key={model.id}
+              model={model}
+              active={model.id === modelId}
+              onSelect={() => setModelId(model.id)}
+            />
+          ))}
+        </div>
       </PopoverContent>
     </Popover>
   );

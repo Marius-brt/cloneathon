@@ -1,0 +1,5941 @@
+{
+  "mistralai/magistral-small-2506": {
+    "id": "mistralai/magistral-small-2506",
+    "model_name": "Magistral Small 2506",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": true,
+    "context_window": 40000,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/magistral-medium-2506": {
+    "id": "mistralai/magistral-medium-2506",
+    "model_name": "Magistral Medium 2506",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/magistral-medium-2506:thinking": {
+    "id": "mistralai/magistral-medium-2506:thinking",
+    "model_name": "Magistral Medium 2506 (thinking)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-pro-preview": {
+    "id": "google/gemini-2.5-pro-preview",
+    "model_name": "Gemini 2.5 Pro Preview 06-05",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.00001",
+      "image": "0.00516"
+    },
+    "input_capabilities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sentientagi/dobby-mini-unhinged-plus-llama-3.1-8b": {
+    "id": "sentientagi/dobby-mini-unhinged-plus-llama-3.1-8b",
+    "model_name": "Dobby Mini Plus Llama 3.1 8B",
+    "provider_name": "SentientAGI",
+    "provider_id": "sentientagi",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-7b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-7b",
+    "model_name": "R1 Distill Qwen 7B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-0528-qwen3-8b:free": {
+    "id": "deepseek/deepseek-r1-0528-qwen3-8b:free",
+    "model_name": "Deepseek R1 0528 Qwen3 8B (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-0528-qwen3-8b": {
+    "id": "deepseek/deepseek-r1-0528-qwen3-8b",
+    "model_name": "Deepseek R1 0528 Qwen3 8B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-0528:free": {
+    "id": "deepseek/deepseek-r1-0528:free",
+    "model_name": "R1 0528 (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-0528": {
+    "id": "deepseek/deepseek-r1-0528",
+    "model_name": "R1 0528",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.00000215",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sarvamai/sarvam-m:free": {
+    "id": "sarvamai/sarvam-m:free",
+    "model_name": "Sarvam-M (free)",
+    "provider_name": "Sarvam AI",
+    "provider_id": "sarvamai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thedrummer/valkyrie-49b-v1": {
+    "id": "thedrummer/valkyrie-49b-v1",
+    "model_name": "Valkyrie 49B V1",
+    "provider_name": "TheDrummer",
+    "provider_id": "thedrummer",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-opus-4": {
+    "id": "anthropic/claude-opus-4",
+    "model_name": "Claude Opus 4",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": true,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000015",
+      "output": "0.000075",
+      "image": "0.024"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-sonnet-4": {
+    "id": "anthropic/claude-sonnet-4",
+    "model_name": "Claude Sonnet 4",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": true,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/devstral-small:free": {
+    "id": "mistralai/devstral-small:free",
+    "model_name": "Devstral Small (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/devstral-small": {
+    "id": "mistralai/devstral-small",
+    "model_name": "Devstral Small",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000006",
+      "output": "0.00000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3n-e4b-it:free": {
+    "id": "google/gemma-3n-e4b-it:free",
+    "model_name": "Gemma 3n 4B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-05-20": {
+    "id": "google/gemini-2.5-flash-preview-05-20",
+    "model_name": "Gemini 2.5 Flash Preview 05-20",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0.0006192"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash-preview-05-20:thinking": {
+    "id": "google/gemini-2.5-flash-preview-05-20:thinking",
+    "model_name": "Gemini 2.5 Flash Preview 05-20 (thinking)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000035",
+      "image": "0.0006192"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.3-8b-instruct:free": {
+    "id": "meta-llama/llama-3.3-8b-instruct:free",
+    "model_name": "Llama 3.3 8B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/deephermes-3-mistral-24b-preview:free": {
+    "id": "nousresearch/deephermes-3-mistral-24b-preview:free",
+    "model_name": "DeepHermes 3 Mistral 24B Preview (free)",
+    "provider_name": "Nous",
+    "provider_id": "nous",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-medium-3": {
+    "id": "mistralai/mistral-medium-3",
+    "model_name": "Mistral Medium 3",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000004",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-pro-preview-05-06": {
+    "id": "google/gemini-2.5-pro-preview-05-06",
+    "model_name": "Gemini 2.5 Pro Preview 05-06",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.00001",
+      "image": "0.00516"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/caller-large": {
+    "id": "arcee-ai/caller-large",
+    "model_name": "Caller Large",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000055",
+      "output": "0.00000085",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/spotlight": {
+    "id": "arcee-ai/spotlight",
+    "model_name": "Spotlight",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000018",
+      "output": "0.00000018",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/maestro-reasoning": {
+    "id": "arcee-ai/maestro-reasoning",
+    "model_name": "Maestro Reasoning",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000033",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/virtuoso-large": {
+    "id": "arcee-ai/virtuoso-large",
+    "model_name": "Virtuoso Large",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000075",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/coder-large": {
+    "id": "arcee-ai/coder-large",
+    "model_name": "Coder Large",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/virtuoso-medium-v2": {
+    "id": "arcee-ai/virtuoso-medium-v2",
+    "model_name": "Virtuoso Medium V2",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arcee-ai/arcee-blitz": {
+    "id": "arcee-ai/arcee-blitz",
+    "model_name": "Arcee Blitz",
+    "provider_name": "Arcee AI",
+    "provider_id": "arceeai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000045",
+      "output": "0.00000075",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-4-reasoning-plus:free": {
+    "id": "microsoft/phi-4-reasoning-plus:free",
+    "model_name": "Phi 4 Reasoning Plus (free)",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-4-reasoning-plus": {
+    "id": "microsoft/phi-4-reasoning-plus",
+    "model_name": "Phi 4 Reasoning Plus",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000007",
+      "output": "0.00000035",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-4-reasoning:free": {
+    "id": "microsoft/phi-4-reasoning:free",
+    "model_name": "Phi 4 Reasoning (free)",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "opengvlab/internvl3-14b:free": {
+    "id": "opengvlab/internvl3-14b:free",
+    "model_name": "InternVL3 14B (free)",
+    "provider_name": "OpenGVLab",
+    "provider_id": "opengvlab",
+    "reasoning": false,
+    "context_window": 12288,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "opengvlab/internvl3-2b:free": {
+    "id": "opengvlab/internvl3-2b:free",
+    "model_name": "InternVL3 2B (free)",
+    "provider_name": "OpenGVLab",
+    "provider_id": "opengvlab",
+    "reasoning": false,
+    "context_window": 12288,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-prover-v2:free": {
+    "id": "deepseek/deepseek-prover-v2:free",
+    "model_name": "DeepSeek Prover V2 (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-prover-v2": {
+    "id": "deepseek/deepseek-prover-v2",
+    "model_name": "DeepSeek Prover V2",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.00000218",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-guard-4-12b": {
+    "id": "meta-llama/llama-guard-4-12b",
+    "model_name": "Llama Guard 4 12B",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.00000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-30b-a3b:free": {
+    "id": "qwen/qwen3-30b-a3b:free",
+    "model_name": "Qwen3 30B A3B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-30b-a3b": {
+    "id": "qwen/qwen3-30b-a3b",
+    "model_name": "Qwen3 30B A3B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.00000008",
+      "output": "0.00000029",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-8b:free": {
+    "id": "qwen/qwen3-8b:free",
+    "model_name": "Qwen3 8B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-8b": {
+    "id": "qwen/qwen3-8b",
+    "model_name": "Qwen3 8B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000000035",
+      "output": "0.000000138",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-14b:free": {
+    "id": "qwen/qwen3-14b:free",
+    "model_name": "Qwen3 14B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-14b": {
+    "id": "qwen/qwen3-14b",
+    "model_name": "Qwen3 14B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.00000006",
+      "output": "0.00000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-32b:free": {
+    "id": "qwen/qwen3-32b:free",
+    "model_name": "Qwen3 32B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-32b": {
+    "id": "qwen/qwen3-32b",
+    "model_name": "Qwen3 32B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-235b-a22b:free": {
+    "id": "qwen/qwen3-235b-a22b:free",
+    "model_name": "Qwen3 235B A22B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen3-235b-a22b": {
+    "id": "qwen/qwen3-235b-a22b",
+    "model_name": "Qwen3 235B A22B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40960,
+    "pricing": {
+      "input": "0.00000013",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "tngtech/deepseek-r1t-chimera:free": {
+    "id": "tngtech/deepseek-r1t-chimera:free",
+    "model_name": "DeepSeek R1T Chimera (free)",
+    "provider_name": "TNG",
+    "provider_id": "tng",
+    "reasoning": true,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thudm/glm-z1-rumination-32b": {
+    "id": "thudm/glm-z1-rumination-32b",
+    "model_name": "GLM Z1 Rumination 32B",
+    "provider_name": "THUDM",
+    "provider_id": "thudm",
+    "reasoning": true,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000024",
+      "output": "0.00000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/mai-ds-r1:free": {
+    "id": "microsoft/mai-ds-r1:free",
+    "model_name": "MAI DS R1 (free)",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": true,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thudm/glm-z1-32b:free": {
+    "id": "thudm/glm-z1-32b:free",
+    "model_name": "GLM Z1 32B (free)",
+    "provider_name": "THUDM",
+    "provider_id": "thudm",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thudm/glm-z1-32b": {
+    "id": "thudm/glm-z1-32b",
+    "model_name": "GLM Z1 32B",
+    "provider_name": "THUDM",
+    "provider_id": "thudm",
+    "reasoning": true,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000024",
+      "output": "0.00000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thudm/glm-4-32b:free": {
+    "id": "thudm/glm-4-32b:free",
+    "model_name": "GLM 4 32B (free)",
+    "provider_name": "THUDM",
+    "provider_id": "thudm",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thudm/glm-4-32b": {
+    "id": "thudm/glm-4-32b",
+    "model_name": "GLM 4 32B",
+    "provider_name": "THUDM",
+    "provider_id": "thudm",
+    "reasoning": false,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000024",
+      "output": "0.00000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash-preview": {
+    "id": "google/gemini-2.5-flash-preview",
+    "model_name": "Gemini 2.5 Flash Preview 04-17",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0.0006192"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash-preview:thinking": {
+    "id": "google/gemini-2.5-flash-preview:thinking",
+    "model_name": "Gemini 2.5 Flash Preview 04-17 (thinking)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000035",
+      "image": "0.0006192"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "shisa-ai/shisa-v2-llama3.3-70b:free": {
+    "id": "shisa-ai/shisa-v2-llama3.3-70b:free",
+    "model_name": "Shisa V2 Llama 3.3 70B  (free)",
+    "provider_name": "Shisa AI",
+    "provider_id": "shisaai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4.1": {
+    "id": "openai/gpt-4.1",
+    "model_name": "GPT-4.1",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 1047576,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4.1-mini": {
+    "id": "openai/gpt-4.1-mini",
+    "model_name": "GPT-4.1 Mini",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 1047576,
+    "pricing": {
+      "input": "0.0000004",
+      "output": "0.0000016",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4.1-nano": {
+    "id": "openai/gpt-4.1-nano",
+    "model_name": "GPT-4.1 Nano",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 1047576,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "eleutherai/llemma_7b": {
+    "id": "eleutherai/llemma_7b",
+    "model_name": "Llemma 7b",
+    "provider_name": "EleutherAI",
+    "provider_id": "eleutherai",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "alfredpros/codellama-7b-instruct-solidity": {
+    "id": "alfredpros/codellama-7b-instruct-solidity",
+    "model_name": "CodeLLaMa 7B Instruct Solidity",
+    "provider_name": "AlfredPros",
+    "provider_id": "alfredpros",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "arliai/qwq-32b-arliai-rpr-v1:free": {
+    "id": "arliai/qwq-32b-arliai-rpr-v1:free",
+    "model_name": "QwQ 32B RpR v1 (free)",
+    "provider_name": "ArliAI",
+    "provider_id": "arliai",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "agentica-org/deepcoder-14b-preview:free": {
+    "id": "agentica-org/deepcoder-14b-preview:free",
+    "model_name": "Deepcoder 14B Preview (free)",
+    "provider_name": "Agentica",
+    "provider_id": "agentica",
+    "reasoning": true,
+    "context_window": 96000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "moonshotai/kimi-vl-a3b-thinking:free": {
+    "id": "moonshotai/kimi-vl-a3b-thinking:free",
+    "model_name": "Kimi VL A3B Thinking (free)",
+    "provider_name": "Moonshot AI",
+    "provider_id": "moonshotai",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-3-mini-beta": {
+    "id": "x-ai/grok-3-mini-beta",
+    "model_name": "Grok 3 Mini Beta",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.0000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-3-beta": {
+    "id": "x-ai/grok-3-beta",
+    "model_name": "Grok 3 Beta",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nvidia/llama-3.3-nemotron-super-49b-v1:free": {
+    "id": "nvidia/llama-3.3-nemotron-super-49b-v1:free",
+    "model_name": "Llama 3.3 Nemotron Super 49B v1 (free)",
+    "provider_name": "NVIDIA",
+    "provider_id": "nvidia",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nvidia/llama-3.3-nemotron-super-49b-v1": {
+    "id": "nvidia/llama-3.3-nemotron-super-49b-v1",
+    "model_name": "Llama 3.3 Nemotron Super 49B v1",
+    "provider_name": "NVIDIA",
+    "provider_id": "nvidia",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000013",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-ultra-253b-v1:free": {
+    "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1:free",
+    "model_name": "Llama 3.1 Nemotron Ultra 253B v1 (free)",
+    "provider_name": "NVIDIA",
+    "provider_id": "nvidia",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-ultra-253b-v1": {
+    "id": "nvidia/llama-3.1-nemotron-ultra-253b-v1",
+    "model_name": "Llama 3.1 Nemotron Ultra 253B v1",
+    "provider_name": "NVIDIA",
+    "provider_id": "nvidia",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000006",
+      "output": "0.0000018",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-4-maverick:free": {
+    "id": "meta-llama/llama-4-maverick:free",
+    "model_name": "Llama 4 Maverick (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-4-maverick": {
+    "id": "meta-llama/llama-4-maverick",
+    "model_name": "Llama 4 Maverick",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0.0006684"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-4-scout:free": {
+    "id": "meta-llama/llama-4-scout:free",
+    "model_name": "Llama 4 Scout (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-4-scout": {
+    "id": "meta-llama/llama-4-scout",
+    "model_name": "Llama 4 Scout",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000008",
+      "output": "0.0000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "all-hands/openhands-lm-32b-v0.1": {
+    "id": "all-hands/openhands-lm-32b-v0.1",
+    "model_name": "OpenHands LM 32B V0.1",
+    "provider_name": "OpenHands",
+    "provider_id": "openhands",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000026",
+      "output": "0.0000034",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-v3-base:free": {
+    "id": "deepseek/deepseek-v3-base:free",
+    "model_name": "DeepSeek V3 Base (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "scb10x/llama3.1-typhoon2-70b-instruct": {
+    "id": "scb10x/llama3.1-typhoon2-70b-instruct",
+    "model_name": "Typhoon2 70B Instruct",
+    "provider_name": "Typhoon",
+    "provider_id": "typhoon",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000088",
+      "output": "0.00000088",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen2.5-vl-3b-instruct:free": {
+    "id": "qwen/qwen2.5-vl-3b-instruct:free",
+    "model_name": "Qwen2.5 VL 3B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 64000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-pro-exp-03-25": {
+    "id": "google/gemini-2.5-pro-exp-03-25",
+    "model_name": "Gemini 2.5 Pro Experimental",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen2.5-vl-32b-instruct:free": {
+    "id": "qwen/qwen2.5-vl-32b-instruct:free",
+    "model_name": "Qwen2.5 VL 32B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen2.5-vl-32b-instruct": {
+    "id": "qwen/qwen2.5-vl-32b-instruct",
+    "model_name": "Qwen2.5 VL 32B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-chat-v3-0324:free": {
+    "id": "deepseek/deepseek-chat-v3-0324:free",
+    "model_name": "DeepSeek V3 0324 (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-chat-v3-0324": {
+    "id": "deepseek/deepseek-chat-v3-0324",
+    "model_name": "DeepSeek V3 0324",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.00000088",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "featherless/qwerky-72b:free": {
+    "id": "featherless/qwerky-72b:free",
+    "model_name": "Qwerky 72B (free)",
+    "provider_name": "Qwerky",
+    "provider_id": "qwerky",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small-3.1-24b-instruct:free": {
+    "id": "mistralai/mistral-small-3.1-24b-instruct:free",
+    "model_name": "Mistral Small 3.1 24B (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 96000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small-3.1-24b-instruct": {
+    "id": "mistralai/mistral-small-3.1-24b-instruct",
+    "model_name": "Mistral Small 3.1 24B",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "open-r1/olympiccoder-32b:free": {
+    "id": "open-r1/olympiccoder-32b:free",
+    "model_name": "OlympicCoder 32B (free)",
+    "provider_name": "OlympicCoder",
+    "provider_id": "olympiccoder",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-1b-it:free": {
+    "id": "google/gemma-3-1b-it:free",
+    "model_name": "Gemma 3 1B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-4b-it:free": {
+    "id": "google/gemma-3-4b-it:free",
+    "model_name": "Gemma 3 4B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 96000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-4b-it": {
+    "id": "google/gemma-3-4b-it",
+    "model_name": "Gemma 3 4B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000002",
+      "output": "0.00000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "ai21/jamba-1.6-large": {
+    "id": "ai21/jamba-1.6-large",
+    "model_name": "Jamba 1.6 Large",
+    "provider_name": "AI21",
+    "provider_id": "ai21",
+    "reasoning": false,
+    "context_window": 256000,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "ai21/jamba-1.6-mini": {
+    "id": "ai21/jamba-1.6-mini",
+    "model_name": "Jamba Mini 1.6",
+    "provider_name": "AI21",
+    "provider_id": "ai21",
+    "reasoning": false,
+    "context_window": 256000,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-12b-it:free": {
+    "id": "google/gemma-3-12b-it:free",
+    "model_name": "Gemma 3 12B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 96000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-12b-it": {
+    "id": "google/gemma-3-12b-it",
+    "model_name": "Gemma 3 12B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-a": {
+    "id": "cohere/command-a",
+    "model_name": "Command A",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 256000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "rekaai/reka-flash-3:free": {
+    "id": "rekaai/reka-flash-3:free",
+    "model_name": "Flash 3 (free)",
+    "provider_name": "Reka",
+    "provider_id": "reka",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-27b-it:free": {
+    "id": "google/gemma-3-27b-it:free",
+    "model_name": "Gemma 3 27B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 96000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-3-27b-it": {
+    "id": "google/gemma-3-27b-it",
+    "model_name": "Gemma 3 27B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000002",
+      "image": "0.0000256"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thedrummer/anubis-pro-105b-v1": {
+    "id": "thedrummer/anubis-pro-105b-v1",
+    "model_name": "Anubis Pro 105B V1",
+    "provider_name": "TheDrummer",
+    "provider_id": "thedrummer",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thedrummer/skyfall-36b-v2": {
+    "id": "thedrummer/skyfall-36b-v2",
+    "model_name": "Skyfall 36B V2",
+    "provider_name": "TheDrummer",
+    "provider_id": "thedrummer",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-4-multimodal-instruct": {
+    "id": "microsoft/phi-4-multimodal-instruct",
+    "model_name": "Phi 4 Multimodal Instruct",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.0000001",
+      "image": "0.00017685"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/sonar-reasoning-pro": {
+    "id": "perplexity/sonar-reasoning-pro",
+    "model_name": "Sonar Reasoning Pro",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/sonar-pro": {
+    "id": "perplexity/sonar-pro",
+    "model_name": "Sonar Pro",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/sonar-deep-research": {
+    "id": "perplexity/sonar-deep-research",
+    "model_name": "Sonar Deep Research",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-zero:free": {
+    "id": "deepseek/deepseek-r1-zero:free",
+    "model_name": "DeepSeek R1 Zero (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwq-32b:free": {
+    "id": "qwen/qwq-32b:free",
+    "model_name": "QwQ 32B (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 40000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwq-32b": {
+    "id": "qwen/qwq-32b",
+    "model_name": "QwQ 32B",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "moonshotai/moonlight-16b-a3b-instruct:free": {
+    "id": "moonshotai/moonlight-16b-a3b-instruct:free",
+    "model_name": "Moonlight 16B A3B Instruct (free)",
+    "provider_name": "Moonshot AI",
+    "provider_id": "moonshotai",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/deephermes-3-llama-3-8b-preview:free": {
+    "id": "nousresearch/deephermes-3-llama-3-8b-preview:free",
+    "model_name": "DeepHermes 3 Llama 3 8B Preview (free)",
+    "provider_name": "Nous",
+    "provider_id": "nous",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4.5-preview": {
+    "id": "openai/gpt-4.5-preview",
+    "model_name": "GPT-4.5 (Preview)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000075",
+      "output": "0.00015",
+      "image": "0.108375"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.0-flash-lite-001": {
+    "id": "google/gemini-2.0-flash-lite-001",
+    "model_name": "Gemini 2.0 Flash Lite",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.000000075",
+      "output": "0.0000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.7-sonnet": {
+    "id": "anthropic/claude-3.7-sonnet",
+    "model_name": "Claude 3.7 Sonnet",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": true,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.7-sonnet:beta": {
+    "id": "anthropic/claude-3.7-sonnet:beta",
+    "model_name": "Claude 3.7 Sonnet (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": true,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.7-sonnet:thinking": {
+    "id": "anthropic/claude-3.7-sonnet:thinking",
+    "model_name": "Claude 3.7 Sonnet (thinking)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": true,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/r1-1776": {
+    "id": "perplexity/r1-1776",
+    "model_name": "R1 1776",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-saba": {
+    "id": "mistralai/mistral-saba",
+    "model_name": "Saba",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cognitivecomputations/dolphin3.0-r1-mistral-24b:free": {
+    "id": "cognitivecomputations/dolphin3.0-r1-mistral-24b:free",
+    "model_name": "Dolphin3.0 R1 Mistral 24B (free)",
+    "provider_name": "Dolphin",
+    "provider_id": "dolphin",
+    "reasoning": true,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cognitivecomputations/dolphin3.0-mistral-24b:free": {
+    "id": "cognitivecomputations/dolphin3.0-mistral-24b:free",
+    "model_name": "Dolphin3.0 Mistral 24B (free)",
+    "provider_name": "Dolphin",
+    "provider_id": "dolphin",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-guard-3-8b": {
+    "id": "meta-llama/llama-guard-3-8b",
+    "model_name": "Llama Guard 3 8B",
+    "provider_name": "Llama",
+    "provider_id": "llama",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000002",
+      "output": "0.00000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-8b": {
+    "id": "deepseek/deepseek-r1-distill-llama-8b",
+    "model_name": "R1 Distill Llama 8B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000004",
+      "output": "0.00000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.0-flash-001": {
+    "id": "google/gemini-2.0-flash-001",
+    "model_name": "Gemini 2.0 Flash",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000004",
+      "image": "0.0000258"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-vl-plus": {
+    "id": "qwen/qwen-vl-plus",
+    "model_name": "Qwen VL Plus",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 7500,
+    "pricing": {
+      "input": "0.00000021",
+      "output": "0.00000063",
+      "image": "0.0002688"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "aion-labs/aion-1.0": {
+    "id": "aion-labs/aion-1.0",
+    "model_name": "Aion-1.0",
+    "provider_name": "AionLabs",
+    "provider_id": "aionlabs",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000004",
+      "output": "0.000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "aion-labs/aion-1.0-mini": {
+    "id": "aion-labs/aion-1.0-mini",
+    "model_name": "Aion-1.0-Mini",
+    "provider_name": "AionLabs",
+    "provider_id": "aionlabs",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000007",
+      "output": "0.0000014",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "aion-labs/aion-rp-llama-3.1-8b": {
+    "id": "aion-labs/aion-rp-llama-3.1-8b",
+    "model_name": "Aion-RP 1.0 (8B)",
+    "provider_name": "AionLabs",
+    "provider_id": "aionlabs",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-vl-max": {
+    "id": "qwen/qwen-vl-max",
+    "model_name": "Qwen VL Max",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 7500,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000032",
+      "image": "0.001024"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-turbo": {
+    "id": "qwen/qwen-turbo",
+    "model_name": "Qwen-Turbo",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 1000000,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen2.5-vl-72b-instruct:free": {
+    "id": "qwen/qwen2.5-vl-72b-instruct:free",
+    "model_name": "Qwen2.5 VL 72B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen2.5-vl-72b-instruct": {
+    "id": "qwen/qwen2.5-vl-72b-instruct",
+    "model_name": "Qwen2.5 VL 72B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.00000075",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-plus": {
+    "id": "qwen/qwen-plus",
+    "model_name": "Qwen-Plus",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000004",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-max": {
+    "id": "qwen/qwen-max",
+    "model_name": "Qwen-Max",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000016",
+      "output": "0.0000064",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-1.5b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-1.5b",
+    "model_name": "R1 Distill Qwen 1.5B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000018",
+      "output": "0.00000018",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small-24b-instruct-2501:free": {
+    "id": "mistralai/mistral-small-24b-instruct-2501:free",
+    "model_name": "Mistral Small 3 (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small-24b-instruct-2501": {
+    "id": "mistralai/mistral-small-24b-instruct-2501",
+    "model_name": "Mistral Small 3",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000005",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-32b:free": {
+    "id": "deepseek/deepseek-r1-distill-qwen-32b:free",
+    "model_name": "R1 Distill Qwen 32B (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 16000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-32b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-32b",
+    "model_name": "R1 Distill Qwen 32B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000012",
+      "output": "0.00000018",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-14b:free": {
+    "id": "deepseek/deepseek-r1-distill-qwen-14b:free",
+    "model_name": "R1 Distill Qwen 14B (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 64000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-qwen-14b": {
+    "id": "deepseek/deepseek-r1-distill-qwen-14b",
+    "model_name": "R1 Distill Qwen 14B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 64000,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/sonar-reasoning": {
+    "id": "perplexity/sonar-reasoning",
+    "model_name": "Sonar Reasoning",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": true,
+    "context_window": 127000,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/sonar": {
+    "id": "perplexity/sonar",
+    "model_name": "Sonar",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": false,
+    "context_window": 127072,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "liquid/lfm-7b": {
+    "id": "liquid/lfm-7b",
+    "model_name": "LFM 7B",
+    "provider_name": "Liquid",
+    "provider_id": "liquid",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000001",
+      "output": "0.00000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "liquid/lfm-3b": {
+    "id": "liquid/lfm-3b",
+    "model_name": "LFM 3B",
+    "provider_name": "Liquid",
+    "provider_id": "liquid",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000002",
+      "output": "0.00000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-70b:free": {
+    "id": "deepseek/deepseek-r1-distill-llama-70b:free",
+    "model_name": "R1 Distill Llama 70B (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1-distill-llama-70b": {
+    "id": "deepseek/deepseek-r1-distill-llama-70b",
+    "model_name": "R1 Distill Llama 70B",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1:free": {
+    "id": "deepseek/deepseek-r1:free",
+    "model_name": "R1 (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-r1": {
+    "id": "deepseek/deepseek-r1",
+    "model_name": "R1",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000045",
+      "output": "0.00000215",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "minimax/minimax-01": {
+    "id": "minimax/minimax-01",
+    "model_name": "MiniMax-01",
+    "provider_name": "MiniMax",
+    "provider_id": "minimax",
+    "reasoning": false,
+    "context_window": 1000192,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000011",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/codestral-2501": {
+    "id": "mistralai/codestral-2501",
+    "model_name": "Codestral 2501",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 262144,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-4": {
+    "id": "microsoft/phi-4",
+    "model_name": "Phi 4",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.00000007",
+      "output": "0.00000014",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-chat:free": {
+    "id": "deepseek/deepseek-chat:free",
+    "model_name": "DeepSeek V3 (free)",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "deepseek/deepseek-chat": {
+    "id": "deepseek/deepseek-chat",
+    "model_name": "DeepSeek V3",
+    "provider_name": "DeepSeek",
+    "provider_id": "deepseek",
+    "reasoning": false,
+    "context_window": 163840,
+    "pricing": {
+      "input": "0.00000038",
+      "output": "0.00000089",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/l3.3-euryale-70b": {
+    "id": "sao10k/l3.3-euryale-70b",
+    "model_name": "Llama 3.3 Euryale 70B",
+    "provider_name": "Sao10K",
+    "provider_id": "sao10k",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000007",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "eva-unit-01/eva-llama-3.33-70b": {
+    "id": "eva-unit-01/eva-llama-3.33-70b",
+    "model_name": "EVA Llama 3.33 70B",
+    "provider_name": "EVA",
+    "provider_id": "eva",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.000004",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-2-vision-1212": {
+    "id": "x-ai/grok-2-vision-1212",
+    "model_name": "Grok 2 Vision 1212",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.00001",
+      "image": "0.0036"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-2-1212": {
+    "id": "x-ai/grok-2-1212",
+    "model_name": "Grok 2 1212",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.00001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r7b-12-2024": {
+    "id": "cohere/command-r7b-12-2024",
+    "model_name": "Command R7B (12-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000000375",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.0-flash-exp:free": {
+    "id": "google/gemini-2.0-flash-exp:free",
+    "model_name": "Gemini 2.0 Flash Experimental (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.3-70b-instruct:free": {
+    "id": "meta-llama/llama-3.3-70b-instruct:free",
+    "model_name": "Llama 3.3 70B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+    "id": "meta-llama/llama-3.3-70b-instruct",
+    "model_name": "Llama 3.3 70B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000007",
+      "output": "0.00000025",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "amazon/nova-lite-v1": {
+    "id": "amazon/nova-lite-v1",
+    "model_name": "Nova Lite 1.0",
+    "provider_name": "Amazon",
+    "provider_id": "amazon",
+    "reasoning": false,
+    "context_window": 300000,
+    "pricing": {
+      "input": "0.00000006",
+      "output": "0.00000024",
+      "image": "0.00009"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "amazon/nova-micro-v1": {
+    "id": "amazon/nova-micro-v1",
+    "model_name": "Nova Micro 1.0",
+    "provider_name": "Amazon",
+    "provider_id": "amazon",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000000035",
+      "output": "0.00000014",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "amazon/nova-pro-v1": {
+    "id": "amazon/nova-pro-v1",
+    "model_name": "Nova Pro 1.0",
+    "provider_name": "Amazon",
+    "provider_id": "amazon",
+    "reasoning": false,
+    "context_window": 300000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000032",
+      "image": "0.0012"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwq-32b-preview": {
+    "id": "qwen/qwq-32b-preview",
+    "model_name": "QwQ 32B Preview",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "eva-unit-01/eva-qwen-2.5-72b": {
+    "id": "eva-unit-01/eva-qwen-2.5-72b",
+    "model_name": "EVA Qwen2.5 72B",
+    "provider_name": "EVA",
+    "provider_id": "eva",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.000004",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-2024-11-20": {
+    "id": "openai/gpt-4o-2024-11-20",
+    "model_name": "GPT-4o (2024-11-20)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0.003613"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-large-2411": {
+    "id": "mistralai/mistral-large-2411",
+    "model_name": "Mistral Large 2411",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-large-2407": {
+    "id": "mistralai/mistral-large-2407",
+    "model_name": "Mistral Large 2407",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/pixtral-large-2411": {
+    "id": "mistralai/pixtral-large-2411",
+    "model_name": "Pixtral Large 2411",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000006",
+      "image": "0.002888"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-vision-beta": {
+    "id": "x-ai/grok-vision-beta",
+    "model_name": "Grok Vision Beta",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0.009"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "infermatic/mn-inferor-12b": {
+    "id": "infermatic/mn-inferor-12b",
+    "model_name": "Mistral Nemo Inferor 12B",
+    "provider_name": "Infermatic",
+    "provider_id": "infermatic",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-coder-32b-instruct:free": {
+    "id": "qwen/qwen-2.5-coder-32b-instruct:free",
+    "model_name": "Qwen2.5 Coder 32B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-coder-32b-instruct": {
+    "id": "qwen/qwen-2.5-coder-32b-instruct",
+    "model_name": "Qwen2.5 Coder 32B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000006",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "raifle/sorcererlm-8x22b": {
+    "id": "raifle/sorcererlm-8x22b",
+    "model_name": "SorcererLM 8x22B",
+    "provider_name": "SorcererLM",
+    "provider_id": "sorcererlm",
+    "reasoning": false,
+    "context_window": 16000,
+    "pricing": {
+      "input": "0.0000045",
+      "output": "0.0000045",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "eva-unit-01/eva-qwen-2.5-32b": {
+    "id": "eva-unit-01/eva-qwen-2.5-32b",
+    "model_name": "EVA Qwen2.5 32B",
+    "provider_name": "EVA",
+    "provider_id": "eva",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000026",
+      "output": "0.0000034",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thedrummer/unslopnemo-12b": {
+    "id": "thedrummer/unslopnemo-12b",
+    "model_name": "UnslopNemo 12B",
+    "provider_name": "TheDrummer",
+    "provider_id": "thedrummer",
+    "reasoning": false,
+    "context_window": 32000,
+    "pricing": {
+      "input": "0.00000045",
+      "output": "0.00000045",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku:beta": {
+    "id": "anthropic/claude-3.5-haiku:beta",
+    "model_name": "Claude 3.5 Haiku (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku": {
+    "id": "anthropic/claude-3.5-haiku",
+    "model_name": "Claude 3.5 Haiku",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku-20241022:beta": {
+    "id": "anthropic/claude-3.5-haiku-20241022:beta",
+    "model_name": "Claude 3.5 Haiku (2024-10-22) (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku-20241022": {
+    "id": "anthropic/claude-3.5-haiku-20241022",
+    "model_name": "Claude 3.5 Haiku (2024-10-22)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "neversleep/llama-3.1-lumimaid-70b": {
+    "id": "neversleep/llama-3.1-lumimaid-70b",
+    "model_name": "Lumimaid v0.2 70B",
+    "provider_name": "NeverSleep",
+    "provider_id": "neversleep",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthracite-org/magnum-v4-72b": {
+    "id": "anthracite-org/magnum-v4-72b",
+    "model_name": "Magnum v4 72B",
+    "provider_name": "Magnum",
+    "provider_id": "magnum",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-sonnet:beta": {
+    "id": "anthropic/claude-3.5-sonnet:beta",
+    "model_name": "Claude 3.5 Sonnet (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-sonnet": {
+    "id": "anthropic/claude-3.5-sonnet",
+    "model_name": "Claude 3.5 Sonnet",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "x-ai/grok-beta": {
+    "id": "x-ai/grok-beta",
+    "model_name": "Grok Beta",
+    "provider_name": "xAI",
+    "provider_id": "xai",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/ministral-8b": {
+    "id": "mistralai/ministral-8b",
+    "model_name": "Ministral 8B",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/ministral-3b": {
+    "id": "mistralai/ministral-3b",
+    "model_name": "Ministral 3B",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000004",
+      "output": "0.00000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-7b-instruct:free": {
+    "id": "qwen/qwen-2.5-7b-instruct:free",
+    "model_name": "Qwen2.5 7B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-7b-instruct": {
+    "id": "qwen/qwen-2.5-7b-instruct",
+    "model_name": "Qwen2.5 7B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000004",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nvidia/llama-3.1-nemotron-70b-instruct": {
+    "id": "nvidia/llama-3.1-nemotron-70b-instruct",
+    "model_name": "Llama 3.1 Nemotron 70B Instruct",
+    "provider_name": "NVIDIA",
+    "provider_id": "nvidia",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000012",
+      "output": "0.0000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "inflection/inflection-3-productivity": {
+    "id": "inflection/inflection-3-productivity",
+    "model_name": "Inflection 3 Productivity",
+    "provider_name": "Inflection",
+    "provider_id": "inflection",
+    "reasoning": false,
+    "context_window": 8000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "inflection/inflection-3-pi": {
+    "id": "inflection/inflection-3-pi",
+    "model_name": "Inflection 3 Pi",
+    "provider_name": "Inflection",
+    "provider_id": "inflection",
+    "reasoning": false,
+    "context_window": 8000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-flash-1.5-8b": {
+    "id": "google/gemini-flash-1.5-8b",
+    "model_name": "Gemini 1.5 Flash 8B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1000000,
+    "pricing": {
+      "input": "0.0000000375",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "thedrummer/rocinante-12b": {
+    "id": "thedrummer/rocinante-12b",
+    "model_name": "Rocinante 12B",
+    "provider_name": "TheDrummer",
+    "provider_id": "thedrummer",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.0000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthracite-org/magnum-v2-72b": {
+    "id": "anthracite-org/magnum-v2-72b",
+    "model_name": "Magnum v2 72B",
+    "provider_name": "Magnum",
+    "provider_id": "magnum",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "liquid/lfm-40b": {
+    "id": "liquid/lfm-40b",
+    "model_name": "LFM 40B MoE",
+    "provider_name": "Liquid",
+    "provider_id": "liquid",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.00000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-3b-instruct:free": {
+    "id": "meta-llama/llama-3.2-3b-instruct:free",
+    "model_name": "Llama 3.2 3B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 20000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-3b-instruct": {
+    "id": "meta-llama/llama-3.2-3b-instruct",
+    "model_name": "Llama 3.2 3B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000001",
+      "output": "0.00000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-1b-instruct:free": {
+    "id": "meta-llama/llama-3.2-1b-instruct:free",
+    "model_name": "Llama 3.2 1B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-1b-instruct": {
+    "id": "meta-llama/llama-3.2-1b-instruct",
+    "model_name": "Llama 3.2 1B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000005",
+      "output": "0.00000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-90b-vision-instruct": {
+    "id": "meta-llama/llama-3.2-90b-vision-instruct",
+    "model_name": "Llama 3.2 90B Vision Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000012",
+      "output": "0.0000012",
+      "image": "0.001734"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-11b-vision-instruct:free": {
+    "id": "meta-llama/llama-3.2-11b-vision-instruct:free",
+    "model_name": "Llama 3.2 11B Vision Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-11b-vision-instruct": {
+    "id": "meta-llama/llama-3.2-11b-vision-instruct",
+    "model_name": "Llama 3.2 11B Vision Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000049",
+      "output": "0.000000049",
+      "image": "0.00007948"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-72b-instruct:free": {
+    "id": "qwen/qwen-2.5-72b-instruct:free",
+    "model_name": "Qwen2.5 72B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-72b-instruct": {
+    "id": "qwen/qwen-2.5-72b-instruct",
+    "model_name": "Qwen2.5 72B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000012",
+      "output": "0.00000039",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "neversleep/llama-3.1-lumimaid-8b": {
+    "id": "neversleep/llama-3.1-lumimaid-8b",
+    "model_name": "Lumimaid v0.2 8B",
+    "provider_name": "NeverSleep",
+    "provider_id": "neversleep",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.00000125",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/pixtral-12b": {
+    "id": "mistralai/pixtral-12b",
+    "model_name": "Pixtral 12B",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000001",
+      "image": "0.0001445"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-plus-08-2024": {
+    "id": "cohere/command-r-plus-08-2024",
+    "model_name": "Command R+ (08-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-08-2024": {
+    "id": "cohere/command-r-08-2024",
+    "model_name": "Command R (08-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-vl-7b-instruct:free": {
+    "id": "qwen/qwen-2.5-vl-7b-instruct:free",
+    "model_name": "Qwen2.5-VL 7B Instruct (free)",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2.5-vl-7b-instruct": {
+    "id": "qwen/qwen-2.5-vl-7b-instruct",
+    "model_name": "Qwen2.5-VL 7B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0.0001445"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/l3.1-euryale-70b": {
+    "id": "sao10k/l3.1-euryale-70b",
+    "model_name": "Llama 3.1 Euryale 70B v2.2",
+    "provider_name": "Sao10K",
+    "provider_id": "sao10k",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000007",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-3.5-mini-128k-instruct": {
+    "id": "microsoft/phi-3.5-mini-128k-instruct",
+    "model_name": "Phi-3.5 Mini 128K Instruct",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/hermes-3-llama-3.1-70b": {
+    "id": "nousresearch/hermes-3-llama-3.1-70b",
+    "model_name": "Hermes 3 70B Instruct",
+    "provider_name": "Nous",
+    "provider_id": "nous",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000012",
+      "output": "0.0000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/hermes-3-llama-3.1-405b": {
+    "id": "nousresearch/hermes-3-llama-3.1-405b",
+    "model_name": "Hermes 3 405B Instruct",
+    "provider_name": "Nous",
+    "provider_id": "nous",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000007",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/chatgpt-4o-latest": {
+    "id": "openai/chatgpt-4o-latest",
+    "model_name": "ChatGPT-4o",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0.007225"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/l3-lunaris-8b": {
+    "id": "sao10k/l3-lunaris-8b",
+    "model_name": "Llama 3 8B Lunaris",
+    "provider_name": "Sao10K",
+    "provider_id": "sao10k",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000002",
+      "output": "0.00000005",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "aetherwiing/mn-starcannon-12b": {
+    "id": "aetherwiing/mn-starcannon-12b",
+    "model_name": "Starcannon 12B",
+    "provider_name": "Aetherwiing",
+    "provider_id": "aetherwiing",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-2024-08-06": {
+    "id": "openai/gpt-4o-2024-08-06",
+    "model_name": "GPT-4o (2024-08-06)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0.003613"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-405b:free": {
+    "id": "meta-llama/llama-3.1-405b:free",
+    "model_name": "Llama 3.1 405B (base) (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 64000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-405b": {
+    "id": "meta-llama/llama-3.1-405b",
+    "model_name": "Llama 3.1 405B (base)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nothingiisreal/mn-celeste-12b": {
+    "id": "nothingiisreal/mn-celeste-12b",
+    "model_name": "Mistral Nemo 12B Celeste",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/llama-3.1-sonar-small-128k-online": {
+    "id": "perplexity/llama-3.1-sonar-small-128k-online",
+    "model_name": "Llama 3.1 Sonar 8B Online",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": false,
+    "context_window": 127072,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "perplexity/llama-3.1-sonar-large-128k-online": {
+    "id": "perplexity/llama-3.1-sonar-large-128k-online",
+    "model_name": "Llama 3.1 Sonar 70B Online",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": false,
+    "context_window": 127072,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-8b-instruct:free": {
+    "id": "meta-llama/llama-3.1-8b-instruct:free",
+    "model_name": "Llama 3.1 8B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-8b-instruct": {
+    "id": "meta-llama/llama-3.1-8b-instruct",
+    "model_name": "Llama 3.1 8B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131000,
+    "pricing": {
+      "input": "0.000000019",
+      "output": "0.00000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-405b-instruct": {
+    "id": "meta-llama/llama-3.1-405b-instruct",
+    "model_name": "Llama 3.1 405B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-70b-instruct": {
+    "id": "meta-llama/llama-3.1-70b-instruct",
+    "model_name": "Llama 3.1 70B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.00000028",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-nemo:free": {
+    "id": "mistralai/mistral-nemo:free",
+    "model_name": "Mistral Nemo (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-nemo": {
+    "id": "mistralai/mistral-nemo",
+    "model_name": "Mistral Nemo",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000001",
+      "output": "0.000000027",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-mini": {
+    "id": "openai/gpt-4o-mini",
+    "model_name": "GPT-4o-mini",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0.000217"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-mini-2024-07-18": {
+    "id": "openai/gpt-4o-mini-2024-07-18",
+    "model_name": "GPT-4o-mini (2024-07-18)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0.007225"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-2-27b-it": {
+    "id": "google/gemma-2-27b-it",
+    "model_name": "Gemma 2 27B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "alpindale/magnum-72b": {
+    "id": "alpindale/magnum-72b",
+    "model_name": "Magnum 72B",
+    "provider_name": "Magnum",
+    "provider_id": "magnum",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.000004",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-2-9b-it:free": {
+    "id": "google/gemma-2-9b-it:free",
+    "model_name": "Gemma 2 9B (free)",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemma-2-9b-it": {
+    "id": "google/gemma-2-9b-it",
+    "model_name": "Gemma 2 9B",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "01-ai/yi-large": {
+    "id": "01-ai/yi-large",
+    "model_name": "Yi Large",
+    "provider_name": "01.AI",
+    "provider_id": "01ai",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-sonnet-20240620:beta": {
+    "id": "anthropic/claude-3.5-sonnet-20240620:beta",
+    "model_name": "Claude 3.5 Sonnet (2024-06-20) (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-sonnet-20240620": {
+    "id": "anthropic/claude-3.5-sonnet-20240620",
+    "model_name": "Claude 3.5 Sonnet (2024-06-20)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/l3-euryale-70b": {
+    "id": "sao10k/l3-euryale-70b",
+    "model_name": "Llama 3 Euryale 70B v2.1",
+    "provider_name": "Sao10k",
+    "provider_id": "sao10k",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000148",
+      "output": "0.00000148",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cognitivecomputations/dolphin-mixtral-8x22b": {
+    "id": "cognitivecomputations/dolphin-mixtral-8x22b",
+    "model_name": "Dolphin 2.9.2 Mixtral 8x22B 🐬",
+    "provider_name": "Dolphin",
+    "provider_id": "dolphin",
+    "reasoning": false,
+    "context_window": 16000,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "qwen/qwen-2-72b-instruct": {
+    "id": "qwen/qwen-2-72b-instruct",
+    "model_name": "Qwen 2 72B Instruct",
+    "provider_name": "Qwen",
+    "provider_id": "qwen",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct:free": {
+    "id": "mistralai/mistral-7b-instruct:free",
+    "model_name": "Mistral 7B Instruct (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct": {
+    "id": "mistralai/mistral-7b-instruct",
+    "model_name": "Mistral 7B Instruct",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000000028",
+      "output": "0.000000054",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/hermes-2-pro-llama-3-8b": {
+    "id": "nousresearch/hermes-2-pro-llama-3-8b",
+    "model_name": "Hermes 2 Pro - Llama-3 8B",
+    "provider_name": "NousResearch",
+    "provider_id": "nousresearch",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000025",
+      "output": "0.00000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct-v0.3": {
+    "id": "mistralai/mistral-7b-instruct-v0.3",
+    "model_name": "Mistral 7B Instruct v0.3",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000000028",
+      "output": "0.000000054",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-3-mini-128k-instruct": {
+    "id": "microsoft/phi-3-mini-128k-instruct",
+    "model_name": "Phi-3 Mini 128K Instruct",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/phi-3-medium-128k-instruct": {
+    "id": "microsoft/phi-3-medium-128k-instruct",
+    "model_name": "Phi-3 Medium 128K Instruct",
+    "provider_name": "Microsoft",
+    "provider_id": "microsoft",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "neversleep/llama-3-lumimaid-70b": {
+    "id": "neversleep/llama-3-lumimaid-70b",
+    "model_name": "Llama 3 Lumimaid 70B",
+    "provider_name": "NeverSleep",
+    "provider_id": "neversleep",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.000004",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-flash-1.5": {
+    "id": "google/gemini-flash-1.5",
+    "model_name": "Gemini 1.5 Flash",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 1000000,
+    "pricing": {
+      "input": "0.000000075",
+      "output": "0.0000003",
+      "image": "0.00004"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o": {
+    "id": "openai/gpt-4o",
+    "model_name": "GPT-4o",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
+      "image": "0.003613"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o:extended": {
+    "id": "openai/gpt-4o:extended",
+    "model_name": "GPT-4o (extended)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000006",
+      "output": "0.000018",
+      "image": "0.007225"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-guard-2-8b": {
+    "id": "meta-llama/llama-guard-2-8b",
+    "model_name": "LlamaGuard 2 8B",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-2024-05-13": {
+    "id": "openai/gpt-4o-2024-05-13",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0.007225"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "neversleep/llama-3-lumimaid-8b": {
+    "id": "neversleep/llama-3-lumimaid-8b",
+    "model_name": "Llama 3 Lumimaid 8B",
+    "provider_name": "NeverSleep",
+    "provider_id": "neversleep",
+    "reasoning": false,
+    "context_window": 24576,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.00000125",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/fimbulvetr-11b-v2": {
+    "id": "sao10k/fimbulvetr-11b-v2",
+    "model_name": "Fimbulvetr 11B v2",
+    "provider_name": "Fimbulvetr",
+    "provider_id": "fimbulvetr",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3-8b-instruct": {
+    "id": "meta-llama/llama-3-8b-instruct",
+    "model_name": "Llama 3 8B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000003",
+      "output": "0.00000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3-70b-instruct": {
+    "id": "meta-llama/llama-3-70b-instruct",
+    "model_name": "Llama 3 70B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mixtral-8x22b-instruct": {
+    "id": "mistralai/mixtral-8x22b-instruct",
+    "model_name": "Mixtral 8x22B Instruct",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 65536,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "microsoft/wizardlm-2-8x22b": {
+    "id": "microsoft/wizardlm-2-8x22b",
+    "model_name": "WizardLM-2 8x22B",
+    "provider_name": "WizardLM",
+    "provider_id": "wizardlm",
+    "reasoning": false,
+    "context_window": 65536,
+    "pricing": {
+      "input": "0.00000048",
+      "output": "0.00000048",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-pro-1.5": {
+    "id": "google/gemini-pro-1.5",
+    "model_name": "Gemini 1.5 Pro",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 2000000,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.000005",
+      "image": "0.0006575"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-turbo": {
+    "id": "openai/gpt-4-turbo",
+    "model_name": "GPT-4 Turbo",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.00003",
+      "image": "0.01445"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-plus": {
+    "id": "cohere/command-r-plus",
+    "model_name": "Command R+",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-plus-04-2024": {
+    "id": "cohere/command-r-plus-04-2024",
+    "model_name": "Command R+ (04-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sophosympatheia/midnight-rose-70b": {
+    "id": "sophosympatheia/midnight-rose-70b",
+    "model_name": "Midnight Rose 70B",
+    "provider_name": "Midnight",
+    "provider_id": "midnight",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command": {
+    "id": "cohere/command",
+    "model_name": "Command",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r": {
+    "id": "cohere/command-r",
+    "model_name": "Command R",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-haiku:beta": {
+    "id": "anthropic/claude-3-haiku:beta",
+    "model_name": "Claude 3 Haiku (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.00000125",
+      "image": "0.0004"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-haiku": {
+    "id": "anthropic/claude-3-haiku",
+    "model_name": "Claude 3 Haiku",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.00000125",
+      "image": "0.0004"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-opus:beta": {
+    "id": "anthropic/claude-3-opus:beta",
+    "model_name": "Claude 3 Opus (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000015",
+      "output": "0.000075",
+      "image": "0.024"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-opus": {
+    "id": "anthropic/claude-3-opus",
+    "model_name": "Claude 3 Opus",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000015",
+      "output": "0.000075",
+      "image": "0.024"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-sonnet:beta": {
+    "id": "anthropic/claude-3-sonnet:beta",
+    "model_name": "Claude 3 Sonnet (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-sonnet": {
+    "id": "anthropic/claude-3-sonnet",
+    "model_name": "Claude 3 Sonnet",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-03-2024": {
+    "id": "cohere/command-r-03-2024",
+    "model_name": "Command R (03-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-large": {
+    "id": "mistralai/mistral-large",
+    "model_name": "Mistral Large",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000002",
+      "output": "0.000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0613": {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "model_name": "GPT-3.5 Turbo (older v0613)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 4095,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-turbo-preview": {
+    "id": "openai/gpt-4-turbo-preview",
+    "model_name": "GPT-4 Turbo Preview",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.00003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/nous-hermes-2-mixtral-8x7b-dpo": {
+    "id": "nousresearch/nous-hermes-2-mixtral-8x7b-dpo",
+    "model_name": "Hermes 2 Mixtral 8x7B DPO",
+    "provider_name": "Nous",
+    "provider_id": "nous",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000006",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-medium": {
+    "id": "mistralai/mistral-medium",
+    "model_name": "Mistral Medium",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000275",
+      "output": "0.0000081",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small": {
+    "id": "mistralai/mistral-small",
+    "model_name": "Mistral Small",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-tiny": {
+    "id": "mistralai/mistral-tiny",
+    "model_name": "Mistral Tiny",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.00000025",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct-v0.2": {
+    "id": "mistralai/mistral-7b-instruct-v0.2",
+    "model_name": "Mistral 7B Instruct v0.2",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mixtral-8x7b-instruct": {
+    "id": "mistralai/mixtral-8x7b-instruct",
+    "model_name": "Mixtral 8x7B Instruct",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000008",
+      "output": "0.00000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "neversleep/noromaid-20b": {
+    "id": "neversleep/noromaid-20b",
+    "model_name": "Noromaid 20B",
+    "provider_name": "Noromaid",
+    "provider_id": "noromaid",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.1:beta": {
+    "id": "anthropic/claude-2.1:beta",
+    "model_name": "Claude v2.1 (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.1": {
+    "id": "anthropic/claude-2.1",
+    "model_name": "Claude v2.1",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2:beta": {
+    "id": "anthropic/claude-2:beta",
+    "model_name": "Claude v2 (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2": {
+    "id": "anthropic/claude-2",
+    "model_name": "Claude v2",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "undi95/toppy-m-7b": {
+    "id": "undi95/toppy-m-7b",
+    "model_name": "Toppy M 7B",
+    "provider_name": "Toppy",
+    "provider_id": "toppy",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "alpindale/goliath-120b": {
+    "id": "alpindale/goliath-120b",
+    "model_name": "Goliath 120B",
+    "provider_name": "Goliath",
+    "provider_id": "goliath",
+    "reasoning": false,
+    "context_window": 6144,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.0000125",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-1106": {
+    "id": "openai/gpt-3.5-turbo-1106",
+    "model_name": "GPT-3.5 Turbo 16k (older v1106)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-1106-preview": {
+    "id": "openai/gpt-4-1106-preview",
+    "model_name": "GPT-4 Turbo (older v1106)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.00003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-instruct": {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "model_name": "GPT-3.5 Turbo Instruct",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 4095,
+    "pricing": {
+      "input": "0.0000015",
+      "output": "0.000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct-v0.1": {
+    "id": "mistralai/mistral-7b-instruct-v0.1",
+    "model_name": "Mistral 7B Instruct v0.1",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 2824,
+    "pricing": {
+      "input": "0.00000011",
+      "output": "0.00000019",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "pygmalionai/mythalion-13b": {
+    "id": "pygmalionai/mythalion-13b",
+    "model_name": "Mythalion 13B",
+    "provider_name": "Pygmalion",
+    "provider_id": "pygmalion",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-16k": {
+    "id": "openai/gpt-3.5-turbo-16k",
+    "model_name": "GPT-3.5 Turbo 16k",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mancer/weaver": {
+    "id": "mancer/weaver",
+    "model_name": "Weaver (alpha)",
+    "provider_name": "Mancer",
+    "provider_id": "mancer",
+    "reasoning": false,
+    "context_window": 8000,
+    "pricing": {
+      "input": "0.0000015",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.0:beta": {
+    "id": "anthropic/claude-2.0:beta",
+    "model_name": "Claude v2.0 (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 100000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.0": {
+    "id": "anthropic/claude-2.0",
+    "model_name": "Claude v2.0",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 100000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "undi95/remm-slerp-l2-13b": {
+    "id": "undi95/remm-slerp-l2-13b",
+    "model_name": "ReMM SLERP 13B",
+    "provider_name": "ReMM",
+    "provider_id": "remm",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "gryphe/mythomax-l2-13b": {
+    "id": "gryphe/mythomax-l2-13b",
+    "model_name": "MythoMax 13B",
+    "provider_name": "MythoMax",
+    "provider_id": "mythomax",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.000000065",
+      "output": "0.000000065",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-2-70b-chat": {
+    "id": "meta-llama/llama-2-70b-chat",
+    "model_name": "Llama 2 70B Chat",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.0000009",
+      "output": "0.0000009",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo": {
+    "id": "openai/gpt-3.5-turbo",
+    "model_name": "GPT-3.5 Turbo",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0125": {
+    "id": "openai/gpt-3.5-turbo-0125",
+    "model_name": "GPT-3.5 Turbo 16k",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4": {
+    "id": "openai/gpt-4",
+    "model_name": "GPT-4",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 8191,
+    "pricing": {
+      "input": "0.00003",
+      "output": "0.00006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-0314": {
+    "id": "openai/gpt-4-0314",
+    "model_name": "GPT-4 (older v0314)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 8191,
+    "pricing": {
+      "input": "0.00003",
+      "output": "0.00006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  }
+}

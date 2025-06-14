@@ -17,7 +17,10 @@ export const env = createEnv({
     // Mistral
     MISTRAL_API_KEY: z.string().min(1),
     // Tavily
-    TAVILY_API_KEY: z.string().min(1)
+    TAVILY_API_KEY: z.string().min(1),
+    // Upstash
+    UPSTASH_SEARCH_REST_URL: z.string().url(),
+    UPSTASH_SEARCH_REST_TOKEN: z.string().min(1)
   },
   client: {},
   experimental__runtimeEnv: {},

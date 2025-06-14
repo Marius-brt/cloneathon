@@ -6,6 +6,7 @@ import type { Message } from "@ai-sdk/react";
 export const MessageRepository = {
   async upsertMessage({
     chatId,
+    modelId,
     id,
     role,
     content,
@@ -13,6 +14,7 @@ export const MessageRepository = {
   }: {
     id: string;
     chatId: string;
+    modelId: string;
     role: string;
     content: string;
     parts: any[];
@@ -26,6 +28,7 @@ export const MessageRepository = {
       create: {
         id,
         chatId,
+        modelId,
         content,
         role,
         parts

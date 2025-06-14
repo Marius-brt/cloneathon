@@ -1,3 +1,4 @@
+import { CodeBlock } from "@/components/chat/code-block";
 import { marked } from "marked";
 import type { ComponentProps } from "react";
 import { memo, useMemo } from "react";
@@ -6,7 +7,6 @@ import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
-import { CodeBlock } from "./code-block";
 
 type CodeComponentProps = ComponentProps<"code"> & ExtraProps;
 
@@ -52,7 +52,7 @@ function Code({ children, className, ...props }: CodeComponentProps) {
   return (
     <code
       className={
-        "mx-0.5 overflow-auto rounded-md bg-primary/10 px-2 py-1 font-mono text-foreground"
+        "mx-0.5 overflow-auto rounded-sm border border-primary/40 bg-primary/20 px-1 pb-0.5 font-mono text-foreground"
       }
       {...props}
     >
