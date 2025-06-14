@@ -9,7 +9,7 @@ import type { Model } from "@/lib/server/openrouter";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@uidotdev/usehooks";
-import { Bot, Brain } from "lucide-react";
+import { Bot, Brain, Search, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 function ModelCard({
@@ -29,7 +29,7 @@ function ModelCard({
       type="button"
       onClick={onSelect}
       className={cn(
-        "flex h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-1 py-3 text-center transition-all duration-300",
+        "flex h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-2 pt-3 pb-2 text-center transition-all duration-300",
         active && "border-border bg-muted"
       )}
     >
@@ -106,15 +106,29 @@ export function ModelBtn() {
       </PopoverTrigger>
       <PopoverContent
         align="start"
-        className="flex w-[610px] flex-col gap-2 overflow-hidden p-2"
+        className="flex w-[620px] flex-col gap-2 overflow-hidden p-2"
       >
-        <Input
-          placeholder="Search models"
-          className="w-full"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <div className="flex max-h-[400px] w-full flex-wrap gap-2 overflow-y-auto pt-2">
+        <div className="relative w-full">
+          <Search className="-translate-y-1/2 absolute top-1/2 left-2 size-4 text-muted-foreground" />
+          <Input
+            placeholder="Search models"
+            className="w-full pl-8"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {search.length > 0 && (
+            <X
+              className="-translate-y-1/2 absolute top-1/2 right-2 size-4"
+              onClick={() => setSearch("")}
+            />
+          )}
+        </div>
+        <div className="flex max-h-[400px] min-h-[200px] w-full flex-wrap gap-3 overflow-y-auto">
+          {results.length === 0 && (
+            <div className="flex w-full items-center justify-center">
+              <span className="text-muted-foreground text-sm">No models found</span>
+            </div>
+          )}
           {Object.values(results).map((model) => (
             <ModelCard
               key={model.id}
