@@ -59,7 +59,7 @@ function ModelCard({
 }
 
 export function ModelBtn() {
-  const models = useModels();
+  const { models } = useModels();
   const { modelId, setModelId } = useChatSettingsStore();
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebounce(search, 100);

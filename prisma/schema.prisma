@@ -88,6 +88,7 @@ model Message {
   role      String
   parts     Json
   content   String
+  annotations Json?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   chatId    String

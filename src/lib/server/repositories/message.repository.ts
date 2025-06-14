@@ -1,6 +1,7 @@
 import { prisma } from "@/lib/config/db";
 import { MESSAGES_BATCH_SIZE } from "@/lib/constants";
 import { getSafeSession } from "@/lib/server/auth-utils";
+import type { Annotation } from "@/lib/types";
 import type { Message } from "@ai-sdk/react";
 
 export const MessageRepository = {
@@ -10,7 +11,8 @@ export const MessageRepository = {
     id,
     role,
     content,
-    parts
+    parts,
+    annotations
   }: {
     id: string;
     chatId: string;
@@ -18,12 +20,14 @@ export const MessageRepository = {
     role: string;
     content: string;
     parts: any[];
+    annotations: any;
   }) {
     return await prisma.message.upsert({
       where: { id },
       update: {
         content,
-        parts
+        parts,
+        annotations
       },
       create: {
         id,
@@ -31,7 +35,8 @@ export const MessageRepository = {
         modelId,
         content,
         role,
-        parts
+        parts,
+        annotations
       }
     });
   },
@@ -56,7 +61,8 @@ export const MessageRepository = {
       role: message.role as Message["role"],
       parts: message.parts as Message["parts"],
       content: message.content,
-      createdAt: message.createdAt
+      createdAt: message.createdAt,
+      annotations: message.annotations as Annotation[]
     })) as Message[];
   },
   async getAllMessages(chatId: string): Promise<Message[]> {

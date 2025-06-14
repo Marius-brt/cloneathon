@@ -3431,46 +3431,6 @@
       "text"
     ]
   },
-  "anthropic/claude-3.5-haiku:beta": {
-    "id": "anthropic/claude-3.5-haiku:beta",
-    "model_name": "Claude 3.5 Haiku (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.000004",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3.5-haiku": {
-    "id": "anthropic/claude-3.5-haiku",
-    "model_name": "Claude 3.5 Haiku",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.000004",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "anthropic/claude-3.5-haiku-20241022:beta": {
     "id": "anthropic/claude-3.5-haiku-20241022:beta",
     "model_name": "Claude 3.5 Haiku (2024-10-22) (self-moderated)",
@@ -3494,6 +3454,46 @@
   "anthropic/claude-3.5-haiku-20241022": {
     "id": "anthropic/claude-3.5-haiku-20241022",
     "model_name": "Claude 3.5 Haiku (2024-10-22)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku:beta": {
+    "id": "anthropic/claude-3.5-haiku:beta",
+    "model_name": "Claude 3.5 Haiku (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku": {
+    "id": "anthropic/claude-3.5-haiku",
+    "model_name": "Claude 3.5 Haiku",
     "provider_name": "Anthropic",
     "provider_id": "anthropic",
     "reasoning": false,
@@ -3818,6 +3818,46 @@
       "text"
     ]
   },
+  "meta-llama/llama-3.2-11b-vision-instruct:free": {
+    "id": "meta-llama/llama-3.2-11b-vision-instruct:free",
+    "model_name": "Llama 3.2 11B Vision Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-11b-vision-instruct": {
+    "id": "meta-llama/llama-3.2-11b-vision-instruct",
+    "model_name": "Llama 3.2 11B Vision Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000049",
+      "output": "0.000000049",
+      "image": "0.00007948"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
   "meta-llama/llama-3.2-3b-instruct:free": {
     "id": "meta-llama/llama-3.2-3b-instruct:free",
     "model_name": "Llama 3.2 3B Instruct (free)",
@@ -3914,46 +3954,6 @@
       "text"
     ]
   },
-  "meta-llama/llama-3.2-11b-vision-instruct:free": {
-    "id": "meta-llama/llama-3.2-11b-vision-instruct:free",
-    "model_name": "Llama 3.2 11B Vision Instruct (free)",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-11b-vision-instruct": {
-    "id": "meta-llama/llama-3.2-11b-vision-instruct",
-    "model_name": "Llama 3.2 11B Vision Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0.000000049",
-      "output": "0.000000049",
-      "image": "0.00007948"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "qwen/qwen-2.5-72b-instruct:free": {
     "id": "qwen/qwen-2.5-72b-instruct:free",
     "model_name": "Qwen2.5 72B Instruct (free)",
@@ -4031,25 +4031,6 @@
       "text"
     ]
   },
-  "cohere/command-r-plus-08-2024": {
-    "id": "cohere/command-r-plus-08-2024",
-    "model_name": "Command R+ (08-2024)",
-    "provider_name": "Cohere",
-    "provider_id": "cohere",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.0000025",
-      "output": "0.00001",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "cohere/command-r-08-2024": {
     "id": "cohere/command-r-08-2024",
     "model_name": "Command R (08-2024)",
@@ -4060,6 +4041,25 @@
     "pricing": {
       "input": "0.00000015",
       "output": "0.0000006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-plus-08-2024": {
+    "id": "cohere/command-r-plus-08-2024",
+    "model_name": "Command R+ (08-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000025",
+      "output": "0.00001",
       "image": "0"
     },
     "input_capabilities": [
@@ -4205,25 +4205,6 @@
       "text"
     ]
   },
-  "sao10k/l3-lunaris-8b": {
-    "id": "sao10k/l3-lunaris-8b",
-    "model_name": "Llama 3 8B Lunaris",
-    "provider_name": "Sao10K",
-    "provider_id": "sao10k",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0.00000002",
-      "output": "0.00000005",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "aetherwiing/mn-starcannon-12b": {
     "id": "aetherwiing/mn-starcannon-12b",
     "model_name": "Starcannon 12B",
@@ -4234,6 +4215,25 @@
     "pricing": {
       "input": "0.0000008",
       "output": "0.0000012",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "sao10k/l3-lunaris-8b": {
+    "id": "sao10k/l3-lunaris-8b",
+    "model_name": "Llama 3 8B Lunaris",
+    "provider_name": "Sao10K",
+    "provider_id": "sao10k",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000002",
+      "output": "0.00000005",
       "image": "0"
     },
     "input_capabilities": [
@@ -4321,6 +4321,25 @@
       "text"
     ]
   },
+  "perplexity/llama-3.1-sonar-large-128k-online": {
+    "id": "perplexity/llama-3.1-sonar-large-128k-online",
+    "model_name": "Llama 3.1 Sonar 70B Online",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
+    "reasoning": false,
+    "context_window": 127072,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000001",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
   "perplexity/llama-3.1-sonar-small-128k-online": {
     "id": "perplexity/llama-3.1-sonar-small-128k-online",
     "model_name": "Llama 3.1 Sonar 8B Online",
@@ -4340,16 +4359,16 @@
       "text"
     ]
   },
-  "perplexity/llama-3.1-sonar-large-128k-online": {
-    "id": "perplexity/llama-3.1-sonar-large-128k-online",
-    "model_name": "Llama 3.1 Sonar 70B Online",
-    "provider_name": "Perplexity",
-    "provider_id": "perplexity",
+  "meta-llama/llama-3.1-405b-instruct": {
+    "id": "meta-llama/llama-3.1-405b-instruct",
+    "model_name": "Llama 3.1 405B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
     "reasoning": false,
-    "context_window": 127072,
+    "context_window": 32768,
     "pricing": {
-      "input": "0.000001",
-      "output": "0.000001",
+      "input": "0.0000008",
+      "output": "0.0000008",
       "image": "0"
     },
     "input_capabilities": [
@@ -4388,25 +4407,6 @@
     "pricing": {
       "input": "0.000000019",
       "output": "0.00000003",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.1-405b-instruct": {
-    "id": "meta-llama/llama-3.1-405b-instruct",
-    "model_name": "Llama 3.1 405B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.0000008",
       "image": "0"
     },
     "input_capabilities": [
@@ -4707,44 +4707,6 @@
       "text"
     ]
   },
-  "mistralai/mistral-7b-instruct:free": {
-    "id": "mistralai/mistral-7b-instruct:free",
-    "model_name": "Mistral 7B Instruct (free)",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "mistralai/mistral-7b-instruct": {
-    "id": "mistralai/mistral-7b-instruct",
-    "model_name": "Mistral 7B Instruct",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0.000000028",
-      "output": "0.000000054",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "nousresearch/hermes-2-pro-llama-3-8b": {
     "id": "nousresearch/hermes-2-pro-llama-3-8b",
     "model_name": "Hermes 2 Pro - Llama-3 8B",
@@ -4767,6 +4729,44 @@
   "mistralai/mistral-7b-instruct-v0.3": {
     "id": "mistralai/mistral-7b-instruct-v0.3",
     "model_name": "Mistral 7B Instruct v0.3",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000000028",
+      "output": "0.000000054",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct:free": {
+    "id": "mistralai/mistral-7b-instruct:free",
+    "model_name": "Mistral 7B Instruct (free)",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct": {
+    "id": "mistralai/mistral-7b-instruct",
+    "model_name": "Mistral 7B Instruct",
     "provider_name": "Mistral",
     "provider_id": "mistral",
     "reasoning": false,
@@ -4860,6 +4860,46 @@
       "text"
     ]
   },
+  "meta-llama/llama-guard-2-8b": {
+    "id": "meta-llama/llama-guard-2-8b",
+    "model_name": "LlamaGuard 2 8B",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-2024-05-13": {
+    "id": "openai/gpt-4o-2024-05-13",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0.007225"
+    },
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
   "openai/gpt-4o": {
     "id": "openai/gpt-4o",
     "model_name": "GPT-4o",
@@ -4891,46 +4931,6 @@
     "pricing": {
       "input": "0.000006",
       "output": "0.000018",
-      "image": "0.007225"
-    },
-    "input_capabilities": [
-      "text",
-      "image",
-      "file"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-guard-2-8b": {
-    "id": "meta-llama/llama-guard-2-8b",
-    "model_name": "LlamaGuard 2 8B",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0.0000002",
-      "output": "0.0000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4o-2024-05-13": {
-    "id": "openai/gpt-4o-2024-05-13",
-    "model_name": "GPT-4o (2024-05-13)",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.000005",
-      "output": "0.000015",
       "image": "0.007225"
     },
     "input_capabilities": [
@@ -4980,25 +4980,6 @@
       "text"
     ]
   },
-  "meta-llama/llama-3-8b-instruct": {
-    "id": "meta-llama/llama-3-8b-instruct",
-    "model_name": "Llama 3 8B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0.00000003",
-      "output": "0.00000006",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "meta-llama/llama-3-70b-instruct": {
     "id": "meta-llama/llama-3-70b-instruct",
     "model_name": "Llama 3 70B Instruct",
@@ -5009,6 +4990,25 @@
     "pricing": {
       "input": "0.0000003",
       "output": "0.0000004",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3-8b-instruct": {
+    "id": "meta-llama/llama-3-8b-instruct",
+    "model_name": "Llama 3 8B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.00000003",
+      "output": "0.00000006",
       "image": "0"
     },
     "input_capabilities": [
@@ -5056,26 +5056,6 @@
       "text"
     ]
   },
-  "google/gemini-pro-1.5": {
-    "id": "google/gemini-pro-1.5",
-    "model_name": "Gemini 1.5 Pro",
-    "provider_name": "Google",
-    "provider_id": "google",
-    "reasoning": false,
-    "context_window": 2000000,
-    "pricing": {
-      "input": "0.00000125",
-      "output": "0.000005",
-      "image": "0.0006575"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "openai/gpt-4-turbo": {
     "id": "openai/gpt-4-turbo",
     "model_name": "GPT-4 Turbo",
@@ -5087,6 +5067,26 @@
       "input": "0.00001",
       "output": "0.00003",
       "image": "0.01445"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-pro-1.5": {
+    "id": "google/gemini-pro-1.5",
+    "model_name": "Gemini 1.5 Pro",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": false,
+    "context_window": 2000000,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.000005",
+      "image": "0.0006575"
     },
     "input_capabilities": [
       "text",
@@ -5153,25 +5153,6 @@
       "text"
     ]
   },
-  "cohere/command": {
-    "id": "cohere/command",
-    "model_name": "Command",
-    "provider_name": "Cohere",
-    "provider_id": "cohere",
-    "reasoning": false,
-    "context_window": 4096,
-    "pricing": {
-      "input": "0.000001",
-      "output": "0.000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "cohere/command-r": {
     "id": "cohere/command-r",
     "model_name": "Command R",
@@ -5182,6 +5163,25 @@
     "pricing": {
       "input": "0.0000005",
       "output": "0.0000015",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command": {
+    "id": "cohere/command",
+    "model_name": "Command",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 4096,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000002",
       "image": "0"
     },
     "input_capabilities": [
@@ -5231,46 +5231,6 @@
       "text"
     ]
   },
-  "anthropic/claude-3-opus:beta": {
-    "id": "anthropic/claude-3-opus:beta",
-    "model_name": "Claude 3 Opus (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000015",
-      "output": "0.000075",
-      "image": "0.024"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3-opus": {
-    "id": "anthropic/claude-3-opus",
-    "model_name": "Claude 3 Opus",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000015",
-      "output": "0.000075",
-      "image": "0.024"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "anthropic/claude-3-sonnet:beta": {
     "id": "anthropic/claude-3-sonnet:beta",
     "model_name": "Claude 3 Sonnet (self-moderated)",
@@ -5302,6 +5262,46 @@
       "input": "0.000003",
       "output": "0.000015",
       "image": "0.0048"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-opus:beta": {
+    "id": "anthropic/claude-3-opus:beta",
+    "model_name": "Claude 3 Opus (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000015",
+      "output": "0.000075",
+      "image": "0.024"
+    },
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-opus": {
+    "id": "anthropic/claude-3-opus",
+    "model_name": "Claude 3 Opus",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000015",
+      "output": "0.000075",
+      "image": "0.024"
     },
     "input_capabilities": [
       "text",
@@ -5349,25 +5349,6 @@
       "text"
     ]
   },
-  "openai/gpt-3.5-turbo-0613": {
-    "id": "openai/gpt-3.5-turbo-0613",
-    "model_name": "GPT-3.5 Turbo (older v0613)",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 4095,
-    "pricing": {
-      "input": "0.000001",
-      "output": "0.000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "openai/gpt-4-turbo-preview": {
     "id": "openai/gpt-4-turbo-preview",
     "model_name": "GPT-4 Turbo Preview",
@@ -5378,6 +5359,25 @@
     "pricing": {
       "input": "0.00001",
       "output": "0.00003",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0613": {
+    "id": "openai/gpt-3.5-turbo-0613",
+    "model_name": "GPT-3.5 Turbo (older v0613)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 4095,
+    "pricing": {
+      "input": "0.000001",
+      "output": "0.000002",
       "image": "0"
     },
     "input_capabilities": [
@@ -5406,16 +5406,16 @@
       "text"
     ]
   },
-  "mistralai/mistral-medium": {
-    "id": "mistralai/mistral-medium",
-    "model_name": "Mistral Medium",
+  "mistralai/mistral-tiny": {
+    "id": "mistralai/mistral-tiny",
+    "model_name": "Mistral Tiny",
     "provider_name": "Mistral",
     "provider_id": "mistral",
     "reasoning": false,
     "context_window": 32768,
     "pricing": {
-      "input": "0.00000275",
-      "output": "0.0000081",
+      "input": "0.00000025",
+      "output": "0.00000025",
       "image": "0"
     },
     "input_capabilities": [
@@ -5444,16 +5444,16 @@
       "text"
     ]
   },
-  "mistralai/mistral-tiny": {
-    "id": "mistralai/mistral-tiny",
-    "model_name": "Mistral Tiny",
+  "mistralai/mistral-medium": {
+    "id": "mistralai/mistral-medium",
+    "model_name": "Mistral Medium",
     "provider_name": "Mistral",
     "provider_id": "mistral",
     "reasoning": false,
     "context_window": 32768,
     "pricing": {
-      "input": "0.00000025",
-      "output": "0.00000025",
+      "input": "0.00000275",
+      "output": "0.0000081",
       "image": "0"
     },
     "input_capabilities": [
@@ -5520,44 +5520,6 @@
       "text"
     ]
   },
-  "anthropic/claude-2.1:beta": {
-    "id": "anthropic/claude-2.1:beta",
-    "model_name": "Claude v2.1 (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000008",
-      "output": "0.000024",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-2.1": {
-    "id": "anthropic/claude-2.1",
-    "model_name": "Claude v2.1",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000008",
-      "output": "0.000024",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "anthropic/claude-2:beta": {
     "id": "anthropic/claude-2:beta",
     "model_name": "Claude v2 (self-moderated)",
@@ -5580,6 +5542,44 @@
   "anthropic/claude-2": {
     "id": "anthropic/claude-2",
     "model_name": "Claude v2",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.1:beta": {
+    "id": "anthropic/claude-2.1:beta",
+    "model_name": "Claude v2.1 (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2.1": {
+    "id": "anthropic/claude-2.1",
+    "model_name": "Claude v2.1",
     "provider_name": "Anthropic",
     "provider_id": "anthropic",
     "reasoning": false,
@@ -5634,25 +5634,6 @@
       "text"
     ]
   },
-  "openai/gpt-3.5-turbo-1106": {
-    "id": "openai/gpt-3.5-turbo-1106",
-    "model_name": "GPT-3.5 Turbo 16k (older v1106)",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 16385,
-    "pricing": {
-      "input": "0.000001",
-      "output": "0.000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "openai/gpt-4-1106-preview": {
     "id": "openai/gpt-4-1106-preview",
     "model_name": "GPT-4 Turbo (older v1106)",
@@ -5672,15 +5653,15 @@
       "text"
     ]
   },
-  "openai/gpt-3.5-turbo-instruct": {
-    "id": "openai/gpt-3.5-turbo-instruct",
-    "model_name": "GPT-3.5 Turbo Instruct",
+  "openai/gpt-3.5-turbo-1106": {
+    "id": "openai/gpt-3.5-turbo-1106",
+    "model_name": "GPT-3.5 Turbo 16k (older v1106)",
     "provider_name": "OpenAI",
     "provider_id": "openai",
     "reasoning": false,
-    "context_window": 4095,
+    "context_window": 16385,
     "pricing": {
-      "input": "0.0000015",
+      "input": "0.000001",
       "output": "0.000002",
       "image": "0"
     },
@@ -5701,6 +5682,25 @@
     "pricing": {
       "input": "0.00000011",
       "output": "0.00000019",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-instruct": {
+    "id": "openai/gpt-3.5-turbo-instruct",
+    "model_name": "GPT-3.5 Turbo Instruct",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 4095,
+    "pricing": {
+      "input": "0.0000015",
+      "output": "0.000002",
       "image": "0"
     },
     "input_capabilities": [
@@ -5862,25 +5862,6 @@
       "text"
     ]
   },
-  "openai/gpt-3.5-turbo": {
-    "id": "openai/gpt-3.5-turbo",
-    "model_name": "GPT-3.5 Turbo",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 16385,
-    "pricing": {
-      "input": "0.0000005",
-      "output": "0.0000015",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "openai/gpt-3.5-turbo-0125": {
     "id": "openai/gpt-3.5-turbo-0125",
     "model_name": "GPT-3.5 Turbo 16k",
@@ -5910,6 +5891,25 @@
     "pricing": {
       "input": "0.00003",
       "output": "0.00006",
+      "image": "0"
+    },
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo": {
+    "id": "openai/gpt-3.5-turbo",
+    "model_name": "GPT-3.5 Turbo",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
       "image": "0"
     },
     "input_capabilities": [

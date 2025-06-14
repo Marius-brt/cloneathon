@@ -20,7 +20,6 @@ export function Form({ children }: { children: ReactNode }) {
     async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
       const data = new FormData(e.currentTarget);
-      console.log(data);
       await execute(data);
     },
     [execute]

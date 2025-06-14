@@ -1,15 +1,15 @@
-import { getSessionCookie } from "better-auth/cookies";
+import { getSession } from "@/lib/server/auth-utils";
 import { type NextRequest, NextResponse } from "next/server";
 
 export async function middleware(request: NextRequest) {
-  const sessionCookie = getSessionCookie(request);
+  const session = await getSession();
   const pathname = request.nextUrl.pathname;
 
-  if (!sessionCookie && !pathname.startsWith("/sign-in")) {
+  if (!session && !pathname.startsWith("/sign-in")) {
     return NextResponse.redirect(new URL("/sign-in", request.url));
   }
 
-  if (sessionCookie && pathname.startsWith("/sign-in")) {
+  if (session && pathname.startsWith("/sign-in")) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
@@ -17,6 +17,7 @@ export async function middleware(request: NextRequest) {
 }
 
 export const config = {
+  runtime: "nodejs",
   matcher: [
     "/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|manifest).*)"
   ]

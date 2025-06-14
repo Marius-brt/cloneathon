@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "bun run src/scripts/load-models.ts && next build --turbopack",
+    "build": "bun run src/scripts/load-models.ts && next build --turbopack && mkdir -p .next/standalone/src/assets && cp src/assets/models.json .next/standalone/src/assets/models.json",
     "db:generate": "prisma generate",
     "db:migrate": "prisma migrate dev --create-only",
     "db:push": "prisma db push",
@@ -52,6 +52,7 @@
     "rehype-katex": "^7.0.1",
     "remark-gfm": "^4.0.1",
     "remark-math": "^6.0.0",
+    "server-only": "^0.0.1",
     "shiki": "^3.6.0",
     "sonner": "^2.0.5",
     "tailwind-merge": "^3.3.0",

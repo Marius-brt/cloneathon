@@ -1,12 +1,14 @@
 import { readFileSync } from "node:fs";
 import { getProvider } from "@/lib/config/ai";
 import { getSession } from "@/lib/server/auth-utils";
-import type { Model } from "@/lib/server/openrouter";
+import { type Model, calculateCost } from "@/lib/server/openrouter";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 import { getTools } from "@/lib/server/tools";
+import type { Annotation } from "@/lib/types";
 import type { OpenRouterProvider } from "@openrouter/ai-sdk-provider";
 import {
+  type DataStreamWriter,
   type UIMessage,
   appendClientMessage,
   appendResponseMessages,
@@ -42,6 +44,22 @@ const bodySchema = z.object({
       .max(1)
   })
 });
+
+function createAnnotation(
+  name: string,
+  value: string | Record<string, any>,
+  dataStream: DataStreamWriter
+): Annotation {
+  dataStream.writeMessageAnnotation({
+    type: name,
+    value
+  });
+
+  return {
+    type: name,
+    value
+  };
+}
 
 export async function POST(req: Request) {
   try {
@@ -83,7 +101,8 @@ export async function POST(req: Request) {
       modelId,
       role: message.role,
       content: message.content,
-      parts: message.parts
+      parts: message.parts,
+      annotations: {}
     });
 
     const previousMessages = await MessageRepository.getAllMessages(chatId);
@@ -98,8 +117,12 @@ export async function POST(req: Request) {
       }
     });
 
+    const annotations: Annotation[] = [];
+
     return createDataStreamResponse({
       execute: async (dataStream) => {
+        annotations.push(createAnnotation("model_id", modelId, dataStream));
+
         const result = streamText({
           model: provider(modelId),
           messages,
@@ -123,8 +146,20 @@ export async function POST(req: Request) {
           onError: (error) => {
             console.error("error", error);
           },
-          onFinish: async ({ response }) => {
+          onFinish: async ({ response, usage }) => {
             try {
+              annotations.push(
+                createAnnotation(
+                  "usage",
+                  {
+                    input: usage.promptTokens,
+                    output: usage.completionTokens,
+                    cost: calculateCost(models[modelId], usage)
+                  },
+                  dataStream
+                )
+              );
+
               const responseMessages = appendResponseMessages({
                 messages,
                 responseMessages: response.messages
@@ -142,7 +177,8 @@ export async function POST(req: Request) {
                 chatId: chatId,
                 role: newMessage.role,
                 content: newMessage.content,
-                parts: newMessage.parts as any[]
+                parts: newMessage.parts as any[],
+                annotations: annotations
               });
             } catch (error) {
               console.error("error", error);
