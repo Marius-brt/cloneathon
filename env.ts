@@ -14,13 +14,8 @@ export const env = createEnv({
     GITHUB_CLIENT_SECRET: z.string().min(1),
     GOOGLE_CLIENT_ID: z.string().min(1),
     GOOGLE_CLIENT_SECRET: z.string().min(1),
-    // Mistral
-    MISTRAL_API_KEY: z.string().min(1),
     // Tavily
-    TAVILY_API_KEY: z.string().min(1),
-    // Upstash
-    UPSTASH_SEARCH_REST_URL: z.string().url(),
-    UPSTASH_SEARCH_REST_TOKEN: z.string().min(1)
+    TAVILY_API_KEY: z.string().min(1)
   },
   client: {},
   experimental__runtimeEnv: {},

@@ -6,15 +6,22 @@ import { MESSAGES_BATCH_SIZE } from "@/lib/constants";
 import { getMessages } from "@/lib/server/actions/messages.action";
 import { useChatStore } from "@/lib/stores/chat.store";
 import type { Message } from "ai";
-import { Loader2 } from "lucide-react";
+import { CircleAlert, Loader2 } from "lucide-react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 export function Messages({
   messages,
   isStreaming,
   submitted,
-  chatId
-}: { messages: Message[]; isStreaming: boolean; submitted: boolean; chatId: string }) {
+  chatId,
+  error
+}: {
+  messages: Message[];
+  isStreaming: boolean;
+  submitted: boolean;
+  chatId: string;
+  error: string | null;
+}) {
   const { oldMessages, addOldMessages } = useChatStore();
   const [autoScroll, setAutoScroll] = useState(true);
   const [noMoreMessages, setNoMoreMessages] = useState(false);
@@ -131,6 +138,18 @@ export function Messages({
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Loader2 className="size-3 animate-spin" />
             <span>Thinking</span>
+          </div>
+        )}
+        {error && (
+          <div className="rounded-md border px-4 py-3">
+            <p className="text-sm">
+              <CircleAlert
+                className="-mt-0.5 me-3 inline-flex text-red-500"
+                size={16}
+                aria-hidden="true"
+              />
+              <span>{error}</span>
+            </p>
           </div>
         )}
       </div>

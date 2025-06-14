@@ -1,12 +1,13 @@
-import { env } from "@env";
+import { getUserApiKey } from "@/lib/server/auth-utils";
 import { createOpenRouter } from "@openrouter/ai-sdk-provider";
+import { cache } from "react";
 
-/* const provider = createMistral({
-  apiKey: env.MISTRAL_API_KEY
-}); */
+export const getProvider = cache(async () => {
+  const apiKey = await getUserApiKey();
 
-export const provider = createOpenRouter({
-  apiKey: env.MISTRAL_API_KEY
+  return createOpenRouter({
+    apiKey
+  });
 });
 
-export const titleGenerationModel = provider("deepseek/deepseek-chat-v3-0324:free");
+export const titleGenerationModel = "deepseek/deepseek-chat-v3-0324:free";

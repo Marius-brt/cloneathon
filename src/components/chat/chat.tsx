@@ -8,6 +8,7 @@ import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { useChat } from "@ai-sdk/react";
 import type { Message } from "ai";
 import { useCallback, useState } from "react";
+import { toast } from "sonner";
 
 export function Chat({
   initialMessages,
@@ -23,10 +24,25 @@ export function Chat({
     initialTitle !== null && initialTitle !== ""
   );
   const [title, setTitle] = useState(initialTitle || "");
+  const [error, setError] = useState<string | null>(null);
   const { input, messages, status, stop, handleSubmit, setInput } = useChat({
     initialMessages,
     experimental_throttle: 100,
     sendExtraMessageFields: false,
+    onError: (error) => {
+      try {
+        const data = JSON.parse(error.message);
+        if (data.code === "key_missing") {
+          setError(
+            "No API key found. Please add an OpenRouter API key in your settings."
+          );
+        } else {
+          setError("An error occurred. Please try again.");
+        }
+      } catch {
+        setError("An error occurred. Please try again.");
+      }
+    },
     onFinish: () => {
       window.history.replaceState({}, "", `/${chatId}`);
       window.dispatchEvent(new CustomEvent("chat-history-updated"));
@@ -56,12 +72,16 @@ export function Chat({
         generateTitle({
           chatId,
           message: firstUserMessage?.content || input
-        }).then((data) => {
-          if (data.data) {
-            setTitle(data.data);
-            setTitleGenerated(true);
-          }
-        });
+        })
+          .then((data) => {
+            if (data.data) {
+              setTitle(data.data);
+              setTitleGenerated(true);
+            }
+          })
+          .catch((error) => {
+            toast.error(error.message);
+          });
       }
     }
   }, [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]);
@@ -70,6 +90,7 @@ export function Chat({
     <>
       <ChatTitle title={title} />
       <Messages
+        error={error}
         messages={messages}
         isStreaming={isStreaming}
         chatId={chatId}

@@ -1,10 +1,11 @@
 import { readFileSync } from "node:fs";
-import { provider } from "@/lib/config/ai";
+import { getProvider } from "@/lib/config/ai";
 import { getSession } from "@/lib/server/auth-utils";
 import type { Model } from "@/lib/server/openrouter";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 import { getTools } from "@/lib/server/tools";
+import type { OpenRouterProvider } from "@openrouter/ai-sdk-provider";
 import {
   type UIMessage,
   appendClientMessage,
@@ -61,6 +62,17 @@ export async function POST(req: Request) {
 
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    let provider: OpenRouterProvider | null = null;
+
+    try {
+      provider = await getProvider();
+    } catch {
+      return NextResponse.json(
+        { error: "Unauthorized", code: "key_missing" },
+        { status: 401 }
+      );
     }
 
     const chat = await ChatRepository.getOrCreateChat(chatId);
