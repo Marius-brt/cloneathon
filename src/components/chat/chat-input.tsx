@@ -56,7 +56,7 @@ export function ChatInput({
             onKeyDown={handleKeyDown}
             disabled={isLoading}
             autoFocus
-            className="!outline-none !ring-0 !bg-background/60 dark:!bg-background/35 !border-t-0 !border-x-0 !text-medium !border-muted dark:!border-white/20 !p-4 !text-base min-h-[100px] resize-none rounded-xl backdrop-blur-sm backdrop-filter max-sm:rounded-none"
+            className="!outline-none !ring-0 !bg-background/60 dark:!bg-background/35 !border-t-0 !border-x-0 !text-medium !border-muted dark:!border-white/20 !p-4 !text-base max-h-[200px] min-h-[100px] resize-none rounded-xl backdrop-blur-sm backdrop-filter max-sm:rounded-none"
           />
           <div className="absolute right-2 bottom-2 flex items-center justify-center gap-2 max-sm:right-4 max-sm:bottom-4">
             <SpeechRecognition value={input} setValue={setInput} isLoading={isLoading} />

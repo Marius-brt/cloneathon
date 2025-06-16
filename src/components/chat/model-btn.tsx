@@ -9,8 +9,37 @@ import type { Model } from "@/lib/server/openrouter";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@uidotdev/usehooks";
-import { Bot, Brain, Search, X } from "lucide-react";
+import {
+  Bot,
+  Brain,
+  Search,
+  PenTool,
+  X,
+  Wrench,
+  LucideIcon,
+  type LucideIcon
+} from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+
+function Capability({
+  icon: Icon,
+  color,
+  label
+}: { icon: LucideIcon; color: string; label: string }) {
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <div className={cn(color, "rounded p-1")}>
+          <Icon className="!size-3" />
+        </div>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{label}</p>
+      </TooltipContent>
+    </Tooltip>
+  );
+}
 
 function ModelCard({
   model,
@@ -29,7 +58,7 @@ function ModelCard({
       type="button"
       onClick={onSelect}
       className={cn(
-        "flex h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-2 pt-3 pb-2 text-center transition-all duration-300",
+        "flex min-h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-2 pt-3 pb-2 text-center transition-all duration-300",
         active && "border-border bg-muted"
       )}
     >
@@ -37,21 +66,29 @@ function ModelCard({
       <span className="font-medium text-sm">{model.model_name}</span>
       <div className="mt-auto flex items-center gap-2">
         {model.reasoning && (
-          <div className={"rounded bg-purple-500/10 p-1 text-purple-500"}>
-            <Brain className="!size-3" />
-          </div>
+          <Capability
+            icon={Brain}
+            color="bg-purple-500/10 text-purple-500"
+            label="Reasoning"
+          />
+        )}
+        {model.supports_tools && (
+          <Capability
+            icon={Wrench}
+            color="bg-orange-500/10 text-orange-500"
+            label="Tools"
+          />
         )}
         {model.input_capabilities.map((capability) => {
           if (!capabilitiesIcons[capability as keyof typeof capabilitiesIcons]) {
             return null;
           }
-          const { icon: Icon, color } =
-            capabilitiesIcons[capability as keyof typeof capabilitiesIcons];
-          return (
-            <div key={capability} className={cn(color, "rounded p-1")}>
-              <Icon className="!size-3" />
-            </div>
-          );
+          const {
+            icon: Icon,
+            color,
+            label
+          } = capabilitiesIcons[capability as keyof typeof capabilitiesIcons];
+          return <Capability key={capability} icon={Icon} color={color} label={label} />;
         })}
       </div>
     </button>

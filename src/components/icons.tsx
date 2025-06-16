@@ -256,7 +256,10 @@ export const toolIcons: Record<string, (props: SVGProps<SVGSVGElement>) => React
   )
 };
 
-export const capabilitiesIcons: Record<string, { icon: LucideIcon; color: string }> = {
-  image: { icon: Eye, color: "text-green-500 bg-green-500/10" },
-  file: { icon: FileIcon, color: "text-blue-500 bg-blue-500/10" }
+export const capabilitiesIcons: Record<
+  string,
+  { icon: LucideIcon; color: string; label: string }
+> = {
+  image: { icon: Eye, color: "text-green-500 bg-green-500/10", label: "Image" },
+  file: { icon: FileIcon, color: "text-blue-500 bg-blue-500/10", label: "File" }
 };

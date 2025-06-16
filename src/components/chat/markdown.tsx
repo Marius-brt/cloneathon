@@ -7,6 +7,14 @@ import ReactMarkdown from "react-markdown";
 import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from "../ui/table";
 
 type CodeComponentProps = ComponentProps<"code"> & ExtraProps;
 
@@ -36,7 +44,23 @@ const components: Components = {
       {props.children}
     </a>
   ),
-  ol: ({ node, ...props }) => <ol {...props} className={"list-decimal pl-5"} />
+  ol: ({ node, ...props }) => <ol {...props} className={"list-decimal pl-5"} />,
+  table: ({ node, ...props }) => <Table {...props} />,
+  th: ({ node, ...props }) => (
+    <TableHead
+      className="min-w-[100px] max-w-[500px] w-fit whitespace-normal break-words px-2 py-2"
+      {...props}
+    />
+  ),
+  td: ({ node, ...props }) => (
+    <TableCell
+      className="min-w-[100px] max-w-[500px] w-fit whitespace-normal break-words px-4 py-2"
+      {...props}
+    />
+  ),
+  thead: ({ node, ...props }) => <TableHeader {...props} />,
+  tbody: ({ node, ...props }) => <TableBody {...props} />,
+  tr: ({ node, ...props }) => <TableRow {...props} />
 };
 
 const LANGUAGE_REGEX = /language-(\w+)/;
