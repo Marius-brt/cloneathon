@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/config/db";
+import { secondaryStorage } from "@/lib/config/upstash";
 import { env } from "@env";
 import { betterAuth } from "better-auth";
 import { prismaAdapter } from "better-auth/adapters/prisma";
@@ -8,12 +9,7 @@ export const auth = betterAuth({
   database: prismaAdapter(prisma, {
     provider: "postgresql"
   }),
-  session: {
-    /*  cookieCache: {
-      enabled: true,
-      maxAge: 5 * 60
-    } */
-  },
+  secondaryStorage,
   socialProviders: {
     github: {
       clientId: env.GITHUB_CLIENT_ID,

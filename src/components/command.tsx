@@ -24,12 +24,13 @@ import { useCommandState } from "cmdk";
 import {
   ArrowUpRightIcon,
   CornerDownLeftIcon,
+  Loader2,
   type LucideIcon,
   MenuIcon,
   MessageSquareDiff,
   Sparkles
 } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import { Button } from "./ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
@@ -57,30 +58,45 @@ const actions: ActionType[] = [
 
 function NewChatButton() {
   const search = useCommandState((state) => state.search);
+  const router = useRouter();
 
   const newChat = useCallback(() => {
-    alert(`Ask AI for ${search}`);
-  }, [search]);
+    router.push(`${crypto.randomUUID()}?prompt=${encodeURIComponent(search)}`);
+  }, [router, search]);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Enter" && search.length > 0) {
+        newChat();
+      }
+    },
+    [newChat, search]
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [handleKeyDown]);
 
   return (
-    <CommandEmpty className="p-2">
-      <button
-        type="button"
-        className="relative flex w-full cursor-default select-none items-center gap-3 rounded-md border bg-accent px-3 py-2 text-accent-foreground text-sm outline-hidden [&_svg]:pointer-events-none [&_svg]:shrink-0"
-        onClick={newChat}
-      >
-        <Sparkles size={16} className="opacity-60" aria-hidden="true" />
-        <div className="flex items-center gap-1">
-          Ask AI for
-          <span className="m-0 max-w-[300px] truncate rounded-md border bg-popover px-1.5 pb-0.5 font-bold">
-            {search}
-          </span>
-        </div>
-        <CommandShortcut>
-          <CornerDownLeftIcon className="size-[0.625rem]" />
-        </CommandShortcut>
-      </button>
-    </CommandEmpty>
+    <button
+      type="button"
+      className="relative flex w-full cursor-default select-none items-center gap-3 rounded-md border bg-accent px-3 py-2 text-accent-foreground text-sm outline-hidden [&_svg]:pointer-events-none [&_svg]:shrink-0"
+      onClick={newChat}
+    >
+      <Sparkles size={16} className="opacity-60" aria-hidden="true" />
+      <div className="flex items-center gap-1">
+        Ask AI for
+        <span className="m-0 max-w-[300px] truncate rounded-md border bg-popover px-1.5 pb-0.5 font-bold">
+          {search}
+        </span>
+      </div>
+      <CommandShortcut>
+        <CornerDownLeftIcon className="size-[0.625rem]" />
+      </CommandShortcut>
+    </button>
   );
 }
 
@@ -89,11 +105,13 @@ export function CommandPalette({
 }: {
   recentChats: ChatType[];
 }) {
+  const [loading, setLoading] = useState(false);
   const [input, setInput] = useState("");
   const debouncedSearch = useDebounce(input, 300);
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [chatsSearchResults, setChatsSearchResults] = useState<ChatType[]>([]);
+  const path = usePathname();
 
   const items = useMemo(() => {
     const chats = recentChats.map((chat) => ({
@@ -115,10 +133,14 @@ export function CommandPalette({
         label: "Actions",
         actions
       },
-      {
-        label: "Recent chats",
-        actions: chats
-      }
+      ...(chats.length > 0
+        ? [
+            {
+              label: "Recent chats",
+              actions: chats
+            }
+          ]
+        : [])
     ] as {
       label: string;
       actions: ActionType[];
@@ -139,16 +161,22 @@ export function CommandPalette({
 
   useEffect(() => {
     if (debouncedSearch !== "") {
+      setLoading(true);
       searchAction({
         query: debouncedSearch,
         ignoreIds: recentChats.map((chat) => chat.id)
-      }).then((res) => {
-        if (res.data) {
-          setChatsSearchResults(res.data);
-        }
-      });
+      })
+        .then((res) => {
+          if (res.data) {
+            setChatsSearchResults(res.data);
+          }
+        })
+        .finally(() => {
+          setLoading(false);
+        });
     } else {
       setChatsSearchResults([]);
+      setLoading(false);
     }
   }, [debouncedSearch, recentChats]);
 
@@ -165,30 +193,17 @@ export function CommandPalette({
       if (action.link) {
         router.push(action.link);
       }
-      setOpen(false);
     },
     [router]
   );
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
+  useEffect(() => {
+    setOpen(false);
+  }, [path]);
+
   return (
     <>
-      {/* <button
-        type="button"
-        className="inline-flex h-9 w-fit rounded-md border border-input bg-background px-3 py-2 text-foreground text-sm shadow-xs outline-none transition-[color,box-shadow] placeholder:text-muted-foreground/70 focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
-        onClick={() => setOpen(true)}
-      >
-        <span className="flex grow items-center">
-          <SearchIcon
-            className="-ms-1 me-3 text-muted-foreground/80"
-            size={16}
-            aria-hidden="true"
-          />
-          <span className="font-normal text-muted-foreground/70">Search</span>
-        </span>
-        <kbd className="-me-1 ms-12 inline-flex h-5 max-h-full items-center rounded border bg-background px-1 font-[inherit] font-medium text-[0.625rem] text-muted-foreground/70">
-          ⌘K
-        </kbd>
-      </button> */}
       <Tooltip>
         <TooltipTrigger asChild>
           <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
@@ -221,7 +236,9 @@ export function CommandPalette({
               onValueChange={(v) => setInput(v)}
             />
             <CommandList>
-              <NewChatButton />
+              <CommandEmpty className="p-2">
+                <NewChatButton />
+              </CommandEmpty>
               {items.map((action, i) => (
                 <Fragment key={i}>
                   <CommandGroup heading={action.label}>
@@ -249,6 +266,12 @@ export function CommandPalette({
                 </Fragment>
               ))}
             </CommandList>
+            {loading && (
+              <p className="flex items-center gap-2 px-4 pb-2 text-muted-foreground text-sm">
+                <Loader2 className="size-4 animate-spin" />
+                Searching for chats...
+              </p>
+            )}
           </Command>
           <div className="absolute inset-x-0 bottom-0 z-20 flex h-10 items-center gap-2 rounded-b-lg border-t border-t-neutral-100 bg-neutral-50 px-4 font-medium text-muted-foreground text-xs dark:border-t-neutral-700 dark:bg-neutral-800">
             <div className="flex items-center gap-2">

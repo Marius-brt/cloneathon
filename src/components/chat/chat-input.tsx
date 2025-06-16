@@ -45,7 +45,7 @@ export function ChatInput({
 
   return (
     <div className="fixed bottom-0 left-0 z-30 w-full text-base md:px-4 md:pb-4">
-      <div className="relative z-20 mx-auto max-w-2xl rounded-xl border bg-gradient-to-b from-stone-200/0 to-70% to-stone-200 shadow-xl max-md:rounded-b-none max-md:border-x-0 max-md:border-b-0 dark:from-stone-800/0 dark:to-stone-800">
+      <div className="relative z-20 mx-auto max-w-2xl border bg-gradient-to-b from-stone-200/0 to-70% to-stone-200 shadow-xl max-sm:pb-2 max-md:rounded-b-none max-md:border-x-0 max-md:border-b-0 md:rounded-xl dark:from-stone-800/0 dark:to-stone-800">
         <form className="relative top-border-gradient w-full " onSubmit={onSubmit}>
           <Textarea
             id="chat-input"
@@ -56,9 +56,9 @@ export function ChatInput({
             onKeyDown={handleKeyDown}
             disabled={isLoading}
             autoFocus
-            className="!outline-none !ring-0 !bg-background/60 dark:!bg-background/35 !border-t-0 !border-x-0 !text-medium !border-muted dark:!border-white/20 !p-4 !text-base min-h-[100px] resize-none rounded-xl backdrop-blur-sm backdrop-filter"
+            className="!outline-none !ring-0 !bg-background/60 dark:!bg-background/35 !border-t-0 !border-x-0 !text-medium !border-muted dark:!border-white/20 !p-4 !text-base min-h-[100px] resize-none rounded-xl backdrop-blur-sm backdrop-filter max-sm:rounded-none"
           />
-          <div className="absolute right-2 bottom-2 flex items-center justify-center gap-2">
+          <div className="absolute right-2 bottom-2 flex items-center justify-center gap-2 max-sm:right-4 max-sm:bottom-4">
             <SpeechRecognition value={input} setValue={setInput} isLoading={isLoading} />
             <Button
               size={"icon"}
@@ -70,7 +70,7 @@ export function ChatInput({
             </Button>
           </div>
         </form>
-        <div className="flex items-center gap-2 p-2">
+        <div className="flex items-center gap-2 p-2 max-sm:px-4 max-sm:pt-4">
           <ModelBtn />
           <ToolsBtn />
         </div>

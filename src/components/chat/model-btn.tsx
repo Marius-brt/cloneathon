@@ -10,7 +10,7 @@ import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@uidotdev/usehooks";
 import { Bot, Brain, Search, X } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 function ModelCard({
   model,
@@ -33,7 +33,7 @@ function ModelCard({
         active && "border-border bg-muted"
       )}
     >
-      {Icon && <Icon className="!size-7" />}
+      {Icon && <Icon className="!size-7 shrink-0" />}
       <span className="font-medium text-sm">{model.model_name}</span>
       <div className="mt-auto flex items-center gap-2">
         {model.reasoning && (
@@ -64,6 +64,7 @@ export function ModelBtn() {
   const [search, setSearch] = useState("");
   const debouncedSearch = useDebounce(search, 100);
   const [results, setResults] = useState<Model[]>([]);
+  const [open, setOpen] = useState(false);
 
   const currentModel = useMemo(() => {
     if (!modelId) {
@@ -92,8 +93,16 @@ export function ModelBtn() {
     );
   }, [debouncedSearch, models]);
 
+  const setModel = useCallback(
+    (id: string) => {
+      setModelId(id);
+      setOpen(false);
+    },
+    [setModelId]
+  );
+
   return (
-    <Popover>
+    <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button
           variant={"outline"}
@@ -106,7 +115,7 @@ export function ModelBtn() {
       </PopoverTrigger>
       <PopoverContent
         align="start"
-        className="flex w-[620px] flex-col gap-2 overflow-hidden p-2"
+        className="flex w-[620px] flex-col gap-2 overflow-hidden p-2 max-sm:w-[calc(100vw-1rem)]"
       >
         <div className="relative w-full">
           <Search className="-translate-y-1/2 absolute top-1/2 left-2 size-4 text-muted-foreground" />
@@ -134,7 +143,7 @@ export function ModelBtn() {
               key={model.id}
               model={model}
               active={model.id === modelId}
-              onSelect={() => setModelId(model.id)}
+              onSelect={() => setModel(model.id)}
             />
           ))}
         </div>

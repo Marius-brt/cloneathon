@@ -7,17 +7,19 @@ import { generateTitle } from "@/lib/server/actions/title.action";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { useChat } from "@ai-sdk/react";
 import type { Message } from "ai";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 
 export function Chat({
   initialMessages,
   chatId,
-  initialTitle
+  initialTitle,
+  initialPrompt
 }: {
   initialMessages: Message[];
   chatId: string;
   initialTitle: string | null;
+  initialPrompt: string | null;
 }) {
   const { enabledTools, modelId } = useChatSettingsStore();
   const [titleGenerated, setTitleGenerated] = useState(
@@ -25,6 +27,7 @@ export function Chat({
   );
   const [title, setTitle] = useState(initialTitle || "");
   const [error, setError] = useState<string | null>(null);
+  const [initialPromptSent, setInitialPromptSent] = useState(false);
   const { input, messages, status, stop, handleSubmit, setInput } = useChat({
     initialMessages,
     experimental_throttle: 100,
@@ -66,6 +69,9 @@ export function Chat({
   const submitHandler = useCallback(() => {
     if (input.length > 0 && !isStreaming) {
       handleSubmit();
+      setInitialPromptSent(true);
+
+      window.history.replaceState({}, "", `/${chatId}`);
 
       if (!titleGenerated) {
         const firstUserMessage = messages.find((message) => message.role === "user");
@@ -85,6 +91,13 @@ export function Chat({
       }
     }
   }, [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]);
+
+  useEffect(() => {
+    if (initialPrompt && initialPrompt.length > 0 && !isStreaming && !initialPromptSent) {
+      setInput(initialPrompt);
+      submitHandler();
+    }
+  }, [initialPrompt, submitHandler, setInput, isStreaming, initialPromptSent]);
 
   return (
     <>

@@ -9,11 +9,14 @@ import { z } from "zod/v4";
 export const dynamic = "force-dynamic";
 
 export default async function ThreadPage({
-  params
+  params,
+  searchParams
 }: {
   params: Promise<{ chatId: string }>;
+  searchParams: Promise<{ prompt?: string }>;
 }) {
   const { chatId } = await params;
+  const { prompt } = await searchParams;
 
   await z
     .uuid()
@@ -34,6 +37,7 @@ export default async function ThreadPage({
           initialMessages={orderedMessages}
           chatId={chatId}
           initialTitle={title?.title || null}
+          initialPrompt={typeof prompt === "string" ? prompt : null}
         />
       </ModelsProvider>
       <div className="pointer-events-none fixed bottom-0 left-0 h-[180px] w-full bg-gradient-to-b from-background/0 via-70% via-background to-background" />
