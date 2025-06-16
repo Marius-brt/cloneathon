@@ -11,6 +11,7 @@
       "output": "0.0000015",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -30,6 +31,7 @@
       "output": "0.000005",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -49,6 +51,7 @@
       "output": "0.000005",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -68,6 +71,7 @@
       "output": "0.00001",
       "image": "0.00516"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "file",
       "image",
@@ -89,6 +93,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -108,6 +113,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -127,6 +133,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -146,6 +153,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -165,6 +173,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -184,6 +193,7 @@
       "output": "0.00000215",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -203,6 +213,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -222,6 +233,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -241,6 +253,7 @@
       "output": "0.000075",
       "image": "0.024"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text"
@@ -261,6 +274,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text"
@@ -281,6 +295,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -300,6 +315,7 @@
       "output": "0.00000012",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -319,6 +335,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -338,6 +355,7 @@
       "output": "0.0000006",
       "image": "0.0006192"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -359,6 +377,7 @@
       "output": "0.0000035",
       "image": "0.0006192"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -380,6 +399,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -399,6 +419,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -418,6 +439,7 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -438,6 +460,7 @@
       "output": "0.00001",
       "image": "0.00516"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -459,6 +482,7 @@
       "output": "0.00000085",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -478,6 +502,7 @@
       "output": "0.00000018",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "image",
       "text"
@@ -498,6 +523,7 @@
       "output": "0.0000033",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -517,6 +543,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -536,6 +563,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -555,6 +583,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -574,6 +603,7 @@
       "output": "0.00000075",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -593,6 +623,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -612,6 +643,7 @@
       "output": "0.00000035",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -631,6 +663,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -650,6 +683,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "image",
       "text"
@@ -670,6 +704,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "image",
       "text"
@@ -690,6 +725,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -709,6 +745,7 @@
       "output": "0.00000218",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -728,6 +765,7 @@
       "output": "0.00000005",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "image",
       "text"
@@ -748,6 +786,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -767,6 +806,7 @@
       "output": "0.00000029",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -786,6 +826,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -805,6 +846,7 @@
       "output": "0.000000138",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -824,6 +866,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -843,6 +886,7 @@
       "output": "0.00000024",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -862,6 +906,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -881,6 +926,7 @@
       "output": "0.0000003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -900,6 +946,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -919,6 +966,7 @@
       "output": "0.0000006",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -938,6 +986,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -957,6 +1006,7 @@
       "output": "0.00000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -976,6 +1026,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -995,6 +1046,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1014,6 +1066,7 @@
       "output": "0.00000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1033,6 +1086,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1052,6 +1106,7 @@
       "output": "0.00000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1071,6 +1126,7 @@
       "output": "0.0000006",
       "image": "0.0006192"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -1092,6 +1148,7 @@
       "output": "0.0000035",
       "image": "0.0006192"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -1113,6 +1170,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1132,6 +1190,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -1153,6 +1212,7 @@
       "output": "0.0000016",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -1174,6 +1234,7 @@
       "output": "0.0000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "image",
       "text",
@@ -1195,6 +1256,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1214,6 +1276,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1233,6 +1296,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1252,6 +1316,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1271,6 +1336,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "image",
       "text"
@@ -1291,6 +1357,7 @@
       "output": "0.0000005",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1310,6 +1377,7 @@
       "output": "0.000015",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1329,6 +1397,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1348,6 +1417,7 @@
       "output": "0.0000004",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1367,6 +1437,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1386,6 +1457,7 @@
       "output": "0.0000018",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1405,6 +1477,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1425,6 +1498,7 @@
       "output": "0.0000006",
       "image": "0.0006684"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1445,6 +1519,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1465,6 +1540,7 @@
       "output": "0.0000003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1485,6 +1561,7 @@
       "output": "0.0000034",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1504,6 +1581,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1523,28 +1601,9 @@
       "output": "0.00000088",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "qwen/qwen2.5-vl-3b-instruct:free": {
-    "id": "qwen/qwen2.5-vl-3b-instruct:free",
-    "model_name": "Qwen2.5 VL 3B Instruct (free)",
-    "provider_name": "Qwen",
-    "provider_id": "qwen",
-    "reasoning": false,
-    "context_window": 64000,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
     ],
     "output_capabilities": [
       "text"
@@ -1562,6 +1621,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -1583,6 +1643,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1603,6 +1664,7 @@
       "output": "0.0000009",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1623,6 +1685,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1642,6 +1705,7 @@
       "output": "0.00000088",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1661,6 +1725,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1680,6 +1745,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1700,6 +1766,7 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -1720,6 +1787,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1739,6 +1807,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1759,6 +1828,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1779,6 +1849,7 @@
       "output": "0.00000004",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1799,6 +1870,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1818,6 +1890,7 @@
       "output": "0.0000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -1837,6 +1910,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1857,6 +1931,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1877,6 +1952,7 @@
       "output": "0.00001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1896,6 +1972,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1915,6 +1992,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1935,6 +2013,7 @@
       "output": "0.0000002",
       "image": "0.0000256"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -1955,6 +2034,7 @@
       "output": "0.000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1974,6 +2054,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -1993,6 +2074,7 @@
       "output": "0.0000001",
       "image": "0.00017685"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2013,6 +2095,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2033,6 +2116,7 @@
       "output": "0.000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2053,6 +2137,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2072,6 +2157,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2091,6 +2177,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2110,25 +2197,7 @@
       "output": "0.0000002",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "moonshotai/moonlight-16b-a3b-instruct:free": {
-    "id": "moonshotai/moonlight-16b-a3b-instruct:free",
-    "model_name": "Moonlight 16B A3B Instruct (free)",
-    "provider_name": "Moonshot AI",
-    "provider_id": "moonshotai",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2148,6 +2217,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2167,6 +2237,7 @@
       "output": "0.00015",
       "image": "0.108375"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -2187,6 +2258,7 @@
       "output": "0.0000003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -2208,6 +2280,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -2228,6 +2301,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -2248,6 +2322,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -2268,6 +2343,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2287,6 +2363,7 @@
       "output": "0.0000006",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2306,6 +2383,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2325,6 +2403,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2344,6 +2423,7 @@
       "output": "0.00000006",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2363,6 +2443,7 @@
       "output": "0.00000004",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2382,6 +2463,7 @@
       "output": "0.0000004",
       "image": "0.0000258"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -2403,6 +2485,7 @@
       "output": "0.00000063",
       "image": "0.0002688"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2423,6 +2506,7 @@
       "output": "0.000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2442,6 +2526,7 @@
       "output": "0.0000014",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2461,6 +2546,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2480,6 +2566,7 @@
       "output": "0.0000032",
       "image": "0.001024"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2500,6 +2587,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2519,6 +2607,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2539,6 +2628,7 @@
       "output": "0.00000075",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2559,6 +2649,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2578,6 +2669,7 @@
       "output": "0.0000064",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2597,6 +2689,7 @@
       "output": "0.00000018",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2616,6 +2709,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2635,6 +2729,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2654,6 +2749,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2673,6 +2769,7 @@
       "output": "0.00000018",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2692,6 +2789,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2711,6 +2809,7 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2730,6 +2829,7 @@
       "output": "0.000005",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2749,6 +2849,7 @@
       "output": "0.000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2769,6 +2870,7 @@
       "output": "0.00000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2788,6 +2890,7 @@
       "output": "0.00000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2807,6 +2910,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2826,6 +2930,7 @@
       "output": "0.0000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2845,6 +2950,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2864,6 +2970,7 @@
       "output": "0.00000215",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2883,6 +2990,7 @@
       "output": "0.0000011",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -2903,6 +3011,7 @@
       "output": "0.0000009",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2922,6 +3031,7 @@
       "output": "0.00000014",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2941,6 +3051,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2960,6 +3071,7 @@
       "output": "0.00000089",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -2979,6 +3091,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -2998,6 +3111,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3017,6 +3131,7 @@
       "output": "0.00001",
       "image": "0.0036"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3037,6 +3152,7 @@
       "output": "0.00001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3056,6 +3172,7 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3075,6 +3192,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3095,6 +3213,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3110,10 +3229,11 @@
     "reasoning": false,
     "context_window": 131072,
     "pricing": {
-      "input": "0.00000007",
+      "input": "0.00000006",
       "output": "0.00000025",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3133,6 +3253,7 @@
       "output": "0.00000024",
       "image": "0.00009"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3153,6 +3274,7 @@
       "output": "0.00000014",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3172,6 +3294,7 @@
       "output": "0.0000032",
       "image": "0.0012"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3192,6 +3315,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3211,6 +3335,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3230,6 +3355,7 @@
       "output": "0.00001",
       "image": "0.003613"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -3251,6 +3377,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3270,6 +3397,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3289,6 +3417,7 @@
       "output": "0.000006",
       "image": "0.002888"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3309,6 +3438,7 @@
       "output": "0.000015",
       "image": "0.009"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3329,6 +3459,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3348,6 +3479,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3367,6 +3499,7 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3386,6 +3519,7 @@
       "output": "0.0000045",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3405,6 +3539,7 @@
       "output": "0.0000034",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3424,48 +3559,9 @@
       "output": "0.00000045",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3.5-haiku-20241022:beta": {
-    "id": "anthropic/claude-3.5-haiku-20241022:beta",
-    "model_name": "Claude 3.5 Haiku (2024-10-22) (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.000004",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3.5-haiku-20241022": {
-    "id": "anthropic/claude-3.5-haiku-20241022",
-    "model_name": "Claude 3.5 Haiku (2024-10-22)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.000004",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
     ],
     "output_capabilities": [
       "text"
@@ -3483,6 +3579,7 @@
       "output": "0.000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3503,6 +3600,49 @@
       "output": "0.000004",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku-20241022:beta": {
+    "id": "anthropic/claude-3.5-haiku-20241022:beta",
+    "model_name": "Claude 3.5 Haiku (2024-10-22) (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3.5-haiku-20241022": {
+    "id": "anthropic/claude-3.5-haiku-20241022",
+    "model_name": "Claude 3.5 Haiku (2024-10-22)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.000004",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3523,6 +3663,7 @@
       "output": "0.000003",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3542,6 +3683,7 @@
       "output": "0.000003",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3561,6 +3703,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3581,6 +3724,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3601,6 +3745,7 @@
       "output": "0.000015",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3620,6 +3765,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3639,6 +3785,7 @@
       "output": "0.00000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3658,6 +3805,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3677,6 +3825,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3696,6 +3845,7 @@
       "output": "0.0000003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -3715,6 +3865,7 @@
       "output": "0.00001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3734,6 +3885,7 @@
       "output": "0.00001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3753,6 +3905,7 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3773,6 +3926,7 @@
       "output": "0.0000005",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3792,6 +3946,7 @@
       "output": "0.000003",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3811,8 +3966,110 @@
       "output": "0.00000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-3b-instruct:free": {
+    "id": "meta-llama/llama-3.2-3b-instruct:free",
+    "model_name": "Llama 3.2 3B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 20000,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-3b-instruct": {
+    "id": "meta-llama/llama-3.2-3b-instruct",
+    "model_name": "Llama 3.2 3B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.00000001",
+      "output": "0.00000002",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-1b-instruct:free": {
+    "id": "meta-llama/llama-3.2-1b-instruct:free",
+    "model_name": "Llama 3.2 1B Instruct (free)",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-1b-instruct": {
+    "id": "meta-llama/llama-3.2-1b-instruct",
+    "model_name": "Llama 3.2 1B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000005",
+      "output": "0.00000001",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.2-90b-vision-instruct": {
+    "id": "meta-llama/llama-3.2-90b-vision-instruct",
+    "model_name": "Llama 3.2 90B Vision Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.0000012",
+      "output": "0.0000012",
+      "image": "0.001734"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text",
+      "image"
     ],
     "output_capabilities": [
       "text"
@@ -3830,6 +4087,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -3850,102 +4108,7 @@
       "output": "0.000000049",
       "image": "0.00007948"
     },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-3b-instruct:free": {
-    "id": "meta-llama/llama-3.2-3b-instruct:free",
-    "model_name": "Llama 3.2 3B Instruct (free)",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 20000,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-3b-instruct": {
-    "id": "meta-llama/llama-3.2-3b-instruct",
-    "model_name": "Llama 3.2 3B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0.00000001",
-      "output": "0.00000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-1b-instruct:free": {
-    "id": "meta-llama/llama-3.2-1b-instruct:free",
-    "model_name": "Llama 3.2 1B Instruct (free)",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-1b-instruct": {
-    "id": "meta-llama/llama-3.2-1b-instruct",
-    "model_name": "Llama 3.2 1B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0.000000005",
-      "output": "0.00000001",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3.2-90b-vision-instruct": {
-    "id": "meta-llama/llama-3.2-90b-vision-instruct",
-    "model_name": "Llama 3.2 90B Vision Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0.0000012",
-      "output": "0.0000012",
-      "image": "0.001734"
-    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -3966,6 +4129,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -3985,6 +4149,7 @@
       "output": "0.00000039",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4004,6 +4169,7 @@
       "output": "0.00000125",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4023,28 +4189,10 @@
       "output": "0.0000001",
       "image": "0.0001445"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "cohere/command-r-08-2024": {
-    "id": "cohere/command-r-08-2024",
-    "model_name": "Command R (08-2024)",
-    "provider_name": "Cohere",
-    "provider_id": "cohere",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.00000015",
-      "output": "0.0000006",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
     ],
     "output_capabilities": [
       "text"
@@ -4062,6 +4210,27 @@
       "output": "0.00001",
       "image": "0"
     },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r-08-2024": {
+    "id": "cohere/command-r-08-2024",
+    "model_name": "Command R (08-2024)",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000015",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4081,6 +4250,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -4101,6 +4271,7 @@
       "output": "0.0000002",
       "image": "0.0001445"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
@@ -4121,6 +4292,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4140,6 +4312,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4159,6 +4332,7 @@
       "output": "0.0000003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4178,6 +4352,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4197,28 +4372,10 @@
       "output": "0.000015",
       "image": "0.007225"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text",
       "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "aetherwiing/mn-starcannon-12b": {
-    "id": "aetherwiing/mn-starcannon-12b",
-    "model_name": "Starcannon 12B",
-    "provider_name": "Aetherwiing",
-    "provider_id": "aetherwiing",
-    "reasoning": false,
-    "context_window": 16384,
-    "pricing": {
-      "input": "0.0000008",
-      "output": "0.0000012",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
     ],
     "output_capabilities": [
       "text"
@@ -4236,6 +4393,27 @@
       "output": "0.00000005",
       "image": "0"
     },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "aetherwiing/mn-starcannon-12b": {
+    "id": "aetherwiing/mn-starcannon-12b",
+    "model_name": "Starcannon 12B",
+    "provider_name": "Aetherwiing",
+    "provider_id": "aetherwiing",
+    "reasoning": false,
+    "context_window": 16384,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000012",
+      "image": "0"
+    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4255,6 +4433,7 @@
       "output": "0.00001",
       "image": "0.003613"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -4276,6 +4455,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4295,6 +4475,7 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4314,25 +4495,7 @@
       "output": "0.0000012",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "perplexity/llama-3.1-sonar-large-128k-online": {
-    "id": "perplexity/llama-3.1-sonar-large-128k-online",
-    "model_name": "Llama 3.1 Sonar 70B Online",
-    "provider_name": "Perplexity",
-    "provider_id": "perplexity",
-    "reasoning": false,
-    "context_window": 127072,
-    "pricing": {
-      "input": "0.000001",
-      "output": "0.000001",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4352,6 +4515,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4359,18 +4523,19 @@
       "text"
     ]
   },
-  "meta-llama/llama-3.1-405b-instruct": {
-    "id": "meta-llama/llama-3.1-405b-instruct",
-    "model_name": "Llama 3.1 405B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
+  "perplexity/llama-3.1-sonar-large-128k-online": {
+    "id": "perplexity/llama-3.1-sonar-large-128k-online",
+    "model_name": "Llama 3.1 Sonar 70B Online",
+    "provider_name": "Perplexity",
+    "provider_id": "perplexity",
     "reasoning": false,
-    "context_window": 32768,
+    "context_window": 127072,
     "pricing": {
-      "input": "0.0000008",
-      "output": "0.0000008",
+      "input": "0.000001",
+      "output": "0.000001",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4390,6 +4555,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4405,10 +4571,31 @@
     "reasoning": false,
     "context_window": 131000,
     "pricing": {
-      "input": "0.000000019",
+      "input": "0.000000017",
       "output": "0.00000003",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3.1-405b-instruct": {
+    "id": "meta-llama/llama-3.1-405b-instruct",
+    "model_name": "Llama 3.1 405B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000008",
+      "output": "0.0000008",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4428,6 +4615,7 @@
       "output": "0.00000028",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4447,6 +4635,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4463,9 +4652,10 @@
     "context_window": 131072,
     "pricing": {
       "input": "0.00000001",
-      "output": "0.000000027",
+      "output": "0.000000025",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4485,6 +4675,7 @@
       "output": "0.0000006",
       "image": "0.000217"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -4506,6 +4697,7 @@
       "output": "0.0000006",
       "image": "0.007225"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -4527,6 +4719,7 @@
       "output": "0.0000008",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4546,6 +4739,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4565,6 +4759,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4584,6 +4779,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4603,6 +4799,7 @@
       "output": "0.000003",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4622,6 +4819,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -4642,6 +4840,7 @@
       "output": "0.000015",
       "image": "0.0048"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -4662,6 +4861,7 @@
       "output": "0.00000148",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4681,6 +4881,7 @@
       "output": "0.0000009",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4700,44 +4901,7 @@
       "output": "0.0000009",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "nousresearch/hermes-2-pro-llama-3-8b": {
-    "id": "nousresearch/hermes-2-pro-llama-3-8b",
-    "model_name": "Hermes 2 Pro - Llama-3 8B",
-    "provider_name": "NousResearch",
-    "provider_id": "nousresearch",
-    "reasoning": false,
-    "context_window": 131072,
-    "pricing": {
-      "input": "0.000000025",
-      "output": "0.00000004",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "mistralai/mistral-7b-instruct-v0.3": {
-    "id": "mistralai/mistral-7b-instruct-v0.3",
-    "model_name": "Mistral 7B Instruct v0.3",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0.000000028",
-      "output": "0.000000054",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4757,6 +4921,7 @@
       "output": "0",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4776,6 +4941,47 @@
       "output": "0.000000054",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "nousresearch/hermes-2-pro-llama-3-8b": {
+    "id": "nousresearch/hermes-2-pro-llama-3-8b",
+    "model_name": "Hermes 2 Pro - Llama-3 8B",
+    "provider_name": "NousResearch",
+    "provider_id": "nousresearch",
+    "reasoning": false,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0.000000025",
+      "output": "0.00000004",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct-v0.3": {
+    "id": "mistralai/mistral-7b-instruct-v0.3",
+    "model_name": "Mistral 7B Instruct v0.3",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.000000028",
+      "output": "0.000000054",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4795,6 +5001,7 @@
       "output": "0.0000001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4814,6 +5021,7 @@
       "output": "0.000001",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -4833,6 +5041,7 @@
       "output": "0.000006",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4852,49 +5061,10 @@
       "output": "0.0000003",
       "image": "0.00004"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-guard-2-8b": {
-    "id": "meta-llama/llama-guard-2-8b",
-    "model_name": "LlamaGuard 2 8B",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0.0000002",
-      "output": "0.0000002",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4o-2024-05-13": {
-    "id": "openai/gpt-4o-2024-05-13",
-    "model_name": "GPT-4o (2024-05-13)",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.000005",
-      "output": "0.000015",
-      "image": "0.007225"
-    },
-    "input_capabilities": [
-      "text",
-      "image",
-      "file"
     ],
     "output_capabilities": [
       "text"
@@ -4912,6 +5082,7 @@
       "output": "0.00001",
       "image": "0.003613"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -4933,6 +5104,49 @@
       "output": "0.000018",
       "image": "0.007225"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image",
+      "file"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-guard-2-8b": {
+    "id": "meta-llama/llama-guard-2-8b",
+    "model_name": "LlamaGuard 2 8B",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000002",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4o-2024-05-13": {
+    "id": "openai/gpt-4o-2024-05-13",
+    "model_name": "GPT-4o (2024-05-13)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.000005",
+      "output": "0.000015",
+      "image": "0.007225"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image",
@@ -4954,6 +5168,7 @@
       "output": "0.00000125",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4973,25 +5188,7 @@
       "output": "0.0000012",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-3-70b-instruct": {
-    "id": "meta-llama/llama-3-70b-instruct",
-    "model_name": "Llama 3 70B Instruct",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 8192,
-    "pricing": {
-      "input": "0.0000003",
-      "output": "0.0000004",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5011,6 +5208,27 @@
       "output": "0.00000006",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "meta-llama/llama-3-70b-instruct": {
+    "id": "meta-llama/llama-3-70b-instruct",
+    "model_name": "Llama 3 70B Instruct",
+    "provider_name": "Meta",
+    "provider_id": "meta",
+    "reasoning": false,
+    "context_window": 8192,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5030,6 +5248,7 @@
       "output": "0.0000009",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5049,28 +5268,9 @@
       "output": "0.00000048",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4-turbo": {
-    "id": "openai/gpt-4-turbo",
-    "model_name": "GPT-4 Turbo",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.00001",
-      "output": "0.00003",
-      "image": "0.01445"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
     ],
     "output_capabilities": [
       "text"
@@ -5088,6 +5288,28 @@
       "output": "0.000005",
       "image": "0.0006575"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-turbo": {
+    "id": "openai/gpt-4-turbo",
+    "model_name": "GPT-4 Turbo",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.00003",
+      "image": "0.01445"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -5108,6 +5330,7 @@
       "output": "0.000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5127,6 +5350,7 @@
       "output": "0.000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5146,25 +5370,7 @@
       "output": "0.0000008",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "cohere/command-r": {
-    "id": "cohere/command-r",
-    "model_name": "Command R",
-    "provider_name": "Cohere",
-    "provider_id": "cohere",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.0000005",
-      "output": "0.0000015",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5184,6 +5390,27 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "cohere/command-r": {
+    "id": "cohere/command-r",
+    "model_name": "Command R",
+    "provider_name": "Cohere",
+    "provider_id": "cohere",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5203,6 +5430,7 @@
       "output": "0.00000125",
       "image": "0.0004"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -5223,46 +5451,7 @@
       "output": "0.00000125",
       "image": "0.0004"
     },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3-sonnet:beta": {
-    "id": "anthropic/claude-3-sonnet:beta",
-    "model_name": "Claude 3 Sonnet (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000003",
-      "output": "0.000015",
-      "image": "0.0048"
-    },
-    "input_capabilities": [
-      "text",
-      "image"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-3-sonnet": {
-    "id": "anthropic/claude-3-sonnet",
-    "model_name": "Claude 3 Sonnet",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000003",
-      "output": "0.000015",
-      "image": "0.0048"
-    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -5283,6 +5472,7 @@
       "output": "0.000075",
       "image": "0.024"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -5303,6 +5493,49 @@
       "output": "0.000075",
       "image": "0.024"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-sonnet:beta": {
+    "id": "anthropic/claude-3-sonnet:beta",
+    "model_name": "Claude 3 Sonnet (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text",
+      "image"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-3-sonnet": {
+    "id": "anthropic/claude-3-sonnet",
+    "model_name": "Claude 3 Sonnet",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000003",
+      "output": "0.000015",
+      "image": "0.0048"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text",
       "image"
@@ -5323,6 +5556,7 @@
       "output": "0.0000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5342,25 +5576,7 @@
       "output": "0.000006",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4-turbo-preview": {
-    "id": "openai/gpt-4-turbo-preview",
-    "model_name": "GPT-4 Turbo Preview",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.00001",
-      "output": "0.00003",
-      "image": "0"
-    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5380,6 +5596,27 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4-turbo-preview": {
+    "id": "openai/gpt-4-turbo-preview",
+    "model_name": "GPT-4 Turbo Preview",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00001",
+      "output": "0.00003",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5399,44 +5636,7 @@
       "output": "0.0000006",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "mistralai/mistral-tiny": {
-    "id": "mistralai/mistral-tiny",
-    "model_name": "Mistral Tiny",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0.00000025",
-      "output": "0.00000025",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "mistralai/mistral-small": {
-    "id": "mistralai/mistral-small",
-    "model_name": "Mistral Small",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0.0000002",
-      "output": "0.0000006",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5456,6 +5656,47 @@
       "output": "0.0000081",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-small": {
+    "id": "mistralai/mistral-small",
+    "model_name": "Mistral Small",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.0000002",
+      "output": "0.0000006",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-tiny": {
+    "id": "mistralai/mistral-tiny",
+    "model_name": "Mistral Tiny",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 32768,
+    "pricing": {
+      "input": "0.00000025",
+      "output": "0.00000025",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5475,6 +5716,7 @@
       "output": "0.0000002",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5494,6 +5736,7 @@
       "output": "0.00000024",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5513,44 +5756,7 @@
       "output": "0.000002",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-2:beta": {
-    "id": "anthropic/claude-2:beta",
-    "model_name": "Claude v2 (self-moderated)",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000008",
-      "output": "0.000024",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "anthropic/claude-2": {
-    "id": "anthropic/claude-2",
-    "model_name": "Claude v2",
-    "provider_name": "Anthropic",
-    "provider_id": "anthropic",
-    "reasoning": false,
-    "context_window": 200000,
-    "pricing": {
-      "input": "0.000008",
-      "output": "0.000024",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5570,6 +5776,7 @@
       "output": "0.000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5589,6 +5796,47 @@
       "output": "0.000024",
       "image": "0"
     },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2:beta": {
+    "id": "anthropic/claude-2:beta",
+    "model_name": "Claude v2 (self-moderated)",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "anthropic/claude-2": {
+    "id": "anthropic/claude-2",
+    "model_name": "Claude v2",
+    "provider_name": "Anthropic",
+    "provider_id": "anthropic",
+    "reasoning": false,
+    "context_window": 200000,
+    "pricing": {
+      "input": "0.000008",
+      "output": "0.000024",
+      "image": "0"
+    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5608,6 +5856,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5627,25 +5876,7 @@
       "output": "0.0000125",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4-1106-preview": {
-    "id": "openai/gpt-4-1106-preview",
-    "model_name": "GPT-4 Turbo (older v1106)",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 128000,
-    "pricing": {
-      "input": "0.00001",
-      "output": "0.00003",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5665,6 +5896,7 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5672,18 +5904,19 @@
       "text"
     ]
   },
-  "mistralai/mistral-7b-instruct-v0.1": {
-    "id": "mistralai/mistral-7b-instruct-v0.1",
-    "model_name": "Mistral 7B Instruct v0.1",
-    "provider_name": "Mistral",
-    "provider_id": "mistral",
+  "openai/gpt-4-1106-preview": {
+    "id": "openai/gpt-4-1106-preview",
+    "model_name": "GPT-4 Turbo (older v1106)",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
     "reasoning": false,
-    "context_window": 2824,
+    "context_window": 128000,
     "pricing": {
-      "input": "0.00000011",
-      "output": "0.00000019",
+      "input": "0.00001",
+      "output": "0.00003",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5703,6 +5936,27 @@
       "output": "0.000002",
       "image": "0"
     },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "mistralai/mistral-7b-instruct-v0.1": {
+    "id": "mistralai/mistral-7b-instruct-v0.1",
+    "model_name": "Mistral 7B Instruct v0.1",
+    "provider_name": "Mistral",
+    "provider_id": "mistral",
+    "reasoning": false,
+    "context_window": 2824,
+    "pricing": {
+      "input": "0.00000011",
+      "output": "0.00000019",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5722,6 +5976,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5741,6 +5996,7 @@
       "output": "0.000004",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5760,6 +6016,7 @@
       "output": "0.0000015",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5779,6 +6036,7 @@
       "output": "0.000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5798,6 +6056,7 @@
       "output": "0.000024",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5817,6 +6076,7 @@
       "output": "0.0000012",
       "image": "0"
     },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5836,63 +6096,7 @@
       "output": "0.000000065",
       "image": "0"
     },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "meta-llama/llama-2-70b-chat": {
-    "id": "meta-llama/llama-2-70b-chat",
-    "model_name": "Llama 2 70B Chat",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 4096,
-    "pricing": {
-      "input": "0.0000009",
-      "output": "0.0000009",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-3.5-turbo-0125": {
-    "id": "openai/gpt-3.5-turbo-0125",
-    "model_name": "GPT-3.5 Turbo 16k",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 16385,
-    "pricing": {
-      "input": "0.0000005",
-      "output": "0.0000015",
-      "image": "0"
-    },
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "openai/gpt-4": {
-    "id": "openai/gpt-4",
-    "model_name": "GPT-4",
-    "provider_name": "OpenAI",
-    "provider_id": "openai",
-    "reasoning": false,
-    "context_window": 8191,
-    "pricing": {
-      "input": "0.00003",
-      "output": "0.00006",
-      "image": "0"
-    },
+    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -5912,6 +6116,47 @@
       "output": "0.0000015",
       "image": "0"
     },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-3.5-turbo-0125": {
+    "id": "openai/gpt-3.5-turbo-0125",
+    "model_name": "GPT-3.5 Turbo 16k",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 16385,
+    "pricing": {
+      "input": "0.0000005",
+      "output": "0.0000015",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "openai/gpt-4": {
+    "id": "openai/gpt-4",
+    "model_name": "GPT-4",
+    "provider_name": "OpenAI",
+    "provider_id": "openai",
+    "reasoning": false,
+    "context_window": 8191,
+    "pricing": {
+      "input": "0.00003",
+      "output": "0.00006",
+      "image": "0"
+    },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],
@@ -5931,6 +6176,7 @@
       "output": "0.00006",
       "image": "0"
     },
+    "supports_tools": true,
     "input_capabilities": [
       "text"
     ],

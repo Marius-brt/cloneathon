@@ -1,8 +1,9 @@
 "use server";
+
 import { protectedAction } from "@/lib/config/safe-action";
+import { saveUserSettings } from "@/lib/server/repositories/user.repository";
 import { zfd } from "zod-form-data";
 import { z } from "zod/v4";
-import { saveUserSettings } from "../repositories/user.repository";
 
 const inputSchema = zfd.formData({
   apiKey: zfd.text(z.string().optional())

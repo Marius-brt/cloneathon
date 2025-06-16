@@ -88,7 +88,7 @@ export function ModelBtn() {
               model.model_name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
               model.provider_name.toLowerCase().includes(debouncedSearch.toLowerCase())
           )
-        : Object.values(models).slice(0, 9)
+        : Object.values(models).slice(0, 10)
       ).sort((a, b) => a.id.localeCompare(b.id))
     );
   }, [debouncedSearch, models]);
@@ -115,7 +115,7 @@ export function ModelBtn() {
       </PopoverTrigger>
       <PopoverContent
         align="start"
-        className="flex w-[620px] flex-col gap-2 overflow-hidden p-2 max-sm:w-[calc(100vw-1rem)]"
+        className="flex w-[640px] flex-col gap-2 overflow-hidden p-2 max-sm:w-[calc(100vw-1rem)]"
       >
         <div className="relative w-full">
           <Search className="-translate-y-1/2 absolute top-1/2 left-2 size-4 text-muted-foreground" />

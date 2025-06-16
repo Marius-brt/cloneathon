@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/config/db";
-import { getSafeSession } from "../auth-utils";
+import { getSafeSession } from "@/lib/server/auth-utils";
 
 export async function getUserSettings() {
   const session = await getSafeSession();

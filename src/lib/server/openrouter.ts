@@ -6,6 +6,7 @@ export type Model = {
   provider_name: string;
   provider_id: string;
   reasoning: boolean;
+  supports_tools: boolean;
   context_window: number;
   pricing: {
     input: string;

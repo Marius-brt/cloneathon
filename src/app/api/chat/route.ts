@@ -1,10 +1,10 @@
-import { readFileSync } from "node:fs";
 import { getProvider } from "@/lib/config/ai";
 import { getSession } from "@/lib/server/auth-utils";
-import { type Model, calculateCost } from "@/lib/server/openrouter";
+import { models } from "@/lib/server/models";
+import { calculateCost } from "@/lib/server/openrouter";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
-import { getTools } from "@/lib/server/tools";
+import { getTools, toolsEnum } from "@/lib/server/tools";
 import type { Annotation } from "@/lib/types";
 import type { OpenRouterProvider } from "@openrouter/ai-sdk-provider";
 import {
@@ -22,13 +22,9 @@ import { z } from "zod";
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
-const models: Record<string, Model> = JSON.parse(
-  readFileSync("src/assets/models.json", "utf-8")
-);
-
 const bodySchema = z.object({
-  chatId: z.string(),
-  tools: z.array(z.string()),
+  chatId: z.string().uuid(),
+  tools: z.array(z.enum(toolsEnum)),
   modelId: z.string(),
   message: z.object({
     content: z.string(),
@@ -66,20 +62,25 @@ export async function POST(req: Request) {
     const body = bodySchema.safeParse(await req.json());
 
     if (!body.success) {
-      console.error("Invalid request body", body.error);
       return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
     }
 
     const { chatId, message, tools, modelId } = body.data;
 
-    if (!models[modelId]) {
-      return NextResponse.json({ error: "Model not found" }, { status: 404 });
-    }
+    let allowedTools = tools;
 
     const session = await getSession();
 
     if (!session) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+
+    if (!models[modelId]) {
+      return NextResponse.json({ error: "Model not found" }, { status: 404 });
+    }
+
+    if (!models[modelId].supports_tools) {
+      allowedTools = [];
     }
 
     let provider: OpenRouterProvider | null = null;
@@ -142,7 +143,7 @@ export async function POST(req: Request) {
           - Display: 
           $$\\frac{d}{dx}\\sin(x) = \\cos(x)$$
           `,
-          tools: await getTools(tools, dataStream),
+          tools: await getTools(allowedTools, dataStream),
           onError: (error) => {
             console.error("error", error);
           },
@@ -184,7 +185,7 @@ export async function POST(req: Request) {
               console.error("error", error);
             }
           },
-          maxSteps: 4,
+          maxSteps: allowedTools.length > 0 ? 4 : undefined,
           experimental_transform: [smoothStream({ chunking: "word" })]
         });
 

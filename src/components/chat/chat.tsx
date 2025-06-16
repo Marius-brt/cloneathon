@@ -39,6 +39,8 @@ export function Chat({
           setError(
             "No API key found. Please add an OpenRouter API key in your settings."
           );
+        } else if (data.code === "tools_not_supported") {
+          setError("This model does not support tools. Please select a different model.");
         } else {
           setError("An error occurred. Please try again.");
         }
@@ -68,6 +70,7 @@ export function Chat({
 
   const submitHandler = useCallback(() => {
     if (input.length > 0 && !isStreaming) {
+      setError(null);
       handleSubmit();
       setInitialPromptSent(true);
 

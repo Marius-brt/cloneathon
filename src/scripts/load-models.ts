@@ -53,6 +53,9 @@ async function fetchModels() {
         output: model.pricing.completion,
         image: model.pricing.image
       },
+      supports_tools:
+        model.supported_parameters.includes("tools") &&
+        model.supported_parameters.includes("tool_choice"),
       input_capabilities: model.architecture.input_modalities,
       output_capabilities: model.architecture.output_modalities
     };

@@ -119,7 +119,6 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
   ),
   qwen: (props: SVGProps<SVGSVGElement>) => (
     <svg
-      fill="#ffff"
       fillRule="evenodd"
       height="1em"
       style={{
@@ -129,6 +128,7 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
       viewBox="0 0 24 24"
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
+      className="fill-black dark:fill-white"
       {...props}
     >
       <title>{"Qwen"}</title>

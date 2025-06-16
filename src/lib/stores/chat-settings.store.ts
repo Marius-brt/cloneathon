@@ -16,6 +16,7 @@ export const useChatSettingsStore = create<
 >()(
   persist(
     (set) => ({
+      modelId: "deepseek/deepseek-r1-0528:free",
       enabledTools: [],
       toggleTool: (tool) =>
         set((state) => ({

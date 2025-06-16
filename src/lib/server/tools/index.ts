@@ -9,9 +9,13 @@ const toolsMapper: Record<
 > = {
   context7: getContext7Client,
   websearch: webSearchTools
-};
+} as const;
 
 export async function getTools(tools: string[], dataStream?: any) {
+  if (tools.length === 0) {
+    return undefined;
+  }
+
   const t = tools.filter((tool) => tool in toolsMapper);
   const sets = await Promise.all(
     t.map((tool) => {
@@ -30,3 +34,5 @@ export async function getTools(tools: string[], dataStream?: any) {
 
   return toolSet;
 }
+
+export const toolsEnum = Object.keys(toolsMapper) as [string, ...string[]];
