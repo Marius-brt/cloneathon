@@ -89,6 +89,7 @@ model Message {
   parts       Json
   content     String
   annotations Json?
+  attachments Json?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   chatId      String

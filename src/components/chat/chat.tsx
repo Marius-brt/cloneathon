@@ -8,7 +8,7 @@ import { errorsMapper } from "@/lib/errors";
 import { generateTitle } from "@/lib/server/actions/title.action";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { useChat } from "@ai-sdk/react";
-import type { Message } from "ai";
+import type { Attachment, Message } from "ai";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
 
@@ -52,56 +52,62 @@ export function Chat({
     },
     onFinish: () => {
       window.history.replaceState({}, "", `/${chatId}`);
-      window.dispatchEvent(new CustomEvent("chat-history-updated"));
     },
     experimental_prepareRequestBody: ({ messages }) => {
       const lastMessage = messages.filter((message) => message.role === "user").at(-1);
       if (!lastMessage) {
         throw new Error("No message found");
       }
+
       return {
         chatId,
         tools: enabledTools,
         modelId,
         agentId: currentAgent?.id,
-        message: lastMessage
+        message: lastMessage,
+        files: lastMessage.experimental_attachments ?? []
       };
     }
   });
 
   const isStreaming = status === "streaming" || status === "submitted";
 
-  const submitHandler = useCallback(() => {
-    if (input.length > 0 && !isStreaming) {
-      setError(null);
-      handleSubmit();
-      setInitialPromptSent(true);
+  const submitHandler = useCallback(
+    (files: Attachment[]) => {
+      if (input.length > 0 && !isStreaming) {
+        setError(null);
+        handleSubmit(undefined, {
+          experimental_attachments: files.length > 0 ? files : undefined
+        });
+        setInitialPromptSent(true);
 
-      window.history.replaceState({}, "", `/${chatId}`);
+        window.history.replaceState({}, "", `/${chatId}`);
 
-      if (!titleGenerated) {
-        const firstUserMessage = messages.find((message) => message.role === "user");
-        generateTitle({
-          chatId,
-          message: firstUserMessage?.content || input
-        })
-          .then((data) => {
-            if (data.data) {
-              setTitle(data.data);
-              setTitleGenerated(true);
-            }
+        if (!titleGenerated) {
+          const firstUserMessage = messages.find((message) => message.role === "user");
+          generateTitle({
+            chatId,
+            message: firstUserMessage?.content || input
           })
-          .catch((error) => {
-            toast.error(error.message);
-          });
+            .then((data) => {
+              if (data.data) {
+                setTitle(data.data);
+                setTitleGenerated(true);
+              }
+            })
+            .catch((error) => {
+              toast.error(error.message);
+            });
+        }
       }
-    }
-  }, [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]);
+    },
+    [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]
+  );
 
   useEffect(() => {
     if (initialPrompt && initialPrompt.length > 0 && !isStreaming && !initialPromptSent) {
       setInput(initialPrompt);
-      submitHandler();
+      submitHandler([]);
     }
   }, [initialPrompt, submitHandler, setInput, isStreaming, initialPromptSent]);
 

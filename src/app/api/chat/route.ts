@@ -40,7 +40,14 @@ const bodySchema = z.object({
       )
       .min(1)
       .max(1)
-  })
+  }),
+  files: z.array(
+    z.object({
+      name: z.string(),
+      contentType: z.string(),
+      url: z.string()
+    })
+  )
 });
 
 function createAnnotation(
@@ -67,7 +74,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "invalid_request_body" }, { status: 400 });
     }
 
-    const { chatId, message, tools, modelId, agentId } = body.data;
+    const { chatId, message, tools, modelId, agentId, files } = body.data;
 
     let allowedTools = tools;
 
@@ -102,7 +109,8 @@ export async function POST(req: Request) {
       role: message.role,
       content: message.content,
       parts: message.parts,
-      annotations: {}
+      annotations: {},
+      attachments: files.map((f) => f.name)
     });
 
     const previousMessages = await MessageRepository.getAllMessages(chatId);
@@ -112,6 +120,7 @@ export async function POST(req: Request) {
       message: {
         id: msg.id,
         role: msg.role as UIMessage["role"],
+        experimental_attachments: files,
         content: msg.content,
         parts: msg.parts as UIMessage["parts"]
       }
@@ -122,22 +131,6 @@ export async function POST(req: Request) {
       ? `Here are some instructions given by the user:
     ${agent.instructions}`
       : "";
-
-    console.info(`You are Cloneathon, an ai assistant that can answer questions and help with tasks.
-          Be helpful and provide relevant information
-          Be respectful and polite in all interactions.
-          Be engaging and maintain a conversational tone.
-          Always use LaTeX for mathematical expressions - 
-          Inline math must be wrapped in single dollar signs: $content$
-          Display math must be wrapped in double dollar signs: $$content$$
-          Display math should be placed on its own line, with nothing else on that line.
-          Do not nest math delimiters or mix styles.
-          Examples:
-          - Inline: The equation $E = mc^2$ shows mass-energy equivalence.
-          - Display: 
-          $$\\frac{d}{dx}\\sin(x) = \\cos(x)$$
-          
-          ${instructions}`);
 
     const annotations: Annotation[] = [];
 
@@ -152,6 +145,7 @@ export async function POST(req: Request) {
             return "internal_server_error";
         }
       },
+
       execute: async (dataStream) => {
         annotations.push(createAnnotation("model_id", modelId, dataStream));
 
@@ -175,9 +169,6 @@ export async function POST(req: Request) {
           
           ${instructions}`,
           tools: await getTools(allowedTools, dataStream),
-          onError: (error) => {
-            console.error("error", error);
-          },
           onFinish: async ({ response, usage }) => {
             try {
               annotations.push(
@@ -210,7 +201,7 @@ export async function POST(req: Request) {
                 role: newMessage.role,
                 content: newMessage.content,
                 parts: newMessage.parts as any[],
-                annotations: annotations
+                annotations
               });
             } catch (error) {
               console.error("error", error);

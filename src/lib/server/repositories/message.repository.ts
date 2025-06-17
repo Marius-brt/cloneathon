@@ -12,7 +12,8 @@ export const MessageRepository = {
     role,
     content,
     parts,
-    annotations
+    annotations,
+    attachments
   }: {
     id: string;
     chatId: string;
@@ -21,6 +22,7 @@ export const MessageRepository = {
     content: string;
     parts: any[];
     annotations: any;
+    attachments?: string[];
   }) {
     return await prisma.message.upsert({
       where: { id },
@@ -36,7 +38,8 @@ export const MessageRepository = {
         content,
         role,
         parts,
-        annotations
+        annotations,
+        attachments
       }
     });
   },
@@ -62,7 +65,17 @@ export const MessageRepository = {
       parts: message.parts as Message["parts"],
       content: message.content,
       createdAt: message.createdAt,
-      annotations: message.annotations as Annotation[]
+      annotations: message.annotations as Annotation[],
+      experimental_attachments:
+        message.attachments &&
+        Array.isArray(message.attachments) &&
+        message.attachments.length > 0
+          ? message.attachments.map((a) => ({
+              name: a,
+              url: "",
+              contentType: ""
+            }))
+          : undefined
     })) as Message[];
   },
   async getAllMessages(chatId: string): Promise<Message[]> {
@@ -81,7 +94,18 @@ export const MessageRepository = {
       role: message.role as Message["role"],
       parts: message.parts as Message["parts"],
       content: message.content,
-      createdAt: message.createdAt
+      createdAt: message.createdAt,
+      annotations: message.annotations as Annotation[],
+      experimental_attachments:
+        message.attachments &&
+        Array.isArray(message.attachments) &&
+        message.attachments.length > 0
+          ? message.attachments.map((a) => ({
+              name: a,
+              url: "",
+              contentType: ""
+            }))
+          : undefined
     })) as Message[];
   }
 };

@@ -20,6 +20,7 @@ export function AssistantMessage({
   isStreaming: boolean;
 }) {
   const sources = message.parts?.filter((part) => part.type === "source") || [];
+
   const { getModel } = useModels();
 
   const model = useMemo(() => {
