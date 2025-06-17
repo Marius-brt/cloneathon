@@ -1,4 +1,3 @@
-
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
@@ -20,6 +19,7 @@ model User {
   sessions      Session[]
   accounts      Account[]
   chats         Chat[]
+  Agent         Agent[]
 
   @@unique([email])
   @@map("user")
@@ -77,24 +77,37 @@ model Chat {
   updatedAt DateTime @updatedAt
   userId    String
 
-  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-  messages  Message[]
-  
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages Message[]
+
   @@map("chat")
 }
 
 model Message {
-  id        String   @id @default(uuid())
-  role      String
-  parts     Json
-  content   String
+  id          String   @id @default(uuid())
+  role        String
+  parts       Json
+  content     String
   annotations Json?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-  chatId    String
-  modelId   String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  chatId      String
+  modelId     String
 
-  chat      Chat     @relation(fields: [chatId], references: [id], onDelete: Cascade)
+  chat Chat @relation(fields: [chatId], references: [id], onDelete: Cascade)
 
   @@map("message")
+}
+
+model Agent {
+  id           String   @id @default(uuid())
+  name         String   @db.VarChar(255)
+  instructions String
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  userId       String
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("agent")
 }

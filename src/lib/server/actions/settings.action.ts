@@ -6,7 +6,7 @@ import { zfd } from "zod-form-data";
 import { z } from "zod/v4";
 
 const inputSchema = zfd.formData({
-  apiKey: zfd.text(z.string().optional())
+  apiKey: zfd.text(z.string().max(255).optional())
 });
 
 export const saveSettings = protectedAction

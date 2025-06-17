@@ -2,6 +2,7 @@ import { appConfig } from "@/lib/config/app";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
 import type { ReactNode } from "react";
@@ -39,6 +40,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           {children}
+          <Toaster position="bottom-right" />
         </ThemeProvider>
       </body>
     </html>

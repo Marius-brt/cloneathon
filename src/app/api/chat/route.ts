@@ -2,6 +2,7 @@ import { getProvider } from "@/lib/config/ai";
 import { getSession } from "@/lib/server/auth-utils";
 import { models } from "@/lib/server/models";
 import { calculateCost } from "@/lib/server/openrouter";
+import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
 import { getTools, toolsEnum } from "@/lib/server/tools";
@@ -17,15 +18,16 @@ import {
   streamText
 } from "ai";
 import { NextResponse } from "next/server";
-import { z } from "zod";
+import { z } from "zod/v4";
 
 export const maxDuration = 60;
 export const dynamic = "force-dynamic";
 
 const bodySchema = z.object({
-  chatId: z.string().uuid(),
+  chatId: z.uuid(),
   tools: z.array(z.enum(toolsEnum)),
   modelId: z.string(),
+  agentId: z.uuid().optional(),
   message: z.object({
     content: z.string(),
     role: z.enum(["user"]),
@@ -62,21 +64,21 @@ export async function POST(req: Request) {
     const body = bodySchema.safeParse(await req.json());
 
     if (!body.success) {
-      return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
+      return NextResponse.json({ error: "invalid_request_body" }, { status: 400 });
     }
 
-    const { chatId, message, tools, modelId } = body.data;
+    const { chatId, message, tools, modelId, agentId } = body.data;
 
     let allowedTools = tools;
 
     const session = await getSession();
 
     if (!session) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+      return NextResponse.json({ error: "unauthorized" }, { status: 401 });
     }
 
     if (!models[modelId]) {
-      return NextResponse.json({ error: "Model not found" }, { status: 404 });
+      return NextResponse.json({ error: "model_not_found" }, { status: 404 });
     }
 
     if (!models[modelId].supports_tools) {
@@ -88,10 +90,7 @@ export async function POST(req: Request) {
     try {
       provider = await getProvider();
     } catch {
-      return NextResponse.json(
-        { error: "Unauthorized", code: "key_missing" },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "key_missing" }, { status: 401 });
     }
 
     const chat = await ChatRepository.getOrCreateChat(chatId);
@@ -118,18 +117,13 @@ export async function POST(req: Request) {
       }
     });
 
-    const annotations: Annotation[] = [];
+    const agent = agentId ? await AgentRepository.getAgent(agentId) : null;
+    const instructions = agent
+      ? `Here are some instructions given by the user:
+    ${agent.instructions}`
+      : "";
 
-    return createDataStreamResponse({
-      execute: async (dataStream) => {
-        annotations.push(createAnnotation("model_id", modelId, dataStream));
-
-        const result = streamText({
-          model: provider(modelId),
-          messages,
-          experimental_generateMessageId: () => crypto.randomUUID(),
-          system: `
-          You are Cloneathon, an ai assistant that can answer questions and help with tasks.
+    console.info(`You are Cloneathon, an ai assistant that can answer questions and help with tasks.
           Be helpful and provide relevant information
           Be respectful and polite in all interactions.
           Be engaging and maintain a conversational tone.
@@ -142,7 +136,44 @@ export async function POST(req: Request) {
           - Inline: The equation $E = mc^2$ shows mass-energy equivalence.
           - Display: 
           $$\\frac{d}{dx}\\sin(x) = \\cos(x)$$
-          `,
+          
+          ${instructions}`);
+
+    const annotations: Annotation[] = [];
+
+    return createDataStreamResponse({
+      onError: (error: any) => {
+        switch (error.statusCode) {
+          case 402:
+            return "insufficient_funds";
+          case 403:
+            return "rate_limit_exceeded";
+          default:
+            return "internal_server_error";
+        }
+      },
+      execute: async (dataStream) => {
+        annotations.push(createAnnotation("model_id", modelId, dataStream));
+
+        const result = streamText({
+          model: provider(modelId),
+          messages,
+          experimental_generateMessageId: () => crypto.randomUUID(),
+          system: `You are Cloneathon, an ai assistant that can answer questions and help with tasks.
+          Be helpful and provide relevant information
+          Be respectful and polite in all interactions.
+          Be engaging and maintain a conversational tone.
+          Always use LaTeX for mathematical expressions - 
+          Inline math must be wrapped in single dollar signs: $content$
+          Display math must be wrapped in double dollar signs: $$content$$
+          Display math should be placed on its own line, with nothing else on that line.
+          Do not nest math delimiters or mix styles.
+          Examples:
+          - Inline: The equation $E = mc^2$ shows mass-energy equivalence.
+          - Display: 
+          $$\\frac{d}{dx}\\sin(x) = \\cos(x)$$
+          
+          ${instructions}`,
           tools: await getTools(allowedTools, dataStream),
           onError: (error) => {
             console.error("error", error);

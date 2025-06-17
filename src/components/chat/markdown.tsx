@@ -48,13 +48,13 @@ const components: Components = {
   table: ({ node, ...props }) => <Table {...props} />,
   th: ({ node, ...props }) => (
     <TableHead
-      className="min-w-[100px] max-w-[500px] w-fit whitespace-normal break-words px-2 py-2"
+      className="w-fit min-w-[100px] max-w-[500px] whitespace-normal break-words px-2 py-2"
       {...props}
     />
   ),
   td: ({ node, ...props }) => (
     <TableCell
-      className="min-w-[100px] max-w-[500px] w-fit whitespace-normal break-words px-4 py-2"
+      className="w-fit min-w-[100px] max-w-[500px] whitespace-normal break-words px-4 py-2"
       {...props}
     />
   ),

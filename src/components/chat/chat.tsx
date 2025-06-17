@@ -3,12 +3,24 @@
 import { ChatInput } from "@/components/chat/chat-input";
 import { ChatTitle } from "@/components/chat/chat-title";
 import { Messages } from "@/components/chat/messages";
+import { useModels } from "@/components/providers/models.provider";
+import { errorsMapper } from "@/lib/errors";
 import { generateTitle } from "@/lib/server/actions/title.action";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { useChat } from "@ai-sdk/react";
 import type { Message } from "ai";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
+
+function parseError(error: any) {
+  const content = error.message.toString();
+  try {
+    const msg = JSON.parse(content);
+    return msg.error;
+  } catch {
+    return content;
+  }
+}
 
 export function Chat({
   initialMessages,
@@ -28,25 +40,15 @@ export function Chat({
   const [title, setTitle] = useState(initialTitle || "");
   const [error, setError] = useState<string | null>(null);
   const [initialPromptSent, setInitialPromptSent] = useState(false);
+  const { currentAgent } = useModels();
   const { input, messages, status, stop, handleSubmit, setInput } = useChat({
     initialMessages,
     experimental_throttle: 100,
     sendExtraMessageFields: false,
     onError: (error) => {
-      try {
-        const data = JSON.parse(error.message);
-        if (data.code === "key_missing") {
-          setError(
-            "No API key found. Please add an OpenRouter API key in your settings."
-          );
-        } else if (data.code === "tools_not_supported") {
-          setError("This model does not support tools. Please select a different model.");
-        } else {
-          setError("An error occurred. Please try again.");
-        }
-      } catch {
-        setError("An error occurred. Please try again.");
-      }
+      const msg = parseError(error);
+      const errorMessage = errorsMapper[msg] || errorsMapper.default;
+      setError(errorMessage);
     },
     onFinish: () => {
       window.history.replaceState({}, "", `/${chatId}`);
@@ -61,6 +63,7 @@ export function Chat({
         chatId,
         tools: enabledTools,
         modelId,
+        agentId: currentAgent?.id,
         message: lastMessage
       };
     }

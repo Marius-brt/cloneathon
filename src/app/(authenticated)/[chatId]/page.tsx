@@ -3,6 +3,7 @@ import { Chat } from "@/components/chat/chat";
 import { ModelsProvider } from "@/components/providers/models.provider";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
+import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { notFound } from "next/navigation";
 import { z } from "zod/v4";
 
@@ -28,11 +29,12 @@ export default async function ThreadPage({
   const messages = await MessageRepository.getMessagesByChatId(chatId, 0);
   const orderedMessages = messages.reverse();
   const title = messages.length > 0 ? await ChatRepository.getChatTitle(chatId) : null;
+  const agents = await AgentRepository.getAgents();
 
   return (
     <>
       <div className="fixed top-0 left-0 z-20 h-22 w-full bg-gradient-to-t from-background/0 via-60% via-background to-background" />
-      <ModelsProvider models={models}>
+      <ModelsProvider models={models} agents={agents}>
         <Chat
           initialMessages={orderedMessages}
           chatId={chatId}

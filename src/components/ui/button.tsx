@@ -67,16 +67,14 @@ function Button({
           aria-hidden="true"
         />
       )}
-      {Icon && !loading && (
-        <div className={"-ms-1"}>
-          {isValidElement(Icon) ? (
-            Icon
-          ) : (
-            // @ts-ignore
-            <Icon className={children ? "opacity-60" : ""} size={16} strokeWidth={2} />
-          )}
-        </div>
-      )}
+      {Icon &&
+        !loading &&
+        (isValidElement(Icon) ? (
+          Icon
+        ) : (
+          // @ts-ignore
+          <Icon className={children ? "opacity-60" : ""} size={16} strokeWidth={2} />
+        ))}
       {children}
     </Comp>
   );

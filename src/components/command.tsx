@@ -278,6 +278,7 @@ export function CommandPalette({
               <CommandMenuKbd>
                 <CornerDownLeftIcon />
               </CommandMenuKbd>
+              <span>Go to page</span>
             </div>
           </div>
         </DialogContent>

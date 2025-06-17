@@ -5,7 +5,7 @@
   "scripts": {
     "build": "bun run src/scripts/load-models.ts && next build --turbopack && mkdir -p .next/standalone/src/assets && cp src/assets/models.json .next/standalone/src/assets/models.json",
     "db:generate": "prisma generate",
-    "db:migrate": "prisma migrate dev --create-only",
+    "db:migrate": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:studio": "prisma studio",
     "dev": "next dev --turbopack",

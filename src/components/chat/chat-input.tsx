@@ -1,5 +1,6 @@
 "use client";
 
+import { AgentBtn } from "@/components/chat/agent-btn";
 import { ModelBtn } from "@/components/chat/model-btn";
 import { SpeechRecognition } from "@/components/chat/speech-recognition";
 import { ToolsBtn } from "@/components/chat/tools-btn";
@@ -72,6 +73,7 @@ export function ChatInput({
         </form>
         <div className="flex items-center gap-2 p-2 max-sm:px-4 max-sm:pt-4">
           <ModelBtn />
+          <AgentBtn />
           <ToolsBtn />
         </div>
       </div>

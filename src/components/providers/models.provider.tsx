@@ -1,20 +1,29 @@
 "use client";
 
 import type { Model } from "@/lib/server/openrouter";
-import { type ReactNode, createContext, useCallback, useContext } from "react";
+import type { Agent } from "@prisma/client";
+import { type ReactNode, createContext, useCallback, useContext, useState } from "react";
 
 const ModelsContext = createContext<{
   models: Record<string, Model>;
+  agents: Agent[];
+  currentAgent: Agent | null;
   getModel: (id: string) => Model | null;
+  setCurrentAgent: (agent: Agent | null) => void;
 }>({
   models: {},
-  getModel: () => null
+  agents: [],
+  currentAgent: null,
+  getModel: () => null,
+  setCurrentAgent: () => {}
 });
 
 export function ModelsProvider({
   children,
-  models
-}: { children: ReactNode; models: Record<string, Model> }) {
+  models,
+  agents
+}: { children: ReactNode; models: Record<string, Model>; agents: Agent[] }) {
+  const [currentAgent, setCurrentAgent] = useState<Agent | null>(null);
   const getModel = useCallback(
     (id: string) => {
       return models[id] ?? null;
@@ -23,7 +32,9 @@ export function ModelsProvider({
   );
 
   return (
-    <ModelsContext.Provider value={{ models, getModel }}>
+    <ModelsContext.Provider
+      value={{ models, getModel, agents, currentAgent, setCurrentAgent }}
+    >
       {children}
     </ModelsContext.Provider>
   );
