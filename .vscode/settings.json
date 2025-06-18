@@ -1,6 +1,6 @@
 {
-    "tailwindCSS.experimental.configFile": "./src/app/globals.css",
-    "[prisma]": {
-        "editor.defaultFormatter": "Prisma.prisma"
-    },
+  "tailwindCSS.experimental.configFile": "./src/app/globals.css",
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
 }

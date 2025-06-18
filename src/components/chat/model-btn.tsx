@@ -9,16 +9,7 @@ import type { Model } from "@/lib/server/openrouter";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
 import { cn } from "@/lib/utils";
 import { useDebounce } from "@uidotdev/usehooks";
-import {
-  Bot,
-  Brain,
-  Search,
-  PenTool,
-  X,
-  Wrench,
-  LucideIcon,
-  type LucideIcon
-} from "lucide-react";
+import { Bot, Brain, type LucideIcon, Search, Wrench, X } from "lucide-react";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 

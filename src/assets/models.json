@@ -1,4 +1,130 @@
 {
+  "minimax/minimax-m1": {
+    "id": "minimax/minimax-m1",
+    "model_name": "MiniMax M1",
+    "provider_name": "MiniMax",
+    "provider_id": "minimax",
+    "reasoning": true,
+    "context_window": 1000000,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.00000165",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "minimax/minimax-m1:extended": {
+    "id": "minimax/minimax-m1:extended",
+    "model_name": "MiniMax M1 (extended)",
+    "provider_name": "MiniMax",
+    "provider_id": "minimax",
+    "reasoning": true,
+    "context_window": 128000,
+    "pricing": {
+      "input": "0.00000055",
+      "output": "0.0000022",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash-lite-preview-06-17": {
+    "id": "google/gemini-2.5-flash-lite-preview-06-17",
+    "model_name": "Gemini 2.5 Flash Lite Preview 06-17",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.0000001",
+      "output": "0.0000004",
+      "image": "0"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-flash": {
+    "id": "google/gemini-2.5-flash",
+    "model_name": "Gemini 2.5 Flash",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.0000003",
+      "output": "0.0000025",
+      "image": "0.001238"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "google/gemini-2.5-pro": {
+    "id": "google/gemini-2.5-pro",
+    "model_name": "Gemini 2.5 Pro",
+    "provider_name": "Google",
+    "provider_id": "google",
+    "reasoning": true,
+    "context_window": 1048576,
+    "pricing": {
+      "input": "0.00000125",
+      "output": "0.00001",
+      "image": "0.00516"
+    },
+    "supports_tools": true,
+    "input_capabilities": [
+      "file",
+      "image",
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
+  "moonshotai/kimi-dev-72b:free": {
+    "id": "moonshotai/kimi-dev-72b:free",
+    "model_name": "Kimi Dev 72b (free)",
+    "provider_name": "Kimi",
+    "provider_id": "kimi",
+    "reasoning": true,
+    "context_window": 131072,
+    "pricing": {
+      "input": "0",
+      "output": "0",
+      "image": "0"
+    },
+    "supports_tools": false,
+    "input_capabilities": [
+      "text"
+    ],
+    "output_capabilities": [
+      "text"
+    ]
+  },
   "mistralai/magistral-small-2506": {
     "id": "mistralai/magistral-small-2506",
     "model_name": "Magistral Small 2506",
@@ -707,26 +833,6 @@
     "supports_tools": false,
     "input_capabilities": [
       "image",
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "deepseek/deepseek-prover-v2:free": {
-    "id": "deepseek/deepseek-prover-v2:free",
-    "model_name": "DeepSeek Prover V2 (free)",
-    "provider_name": "DeepSeek",
-    "provider_id": "deepseek",
-    "reasoning": false,
-    "context_window": 163840,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "supports_tools": false,
-    "input_capabilities": [
       "text"
     ],
     "output_capabilities": [
@@ -2145,26 +2251,6 @@
       "text"
     ]
   },
-  "deepseek/deepseek-r1-zero:free": {
-    "id": "deepseek/deepseek-r1-zero:free",
-    "model_name": "DeepSeek R1 Zero (free)",
-    "provider_name": "DeepSeek",
-    "provider_id": "deepseek",
-    "reasoning": true,
-    "context_window": 163840,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "supports_tools": false,
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "qwen/qwq-32b:free": {
     "id": "qwen/qwq-32b:free",
     "model_name": "QwQ 32B (free)",
@@ -2726,7 +2812,7 @@
     "context_window": 32768,
     "pricing": {
       "input": "0.00000005",
-      "output": "0.0000001",
+      "output": "0.00000009",
       "image": "0"
     },
     "supports_tools": true,
@@ -3229,7 +3315,7 @@
     "reasoning": false,
     "context_window": 131072,
     "pricing": {
-      "input": "0.00000006",
+      "input": "0.00000005",
       "output": "0.00000025",
       "image": "0"
     },
@@ -3786,26 +3872,6 @@
       "image": "0"
     },
     "supports_tools": true,
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
-  "qwen/qwen-2.5-7b-instruct:free": {
-    "id": "qwen/qwen-2.5-7b-instruct:free",
-    "model_name": "Qwen2.5 7B Instruct (free)",
-    "provider_name": "Qwen",
-    "provider_id": "qwen",
-    "reasoning": false,
-    "context_window": 32768,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "supports_tools": false,
     "input_capabilities": [
       "text"
     ],
@@ -4443,26 +4509,6 @@
       "text"
     ]
   },
-  "meta-llama/llama-3.1-405b:free": {
-    "id": "meta-llama/llama-3.1-405b:free",
-    "model_name": "Llama 3.1 405B (base) (free)",
-    "provider_name": "Meta",
-    "provider_id": "meta",
-    "reasoning": false,
-    "context_window": 64000,
-    "pricing": {
-      "input": "0",
-      "output": "0",
-      "image": "0"
-    },
-    "supports_tools": false,
-    "input_capabilities": [
-      "text"
-    ],
-    "output_capabilities": [
-      "text"
-    ]
-  },
   "meta-llama/llama-3.1-405b": {
     "id": "meta-llama/llama-3.1-405b",
     "model_name": "Llama 3.1 405B (base)",
@@ -4571,7 +4617,7 @@
     "reasoning": false,
     "context_window": 131000,
     "pricing": {
-      "input": "0.000000017",
+      "input": "0.000000016",
       "output": "0.00000003",
       "image": "0"
     },
@@ -4652,7 +4698,7 @@
     "context_window": 131072,
     "pricing": {
       "input": "0.00000001",
-      "output": "0.000000025",
+      "output": "0.000000023",
       "image": "0"
     },
     "supports_tools": true,

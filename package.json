@@ -11,8 +11,8 @@
     "dev": "next dev --turbopack",
     "format": "sort-package-json package.json  && biome format --write ./",
     "lint": "biome check --organize-imports-enabled=true ./",
-    "start": "next start",
-    "load-models": "bun run src/scripts/load-models.ts"
+    "load-models": "bun run src/scripts/load-models.ts",
+    "start": "next start"
   },
   "dependencies": {
     "@ai-sdk/provider": "^1.1.3",

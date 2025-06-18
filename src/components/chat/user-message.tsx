@@ -3,7 +3,6 @@ import type { Message } from "ai";
 import { File } from "lucide-react";
 
 export function UserMessage({ message }: { message: Message }) {
-  console.log(message);
   return (
     <div className="flex flex-col items-end gap-2">
       <pre className="whitespace-pre-wrap rounded-xl border bg-accent px-4 py-2 font-sans text-accent-foreground text-base md:max-w-[80%]">

@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { Chat } from "@/components/chat/chat";
 import { ModelsProvider } from "@/components/providers/models.provider";
+import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
-import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { notFound } from "next/navigation";
 import { z } from "zod/v4";
 

@@ -15,7 +15,7 @@ const ModelsContext = createContext<{
   agents: [],
   currentAgent: null,
   getModel: () => null,
-  setCurrentAgent: () => {}
+  setCurrentAgent: () => null
 });
 
 export function ModelsProvider({
