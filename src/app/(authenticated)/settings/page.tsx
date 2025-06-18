@@ -3,6 +3,7 @@ import { SettingsField } from "@/components/settings-field";
 import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { getUserSettings } from "@/lib/server/repositories/user.repository";
 import { Agents } from "./_ui/agents";
+import { DeleteAccount } from "./_ui/delete-account";
 import { Form } from "./_ui/form";
 
 export default async function SettingsPage() {
@@ -44,6 +45,13 @@ export default async function SettingsPage() {
         description="Agents are used to generate responses. You can create multiple agents with different instructions."
       >
         <Agents agents={agents} />
+      </SettingsField>
+      <SettingsField
+        className="mt-4"
+        name="Danger zone"
+        description="Delete your account and all your data."
+      >
+        <DeleteAccount />
       </SettingsField>
     </div>
   );

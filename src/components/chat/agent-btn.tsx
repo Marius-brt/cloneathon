@@ -37,33 +37,39 @@ export function AgentBtn() {
       <PopoverContent align="start" className="overflow-hidden p-0">
         <Command>
           <CommandInput placeholder="Find agent" className="h-9" />
-          <CommandList>
-            <CommandGroup className="max-h-[200px] overflow-y-auto">
-              {agents.map((agent) => (
-                <CommandItem
-                  key={agent.id}
-                  value={agent.id}
-                  keywords={[agent.name]}
-                  className={cn(
-                    currentAgent?.id === agent.id && "!border-primary !bg-primary/10"
-                  )}
-                  onSelect={(currentValue) => {
-                    setCurrentAgent(currentValue === currentAgent?.id ? null : agent);
-                    setOpen(false);
-                  }}
-                >
-                  {agent.name}
-                  {currentAgent?.id === agent.id && (
-                    <CheckIcon size={16} className="ml-auto text-primary" />
-                  )}
-                </CommandItem>
-              ))}
-            </CommandGroup>
-          </CommandList>
+          {agents.length === 0 ? (
+            <p className="pt-4 pb-3 text-center text-muted-foreground text-sm">
+              You don't have any agents yet.
+            </p>
+          ) : (
+            <CommandList>
+              <CommandGroup className="max-h-[200px] overflow-y-auto">
+                {agents.map((agent) => (
+                  <CommandItem
+                    key={agent.id}
+                    value={agent.id}
+                    keywords={[agent.name]}
+                    className={cn(
+                      currentAgent?.id === agent.id && "!border-primary !bg-primary/10"
+                    )}
+                    onSelect={(currentValue) => {
+                      setCurrentAgent(currentValue === currentAgent?.id ? null : agent);
+                      setOpen(false);
+                    }}
+                  >
+                    {agent.name}
+                    {currentAgent?.id === agent.id && (
+                      <CheckIcon size={16} className="ml-auto text-primary" />
+                    )}
+                  </CommandItem>
+                ))}
+              </CommandGroup>
+            </CommandList>
+          )}
         </Command>
         <div className="px-2 pt-2 pb-2">
           <Link href="/settings">
-            <Button variant="secondary" className="w-full justify-start font-normal">
+            <Button variant="secondary" className="w-full font-normal">
               <PlusIcon size={16} className="-ms-2 opacity-60" aria-hidden="true" />
               New agent
             </Button>

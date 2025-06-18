@@ -1,5 +1,4 @@
 import { FormLoadingState } from "@/components/providers/form-loading-state";
-import { Button } from "@/components/ui/button";
 import { MessageSquareIcon } from "lucide-react";
 import Link from "next/link";
 import { ProviderBtn } from "./_ui/provider-btn";
@@ -22,15 +21,10 @@ export default function SignInPage() {
             </div>
           </div>
 
-          <div className="p-3">
-            <p className="text-center text-accent-foreground text-sm">
-              Don't have an account ?
-              <Link href="#">
-                <Button variant="link" className="px-2">
-                  Create account
-                </Button>
-              </Link>
-            </p>
+          <div className="px-8 py-4 text-center text-muted-foreground text-xs [&_a]:underline [&_a]:underline-offset-4 [&_a]:hover:text-primary">
+            By clicking continue, you agree to our{" "}
+            <Link href="/terms">Terms of Service</Link> and{" "}
+            <Link href="/privacy">Privacy Policy</Link>.
           </div>
         </div>
       </FormLoadingState>

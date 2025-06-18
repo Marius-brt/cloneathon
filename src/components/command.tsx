@@ -29,6 +29,7 @@ import {
   type LucideIcon,
   MenuIcon,
   MessageSquareDiff,
+  Settings,
   Sparkles
 } from "lucide-react";
 import { usePathname, useRouter } from "next/navigation";
@@ -47,8 +48,18 @@ const actions: ActionType[] = [
   {
     label: "New chat",
     icon: MessageSquareDiff,
-    shortcut: "⌘N",
     link: "/"
+  },
+  {
+    label: "Agents",
+    // @ts-ignore
+    icon: () => <p className="text-base opacity-60">@</p>,
+    link: "/settings"
+  },
+  {
+    label: "Settings",
+    icon: Settings,
+    link: "/settings"
   }
 ];
 
@@ -193,6 +204,7 @@ export function CommandPalette({
     (action: ActionType) => {
       if (action.link) {
         router.push(action.link);
+        setOpen(false);
       }
     },
     [router]
@@ -232,7 +244,7 @@ export function CommandPalette({
             className="**:data-[slot=command-input]:!h-9 **:data-[slot=command-input-wrapper]:!h-9 rounded-none bg-transparent"
           >
             <CommandInput
-              placeholder="Type a command or search..."
+              placeholder="Search..."
               value={input}
               onValueChange={(v) => setInput(v)}
             />

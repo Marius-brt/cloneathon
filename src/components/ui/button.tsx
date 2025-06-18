@@ -12,7 +12,7 @@ const buttonVariants = cva(
         default:
           "border border-primary bg-linear-to-b from-primary/80 to-primary text-primary-foreground text-sm shadow-md shadow-zinc-950/30 ring ring-white/20 ring-inset transition-[filter] duration-200 hover:brightness-125 active:brightness-95 dark:border-primary dark:from-primary dark:to-primary/80 **:[text-shadow:0_1px_0_var(--color-primary)]",
         destructive:
-          "inset-shadow-2xs inset-shadow-white/25 border border-zinc-950/35 bg-linear-to-b from-destructive/85 to-destructive text-destructive-foreground shadow-md shadow-zinc-950/20 ring-0 transition-[filter] duration-200 hover:brightness-125 active:brightness-95 dark:border-0 dark:border-zinc-950/50 dark:bg-linear-to-t dark:from-destructive/75",
+          "inset-shadow-2xs inset-shadow-white/25 border border-zinc-950/35 bg-linear-to-b from-destructive/85 to-destructive text-white shadow-md shadow-zinc-950/20 ring-0 transition-[filter] duration-200 hover:brightness-125 active:brightness-95 dark:border-0 dark:border-zinc-950/50 dark:bg-linear-to-t dark:from-destructive/75",
         outline:
           "relative flex border border-zinc-300 ring-0 duration-150 hover:bg-muted dark:border-border dark:hover:bg-muted/50",
         secondary:

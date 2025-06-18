@@ -16,12 +16,16 @@ export function Suggestions({
 }: { input: string; setInput: (input: string) => void }) {
   return (
     <div
-      className={cn(
-        "fixed top-0 left-0 flex w-full justify-center pt-[20dvh] transition-all duration-200",
-        input.length > 0 && "rotate-x-45 opacity-0 blur-sm"
-      )}
+      className={
+        "motion-preset-slide-up fixed top-0 left-0 flex w-full justify-center px-6 pt-[25dvh]"
+      }
     >
-      <div className="flex w-full max-w-3xl flex-col gap-4">
+      <div
+        className={cn(
+          " flex w-full max-w-3xl flex-col gap-4 transition-all duration-200",
+          input.length > 0 && "rotate-x-45 opacity-0 blur-sm"
+        )}
+      >
         <h1 className="font-bold text-3xl">How can I help you today?</h1>
         <div className="flex flex-col items-start gap-2">
           {suggestions.map((suggestion) => (

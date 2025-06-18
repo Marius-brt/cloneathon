@@ -20,5 +20,10 @@ export const auth = betterAuth({
       clientSecret: env.GOOGLE_CLIENT_SECRET
     }
   },
-  plugins: [nextCookies()]
+  plugins: [nextCookies()],
+  user: {
+    deleteUser: {
+      enabled: true
+    }
+  }
 });
