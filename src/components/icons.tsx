@@ -48,6 +48,7 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
   ),
   anthropic: (props: SVGProps<SVGSVGElement>) => (
     <svg
+      fill="currentColor"
       fillRule="evenodd"
       style={{
         flex: "none",
@@ -57,7 +58,7 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
       height="1em"
-      className="!text-black dark:!text-white"
+      className="!fill-black dark:!fill-white"
       {...props}
     >
       <title>{"Anthropic"}</title>

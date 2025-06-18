@@ -49,7 +49,7 @@ function ModelCard({
       type="button"
       onClick={onSelect}
       className={cn(
-        "flex min-h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-2 pt-3 pb-2 text-center transition-all duration-300",
+        "hover:!bg-primary/10 flex min-h-[150px] shrink-0 flex-col items-center gap-2 rounded-lg border px-2 pt-3 pb-2 text-center transition-all duration-300",
         active && "border-primary bg-primary/10"
       )}
     >
@@ -135,10 +135,10 @@ export function ModelBtn() {
     } else if (modelId) {
       const allModels = Object.values(models);
       const selectedModel = allModels.find((model) => model.id === modelId);
-      const otherModels = allModels.filter((model) => model.id !== modelId).slice(0, 9);
+      const otherModels = allModels.filter((model) => model.id !== modelId).slice(0, 7);
       resultModels = selectedModel ? [selectedModel, ...otherModels] : otherModels;
     } else {
-      resultModels = Object.values(models).slice(0, 10);
+      resultModels = Object.values(models).slice(0, 8);
     }
     setResults(resultModels.sort((a, b) => a.id.localeCompare(b.id)));
   }, [debouncedSearch, models, modelId]);
@@ -182,21 +182,22 @@ export function ModelBtn() {
             />
           )}
         </div>
-        <div className="flex max-h-[400px] min-h-[200px] w-full flex-wrap gap-3 overflow-y-auto">
-          {results.length === 0 && (
-            <div className="flex w-full items-center justify-center">
-              <span className="text-muted-foreground text-sm">No models found</span>
-            </div>
-          )}
-          {Object.values(results).map((model) => (
-            <ModelCard
-              key={model.id}
-              model={model}
-              active={model.id === modelId}
-              onSelect={() => setModel(model.id)}
-            />
-          ))}
-        </div>
+        {results.length === 0 ? (
+          <div className="flex w-full items-center justify-center py-6">
+            <span className="text-muted-foreground text-sm">No models found</span>
+          </div>
+        ) : (
+          <div className="grid max-h-[400px] min-h-[200px] w-full grid-cols-4 flex-wrap gap-3 overflow-y-auto">
+            {Object.values(results).map((model) => (
+              <ModelCard
+                key={model.id}
+                model={model}
+                active={model.id === modelId}
+                onSelect={() => setModel(model.id)}
+              />
+            ))}
+          </div>
+        )}
       </PopoverContent>
     </Popover>
   );

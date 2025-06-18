@@ -123,8 +123,12 @@ export function Messages({
             Loading older messages...
           </div>
         )}
-        {allMessages.map((message) =>
-          message.role === "user" ? (
+        {allMessages.map((message, i) => {
+          if (message.role === "assistant" && i === messages.length - 1 && error) {
+            return null;
+          }
+
+          return message.role === "user" ? (
             <UserMessage key={message.id} message={message} />
           ) : (
             <AssistantMessage
@@ -132,8 +136,8 @@ export function Messages({
               message={message}
               isStreaming={isStreaming}
             />
-          )
-        )}
+          );
+        })}
         {submitted && (
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
             <Loader2 className="size-3 animate-spin" />

@@ -275,7 +275,7 @@ export function CommandPalette({
                       </CommandItem>
                     ))}
                   </CommandGroup>
-                  {i < actions.length - 1 && <CommandSeparator />}
+                  {i < items.length - 1 && <CommandSeparator />}
                 </Fragment>
               ))}
             </CommandList>
