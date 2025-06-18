@@ -11,6 +11,7 @@ import { formatDate } from "@/lib/utils";
 import type { Message } from "ai";
 import { Loader2 } from "lucide-react";
 import { useMemo } from "react";
+import { BranchBtn } from "./branch-btn";
 
 export function AssistantMessage({
   message,
@@ -101,6 +102,7 @@ export function AssistantMessage({
       <div className="flex items-center justify-between gap-2 py-2 text-muted-foreground text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
         <div className="flex items-center gap-2">
           <CopyButton small value={message.content} />
+          <BranchBtn messageId={message.id} isStreaming={isStreaming} />
           {message.createdAt && <span>{formatDate(message.createdAt)}</span>}
         </div>
         <div className="flex items-center gap-2">

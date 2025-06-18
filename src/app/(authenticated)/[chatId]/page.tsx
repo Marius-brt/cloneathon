@@ -22,7 +22,9 @@ export default async function ThreadPage({
   await z
     .uuid()
     .parseAsync(chatId)
-    .catch(() => notFound());
+    .catch(() => {
+      notFound();
+    });
 
   const messages = await MessageRepository.getMessagesByChatId(chatId, 0);
   const orderedMessages = messages.reverse();
