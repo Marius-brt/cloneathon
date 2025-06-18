@@ -120,6 +120,8 @@ export function ModelBtn() {
     return icons[currentModel.provider_id as keyof typeof icons];
   }, [currentModel]);
 
+  const modelCount = useMemo(() => Object.keys(models).length, [models]);
+
   useEffect(() => {
     let resultModels: Model[];
     if (debouncedSearch.length > 0) {
@@ -170,7 +172,7 @@ export function ModelBtn() {
         <div className="relative w-full">
           <Search className="-translate-y-1/2 absolute top-1/2 left-2 size-4 text-muted-foreground" />
           <Input
-            placeholder="Search models"
+            placeholder={`Search a model (${modelCount} available)`}
             className="w-full pl-8"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
@@ -187,7 +189,7 @@ export function ModelBtn() {
             <span className="text-muted-foreground text-sm">No models found</span>
           </div>
         ) : (
-          <div className="grid max-h-[400px] min-h-[200px] w-full grid-cols-4 flex-wrap gap-3 overflow-y-auto">
+          <div className="grid max-h-[400px] min-h-[200px] w-full grid-cols-2 gap-3 overflow-y-auto md:grid-cols-4">
             {Object.values(results).map((model) => (
               <ModelCard
                 key={model.id}
