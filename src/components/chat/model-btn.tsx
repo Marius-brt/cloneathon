@@ -50,10 +50,22 @@ function ModelCard({
       onClick={onSelect}
       className={cn(
         "flex min-h-[150px] w-[110px] shrink-0 flex-col items-center gap-2 rounded-lg border border-transparent px-2 pt-3 pb-2 text-center transition-all duration-300",
-        active && "border-border bg-muted"
+        active && "border-primary bg-primary/10"
       )}
     >
-      {Icon && <Icon className="!size-7 shrink-0" />}
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <Icon className="!size-7 shrink-0" />
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>
+            ${(Number(model.pricing?.input || 0) * 1000000).toFixed(1)}/M input tokens
+          </p>
+          <p>
+            ${(Number(model.pricing?.output || 0) * 1000000).toFixed(1)}/M output tokens
+          </p>
+        </TooltipContent>
+      </Tooltip>
       <span className="font-medium text-sm">{model.model_name}</span>
       <div className="mt-auto flex items-center gap-2">
         {model.reasoning && (
@@ -109,17 +121,27 @@ export function ModelBtn() {
   }, [currentModel]);
 
   useEffect(() => {
-    setResults(
-      (debouncedSearch.length > 0
-        ? Object.values(models).filter(
-            (model) =>
-              model.model_name.toLowerCase().includes(debouncedSearch.toLowerCase()) ||
-              model.provider_name.toLowerCase().includes(debouncedSearch.toLowerCase())
-          )
-        : Object.values(models).slice(0, 10)
-      ).sort((a, b) => a.id.localeCompare(b.id))
-    );
-  }, [debouncedSearch, models]);
+    let resultModels: Model[];
+    if (debouncedSearch.length > 0) {
+      const searchWords = debouncedSearch.toLowerCase().split(/\s+/).filter(Boolean);
+
+      resultModels = Object.values(models).filter((model) => {
+        const modelName = model.model_name.toLowerCase();
+        const providerName = model.provider_name.toLowerCase();
+        return searchWords.every(
+          (word) => modelName.includes(word) || providerName.includes(word)
+        );
+      });
+    } else if (modelId) {
+      const allModels = Object.values(models);
+      const selectedModel = allModels.find((model) => model.id === modelId);
+      const otherModels = allModels.filter((model) => model.id !== modelId).slice(0, 9);
+      resultModels = selectedModel ? [selectedModel, ...otherModels] : otherModels;
+    } else {
+      resultModels = Object.values(models).slice(0, 10);
+    }
+    setResults(resultModels.sort((a, b) => a.id.localeCompare(b.id)));
+  }, [debouncedSearch, models, modelId]);
 
   const setModel = useCallback(
     (id: string) => {

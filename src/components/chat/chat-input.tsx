@@ -1,8 +1,6 @@
 "use client";
 
 import { AgentBtn } from "@/components/chat/agent-btn";
-import { FileBtn } from "@/components/chat/file-btn";
-import { FileList } from "@/components/chat/file-list";
 import { ModelBtn } from "@/components/chat/model-btn";
 import { SpeechRecognition } from "@/components/chat/speech-recognition";
 import { ToolsBtn } from "@/components/chat/tools-btn";
@@ -25,7 +23,7 @@ export function ChatInput({
   input: string;
   setInput: (value: string) => void;
 }) {
-  const [files, setFiles] = useState<Attachment[]>([]);
+  const [files] = useState<Attachment[]>([]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent<HTMLTextAreaElement>) => {
@@ -56,7 +54,7 @@ export function ChatInput({
           className="relative w-full overflow-hidden rounded-t-xl"
           onSubmit={onSubmit}
         >
-          <FileList files={files} setFiles={setFiles} />
+          {/* <FileList files={files} setFiles={setFiles} /> */}
           <Textarea
             id="chat-input"
             value={input}
@@ -80,8 +78,10 @@ export function ChatInput({
             </Button>
           </div>
         </form>
-        <div className="flex items-center gap-1 p-2 max-sm:px-4 max-sm:pt-4">
+        <div className="flex flex-wrap items-center gap-1 p-2 max-sm:px-4 max-sm:pt-4">
+          {/*           
           <FileBtn files={files} setFiles={setFiles} />
+           */}
           <ModelBtn />
           <AgentBtn />
           <ToolsBtn />

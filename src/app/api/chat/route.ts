@@ -9,6 +9,7 @@ import { getTools, toolsEnum } from "@/lib/server/tools";
 import type { Annotation } from "@/lib/types";
 import type { OpenRouterProvider } from "@openrouter/ai-sdk-provider";
 import {
+  type Attachment,
   type DataStreamWriter,
   type UIMessage,
   appendClientMessage,
@@ -71,10 +72,11 @@ export async function POST(req: Request) {
     const body = bodySchema.safeParse(await req.json());
 
     if (!body.success) {
+      console.error(body.error);
       return NextResponse.json({ error: "invalid_request_body" }, { status: 400 });
     }
 
-    const { chatId, message, tools, modelId, agentId, files } = body.data;
+    const { chatId, message, tools, modelId, agentId } = body.data;
 
     let allowedTools = tools;
 
@@ -84,11 +86,13 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "unauthorized" }, { status: 401 });
     }
 
-    if (!models[modelId]) {
+    const model = models[modelId];
+
+    if (!model) {
       return NextResponse.json({ error: "model_not_found" }, { status: 404 });
     }
 
-    if (!models[modelId].supports_tools) {
+    if (!model.supports_tools) {
       allowedTools = [];
     }
 
@@ -102,6 +106,12 @@ export async function POST(req: Request) {
 
     const chat = await ChatRepository.getOrCreateChat(chatId);
 
+    const msgFiles: Attachment[] = [];
+    /* model.input_capabilities.includes("file") ||
+      model.input_capabilities.includes("image")
+        ? files
+        : []; */
+
     const msg = await MessageRepository.upsertMessage({
       id: crypto.randomUUID(),
       chatId: chat.id,
@@ -110,7 +120,7 @@ export async function POST(req: Request) {
       content: message.content,
       parts: message.parts,
       annotations: {},
-      attachments: files.map((f) => f.name)
+      attachments: msgFiles.length > 0 ? msgFiles.map((f) => f.name ?? "") : undefined
     });
 
     const previousMessages = await MessageRepository.getAllMessages(chatId);
@@ -120,7 +130,7 @@ export async function POST(req: Request) {
       message: {
         id: msg.id,
         role: msg.role as UIMessage["role"],
-        experimental_attachments: files,
+        experimental_attachments: msgFiles.length > 0 ? msgFiles : undefined,
         content: msg.content,
         parts: msg.parts as UIMessage["parts"]
       }
@@ -136,6 +146,7 @@ export async function POST(req: Request) {
 
     return createDataStreamResponse({
       onError: (error: any) => {
+        console.error("Stream error", error);
         switch (error.statusCode) {
           case 402:
             return "insufficient_funds";
@@ -169,6 +180,9 @@ export async function POST(req: Request) {
           
           ${instructions}`,
           tools: await getTools(allowedTools, dataStream),
+          onError: (error) => {
+            console.error("error", error);
+          },
           onFinish: async ({ response, usage }) => {
             try {
               annotations.push(

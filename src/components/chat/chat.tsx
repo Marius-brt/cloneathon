@@ -7,10 +7,12 @@ import { useModels } from "@/components/providers/models.provider";
 import { errorsMapper } from "@/lib/errors";
 import { generateTitle } from "@/lib/server/actions/title.action";
 import { useChatSettingsStore } from "@/lib/stores/chat-settings.store";
+import { useCommandStore } from "@/lib/stores/command.store";
 import { useChat } from "@ai-sdk/react";
 import type { Attachment, Message } from "ai";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
+import { Suggestions } from "./suggestions";
 
 function parseError(error: any) {
   const content = error.message.toString();
@@ -37,6 +39,7 @@ export function Chat({
   const [titleGenerated, setTitleGenerated] = useState(
     initialTitle !== null && initialTitle !== ""
   );
+  const { addThreads } = useCommandStore();
   const [title, setTitle] = useState(initialTitle || "");
   const [error, setError] = useState<string | null>(null);
   const [initialPromptSent, setInitialPromptSent] = useState(false);
@@ -75,6 +78,7 @@ export function Chat({
   const submitHandler = useCallback(
     (files: Attachment[]) => {
       if (input.length > 0 && !isStreaming) {
+        addThreads([{ id: chatId, title }]);
         setError(null);
         handleSubmit(undefined, {
           experimental_attachments: files.length > 0 ? files : undefined
@@ -92,6 +96,7 @@ export function Chat({
             .then((data) => {
               if (data.data) {
                 setTitle(data.data);
+                addThreads([{ id: chatId, title: data.data }]);
                 setTitleGenerated(true);
               }
             })
@@ -101,7 +106,16 @@ export function Chat({
         }
       }
     },
-    [handleSubmit, input, isStreaming, titleGenerated, messages, chatId]
+    [
+      handleSubmit,
+      input,
+      isStreaming,
+      titleGenerated,
+      messages,
+      chatId,
+      addThreads,
+      title
+    ]
   );
 
   useEffect(() => {
@@ -113,6 +127,7 @@ export function Chat({
 
   return (
     <>
+      {messages.length === 0 && <Suggestions input={input} setInput={setInput} />}
       <ChatTitle title={title} />
       <Messages
         error={error}

@@ -19,6 +19,7 @@ import {
   DialogTitle
 } from "@/components/ui/dialog";
 import { searchAction } from "@/lib/server/actions/search.action";
+import { type Thread, useCommandStore } from "@/lib/stores/command.store";
 import { useDebounce } from "@uidotdev/usehooks";
 import { useCommandState } from "cmdk";
 import {
@@ -40,11 +41,6 @@ type ActionType = {
   icon: LucideIcon;
   shortcut?: string;
   link?: string;
-};
-
-type ChatType = {
-  id: string;
-  title: string | null;
 };
 
 const actions: ActionType[] = [
@@ -103,18 +99,19 @@ function NewChatButton() {
 export function CommandPalette({
   recentChats
 }: {
-  recentChats: ChatType[];
+  recentChats: Thread[];
 }) {
   const [loading, setLoading] = useState(false);
   const [input, setInput] = useState("");
   const debouncedSearch = useDebounce(input, 300);
   const router = useRouter();
   const [open, setOpen] = useState(false);
-  const [chatsSearchResults, setChatsSearchResults] = useState<ChatType[]>([]);
+  const { threads, addThreads } = useCommandStore();
+  const [chatsSearchResults, setChatsSearchResults] = useState<Thread[]>([]);
   const path = usePathname();
 
   const items = useMemo(() => {
-    const chats = recentChats.map((chat) => ({
+    const chats = threads.slice(0, 3).map((chat) => ({
       label: chat.title || "Recent chat",
       icon: ArrowUpRightIcon,
       link: `/${chat.id}`
@@ -145,7 +142,7 @@ export function CommandPalette({
       label: string;
       actions: ActionType[];
     }[];
-  }, [recentChats, chatsSearchResults]);
+  }, [threads, chatsSearchResults]);
 
   useEffect(() => {
     const down = (e: KeyboardEvent) => {
@@ -158,6 +155,10 @@ export function CommandPalette({
     document.addEventListener("keydown", down);
     return () => document.removeEventListener("keydown", down);
   }, []);
+
+  useEffect(() => {
+    addThreads(recentChats);
+  }, [recentChats, addThreads]);
 
   useEffect(() => {
     if (debouncedSearch !== "") {

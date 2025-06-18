@@ -1,5 +1,6 @@
 "use client";
 
+import { useModels } from "@/components/providers/models.provider";
 import { Button } from "@/components/ui/button";
 import type { Attachment } from "@ai-sdk/ui-utils";
 import { Plus } from "lucide-react";
@@ -22,6 +23,8 @@ export function FileBtn({
   files: Attachment[];
   setFiles: (files: Attachment[]) => void;
 }) {
+  const { acceptedFileTypes } = useModels();
+
   const ref = useRef<HTMLInputElement>(null);
 
   const openFileDialog = useCallback(() => {
@@ -58,19 +61,21 @@ export function FileBtn({
         type="button"
         className="hover:!bg-popover !size-8 [&_svg]:!size-3.5 rounded-lg bg-muted dark:bg-transparent"
         icon={Plus}
-        disabled={!!(files && files.length >= MAX_FILES)}
+        disabled={!!(files && files.length >= MAX_FILES) || !acceptedFileTypes}
         onClick={openFileDialog}
         aria-label="Upload file"
       />
-      <input
-        type="file"
-        multiple
-        className="sr-only"
-        aria-label="Upload file"
-        accept="image/*,application/pdf"
-        onChange={onChange}
-        ref={ref}
-      />
+      {acceptedFileTypes && (
+        <input
+          type="file"
+          multiple
+          className="sr-only"
+          aria-label="Upload file"
+          accept={acceptedFileTypes}
+          onChange={onChange}
+          ref={ref}
+        />
+      )}
     </>
   );
 }

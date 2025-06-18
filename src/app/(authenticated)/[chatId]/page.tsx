@@ -1,6 +1,6 @@
-import { readFileSync } from "node:fs";
 import { Chat } from "@/components/chat/chat";
 import { ModelsProvider } from "@/components/providers/models.provider";
+import { models } from "@/lib/server/models";
 import { AgentRepository } from "@/lib/server/repositories/agent.repository";
 import { ChatRepository } from "@/lib/server/repositories/chat.repository";
 import { MessageRepository } from "@/lib/server/repositories/message.repository";
@@ -23,8 +23,6 @@ export default async function ThreadPage({
     .uuid()
     .parseAsync(chatId)
     .catch(() => notFound());
-
-  const models = JSON.parse(readFileSync("src/assets/models.json", "utf-8"));
 
   const messages = await MessageRepository.getMessagesByChatId(chatId, 0);
   const orderedMessages = messages.reverse();

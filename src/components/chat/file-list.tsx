@@ -1,18 +1,27 @@
 import { Badge } from "@/components/ui/badge";
 import type { Attachment } from "@ai-sdk/ui-utils";
 import { File, X } from "lucide-react";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
+import { useModels } from "../providers/models.provider";
 
 export function FileList({
   files,
   setFiles
 }: { files: Attachment[]; setFiles: (files: Attachment[]) => void }) {
+  const { acceptedFileTypes } = useModels();
+
   const handleRemoveFile = useCallback(
     (file: Attachment) => {
       setFiles(files.filter((f) => f.name !== file.name));
     },
     [files, setFiles]
   );
+
+  useEffect(() => {
+    if (!acceptedFileTypes && files.length > 0) {
+      setFiles([]);
+    }
+  }, [acceptedFileTypes, files, setFiles]);
 
   if (!files || files.length === 0) {
     return null;

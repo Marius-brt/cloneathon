@@ -48,7 +48,6 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
   ),
   anthropic: (props: SVGProps<SVGSVGElement>) => (
     <svg
-      fill="#ffff"
       fillRule="evenodd"
       style={{
         flex: "none",
@@ -58,6 +57,7 @@ export const icons: Record<string, (props: SVGProps<SVGSVGElement>) => ReactNode
       width="1em"
       xmlns="http://www.w3.org/2000/svg"
       height="1em"
+      className="!text-black dark:!text-white"
       {...props}
     >
       <title>{"Anthropic"}</title>
@@ -260,6 +260,6 @@ export const capabilitiesIcons: Record<
   string,
   { icon: LucideIcon; color: string; label: string }
 > = {
-  image: { icon: Eye, color: "text-green-500 bg-green-500/10", label: "Image" },
+  image: { icon: Eye, color: "text-green-500 bg-green-500/10", label: "Vision" },
   file: { icon: FileIcon, color: "text-blue-500 bg-blue-500/10", label: "File" }
 };
