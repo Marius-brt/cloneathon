@@ -179,5 +179,25 @@ export const MessageRepository = {
     });
 
     return branch.id;
+  },
+  async deleteMessage(messageId: string) {
+    const session = await getSafeSession();
+    const message = await prisma.message.delete({
+      where: {
+        id: messageId,
+        chat: {
+          userId: session.user.id
+        }
+      }
+    });
+
+    return message;
+  },
+  async updateMessage(messageId: string, content: string, parts: any[]) {
+    const session = await getSafeSession();
+    return await prisma.message.update({
+      where: { id: messageId, chat: { userId: session.user.id } },
+      data: { content, parts }
+    });
   }
 };

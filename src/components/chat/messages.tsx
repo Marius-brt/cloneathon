@@ -14,13 +14,17 @@ export function Messages({
   isStreaming,
   submitted,
   chatId,
-  error
+  error,
+  retry,
+  onEdit
 }: {
   messages: Message[];
   isStreaming: boolean;
   submitted: boolean;
   chatId: string;
   error: string | null;
+  retry: () => void;
+  onEdit: (content: string) => void;
 }) {
   const { oldMessages, addOldMessages } = useChatStore();
   const [autoScroll, setAutoScroll] = useState(true);
@@ -129,12 +133,17 @@ export function Messages({
           }
 
           return message.role === "user" ? (
-            <UserMessage key={message.id} message={message} />
+            <UserMessage
+              key={message.id}
+              message={message}
+              onEdit={i >= messages.length - 2 ? onEdit : undefined}
+            />
           ) : (
             <AssistantMessage
               key={message.id}
               message={message}
               isStreaming={isStreaming}
+              retry={i === messages.length - 1 ? retry : undefined}
             />
           );
         })}

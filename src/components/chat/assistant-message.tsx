@@ -1,5 +1,7 @@
+import { BranchBtn } from "@/components/chat/branch-btn";
 import { MemoizedMarkdown } from "@/components/chat/markdown";
 import { Reasoning } from "@/components/chat/reasoning";
+import { RetryBtn } from "@/components/chat/retry-btn";
 import { Source } from "@/components/chat/source";
 import { ToolCalling } from "@/components/chat/tool-calling";
 import { icons } from "@/components/icons";
@@ -11,14 +13,15 @@ import { formatDate } from "@/lib/utils";
 import type { Message } from "ai";
 import { Loader2 } from "lucide-react";
 import { useMemo } from "react";
-import { BranchBtn } from "./branch-btn";
 
 export function AssistantMessage({
   message,
-  isStreaming
+  isStreaming,
+  retry
 }: {
   message: Message;
   isStreaming: boolean;
+  retry?: () => void;
 }) {
   const sources = message.parts?.filter((part) => part.type === "source") || [];
 
@@ -54,7 +57,7 @@ export function AssistantMessage({
   }, [message.annotations]);
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 group">
       <div className="flex flex-col items-start gap-6 text-base">
         {(message.parts?.length || 0) <= 1 && (
           <div className="flex items-center gap-2 text-muted-foreground text-sm">
@@ -99,13 +102,14 @@ export function AssistantMessage({
           ))}
         </div>
       )}
-      <div className="flex items-center justify-between gap-2 py-2 text-muted-foreground text-sm opacity-0 transition-opacity duration-300 hover:opacity-100">
+      <div className="flex items-center justify-between gap-2 py-2 text-muted-foreground text-sm opacity-0 transition-opacity duration-300 group-hover:opacity-100 max-sm:flex-col max-sm:items-start">
         <div className="flex items-center gap-2">
           <CopyButton small value={message.content} />
           <BranchBtn messageId={message.id} isStreaming={isStreaming} />
+          {retry && <RetryBtn isStreaming={isStreaming} onClick={retry} />}
           {message.createdAt && <span>{formatDate(message.createdAt)}</span>}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 max-sm:mt-1 max-sm:ml-1">
           {ModelIcon && <ModelIcon className="size-4" />}
           {model?.model_name}
           {cost !== null && (

@@ -11,6 +11,7 @@ import type { OpenRouterProvider } from "@openrouter/ai-sdk-provider";
 import {
   type Attachment,
   type DataStreamWriter,
+  type Message,
   type UIMessage,
   appendClientMessage,
   appendResponseMessages,
@@ -26,6 +27,7 @@ export const dynamic = "force-dynamic";
 
 const bodySchema = z.object({
   chatId: z.uuid(),
+  retry: z.boolean().optional(),
   tools: z.array(z.enum(toolsEnum)),
   modelId: z.string(),
   agentId: z.uuid().optional(),
@@ -76,7 +78,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "invalid_request_body" }, { status: 400 });
     }
 
-    const { chatId, message, tools, modelId, agentId } = body.data;
+    const { chatId, message, tools, modelId, agentId, retry } = body.data;
 
     let allowedTools = tools;
 
@@ -112,29 +114,63 @@ export async function POST(req: Request) {
         ? files
         : []; */
 
-    const msg = await MessageRepository.upsertMessage({
-      id: crypto.randomUUID(),
-      chatId: chat.id,
-      modelId,
-      role: message.role,
-      content: message.content,
-      parts: message.parts,
-      annotations: {},
-      attachments: msgFiles.length > 0 ? msgFiles.map((f) => f.name ?? "") : undefined
-    });
+    let messages: Message[] = [];
 
-    const previousMessages = await MessageRepository.getAllMessages(chatId);
+    if (retry) {
+      let previousMessages = await MessageRepository.getAllMessages(chatId);
 
-    const messages = appendClientMessage({
-      messages: previousMessages.map((m) => ({ ...m, content: "" }) as UIMessage),
-      message: {
-        id: msg.id,
-        role: msg.role as UIMessage["role"],
-        experimental_attachments: msgFiles.length > 0 ? msgFiles : undefined,
-        content: msg.content,
-        parts: msg.parts as UIMessage["parts"]
+      if (previousMessages.length === 0) {
+        return NextResponse.json({ error: "no_messages" }, { status: 400 });
       }
-    });
+
+      const lastUserMessage = previousMessages.filter((m) => m.role === "user").at(-1);
+
+      if (lastUserMessage) {
+        await MessageRepository.updateMessage(
+          lastUserMessage.id,
+          message.content,
+          message.parts
+        );
+        previousMessages = previousMessages.map((m) =>
+          m.id === lastUserMessage.id
+            ? { ...m, content: message.content, parts: message.parts }
+            : m
+        );
+      }
+
+      if (previousMessages.at(-1)?.role === "assistant") {
+        const lastMessage = previousMessages.at(-1);
+        if (lastMessage) {
+          await MessageRepository.deleteMessage(lastMessage.id);
+          previousMessages = previousMessages.slice(0, -1);
+        }
+      }
+      messages = previousMessages;
+    } else {
+      const msg = await MessageRepository.upsertMessage({
+        id: crypto.randomUUID(),
+        chatId: chat.id,
+        modelId,
+        role: message.role,
+        content: message.content,
+        parts: message.parts,
+        annotations: {},
+        attachments: msgFiles.length > 0 ? msgFiles.map((f) => f.name ?? "") : undefined
+      });
+
+      const previousMessages = await MessageRepository.getAllMessages(chatId);
+
+      messages = appendClientMessage({
+        messages: previousMessages.map((m) => ({ ...m, content: "" }) as UIMessage),
+        message: {
+          id: msg.id,
+          role: msg.role as UIMessage["role"],
+          experimental_attachments: msgFiles.length > 0 ? msgFiles : undefined,
+          content: msg.content,
+          parts: msg.parts as UIMessage["parts"]
+        }
+      });
+    }
 
     const agent = agentId ? await AgentRepository.getAgent(agentId) : null;
     const instructions = agent

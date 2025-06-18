@@ -102,7 +102,7 @@ export function ModelBtn() {
   const { models } = useModels();
   const { modelId, setModelId } = useChatSettingsStore();
   const [search, setSearch] = useState("");
-  const debouncedSearch = useDebounce(search, 100);
+  const debouncedSearch = useDebounce(search, 300);
   const [results, setResults] = useState<Model[]>([]);
   const [open, setOpen] = useState(false);
 
@@ -189,7 +189,7 @@ export function ModelBtn() {
             <span className="text-muted-foreground text-sm">No models found</span>
           </div>
         ) : (
-          <div className="grid max-h-[400px] min-h-[200px] w-full grid-cols-2 gap-3 overflow-y-auto md:grid-cols-4">
+          <div className="grid max-h-[400px] w-full grid-cols-2 gap-3 overflow-y-auto md:grid-cols-4">
             {Object.values(results).map((model) => (
               <ModelCard
                 key={model.id}

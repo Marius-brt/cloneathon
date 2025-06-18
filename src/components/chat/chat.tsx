@@ -44,7 +44,7 @@ export function Chat({
   const [error, setError] = useState<string | null>(null);
   const [initialPromptSent, setInitialPromptSent] = useState(false);
   const { currentAgent } = useModels();
-  const { input, messages, status, stop, handleSubmit, setInput } = useChat({
+  const { input, messages, status, stop, handleSubmit, setInput, reload } = useChat({
     initialMessages,
     experimental_throttle: 100,
     sendExtraMessageFields: false,
@@ -56,13 +56,28 @@ export function Chat({
     onFinish: () => {
       window.history.replaceState({}, "", `/${chatId}`);
     },
-    experimental_prepareRequestBody: ({ messages }) => {
+    experimental_prepareRequestBody: ({ messages, requestBody }) => {
       const lastMessage = messages.filter((message) => message.role === "user").at(-1);
       if (!lastMessage) {
         throw new Error("No message found");
       }
 
+      // @ts-ignore
+      if (requestBody?.retry && requestBody?.content) {
+        // @ts-ignore
+        lastMessage.content = requestBody.content;
+        lastMessage.parts = lastMessage.parts.map((part) => {
+          if (part.type === "text") {
+            // @ts-ignore
+            return { ...part, text: requestBody.content };
+          }
+          return part;
+        });
+      }
+
       return {
+        // @ts-ignore
+        retry: requestBody?.retry ?? false,
         chatId,
         tools: enabledTools,
         modelId,
@@ -118,6 +133,26 @@ export function Chat({
     ]
   );
 
+  const retry = useCallback(() => {
+    reload({
+      body: {
+        retry: true
+      }
+    });
+  }, [reload]);
+
+  const onEdit = useCallback(
+    (content: string) => {
+      reload({
+        body: {
+          retry: true,
+          content: content
+        }
+      });
+    },
+    [reload]
+  );
+
   useEffect(() => {
     if (initialPrompt && initialPrompt.length > 0 && !isStreaming && !initialPromptSent) {
       setInput(initialPrompt);
@@ -135,6 +170,8 @@ export function Chat({
         isStreaming={isStreaming}
         chatId={chatId}
         submitted={status === "submitted"}
+        retry={retry}
+        onEdit={onEdit}
       />
       <ChatInput
         stop={stop}

@@ -22,7 +22,7 @@ export function BranchBtn({
 
   return (
     <Tooltip>
-      <TooltipTrigger>
+      <TooltipTrigger asChild>
         <Button
           variant="ghost"
           size="icon"
@@ -33,7 +33,7 @@ export function BranchBtn({
           disabled={isStreaming}
         />
       </TooltipTrigger>
-      <TooltipContent>Create a branch from here</TooltipContent>
+      <TooltipContent sideOffset={5}>Create a branch from here</TooltipContent>
     </Tooltip>
   );
 }
